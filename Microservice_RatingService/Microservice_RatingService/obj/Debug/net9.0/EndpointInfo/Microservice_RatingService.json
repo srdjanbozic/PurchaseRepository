@@ -1,0 +1,260 @@
+{
+  "openapi": "3.0.1",
+  "info": {
+    "title": "Rating Service",
+    "description": "Rating service project",
+    "contact": {
+      "name": " Linkedin Profile",
+      "url": "https://www.linkedin.com/in/srdjan-bozic-b560b6231/"
+    },
+    "version": "v1"
+  },
+  "paths": {
+    "/api/Rating": {
+      "post": {
+        "tags": [
+          "Rating"
+        ],
+        "summary": "Adds new rating to the database",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/RatingCreateDto"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/RatingCreateDto"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/RatingCreateDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Successfully added rating to the database!"
+          },
+          "400": {
+            "description": "Bad request!"
+          },
+          "500": {
+            "description": "Something is wrong with the server!"
+          }
+        }
+      },
+      "get": {
+        "tags": [
+          "Rating"
+        ],
+        "summary": "Return all ratings from the database",
+        "responses": {
+          "200": {
+            "description": "Successfully returns all ratings!"
+          },
+          "400": {
+            "description": "Bad request!"
+          },
+          "500": {
+            "description": "Something is wrong with the server!"
+          }
+        }
+      }
+    },
+    "/api/Rating/{id}": {
+      "get": {
+        "tags": [
+          "Rating"
+        ],
+        "summary": "Return rating with specified Id from the database",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successfully return specified rating!"
+          },
+          "400": {
+            "description": "Bad request!"
+          },
+          "500": {
+            "description": "Something is wrong with the server!"
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "Rating"
+        ],
+        "summary": "Update rating with specifed Id in the database",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/RatingUpdateDto"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/RatingUpdateDto"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/RatingUpdateDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Successfully updated rating!"
+          },
+          "400": {
+            "description": "Bad request!"
+          },
+          "500": {
+            "description": "Something is wrong with the server!"
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "Rating"
+        ],
+        "summary": "Delete rating by Id from the database",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successfully deleted rating!"
+          },
+          "204": {
+            "description": "Succesfully deleted rating, no additional content!"
+          },
+          "400": {
+            "description": "Bad request!"
+          },
+          "500": {
+            "description": "Something is wrong with the server!"
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "RatingCreateDto": {
+        "type": "object",
+        "properties": {
+          "ratingDate": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "grade": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "comment": {
+            "type": "string",
+            "nullable": true
+          },
+          "title": {
+            "type": "string",
+            "nullable": true
+          },
+          "status": {
+            "$ref": "#/components/schemas/Status"
+          },
+          "buyerId": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "sellerId": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "purchaseId": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "purchaseDate": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "purchasePrice": {
+            "type": "number",
+            "format": "double"
+          }
+        },
+        "additionalProperties": false
+      },
+      "RatingUpdateDto": {
+        "type": "object",
+        "properties": {
+          "grade": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "title": {
+            "type": "string",
+            "nullable": true
+          },
+          "comment": {
+            "type": "string",
+            "nullable": true
+          },
+          "status": {
+            "$ref": "#/components/schemas/Status"
+          },
+          "ratingDate": {
+            "type": "string",
+            "format": "date-time"
+          }
+        },
+        "additionalProperties": false
+      },
+      "Status": {
+        "enum": [
+          1,
+          2,
+          3
+        ],
+        "type": "integer",
+        "format": "int32"
+      }
+    }
+  }
+}

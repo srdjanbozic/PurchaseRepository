@@ -1,0 +1,12 @@
+{
+  "Version": 1,
+  "Hash": "XnyrUD1F2/dUUkhYg1BFwqJXtaIEe6uDIfG6eJy77Gk=",
+  "Source": "Microservice_RatingService",
+  "BasePath": "_content/Microservice_RatingService",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": [],
+  "Endpoints": []
+}
