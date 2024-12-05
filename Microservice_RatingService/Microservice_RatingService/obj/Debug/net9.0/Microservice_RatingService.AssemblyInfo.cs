@@ -15,7 +15,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Microservice_RatingService")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+77c3268a0cd4348f0476393a2746fcb43a3ad477")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+27b1fabd2a6dbc25d60d3aa0c06d0949640ec092")]
 [assembly: System.Reflection.AssemblyProductAttribute("Microservice_RatingService")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Microservice_RatingService")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
