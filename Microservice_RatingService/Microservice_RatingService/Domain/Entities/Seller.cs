@@ -5,7 +5,6 @@ namespace Microservice_RatingService.Domain.Entities
 {
     public class Seller
     {
-        
         public Guid SellerId { get; set; }
         [Required]
         [StringLength(50)]

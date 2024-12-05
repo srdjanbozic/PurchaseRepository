@@ -5,7 +5,6 @@
         public RatingNotFoundException(Guid id)
             : base($"Rating with ID {id} was not found.") { }
     }
-
     public class RatingValidationException : Exception
     {
         public List<string> Errors { get; }
@@ -16,13 +15,11 @@
             Errors = errors ?? new List<string>();
         }
     }
-
     public class SellerNotFoundException : Exception
     {
         public SellerNotFoundException(Guid sellerId)
             : base($"Seller with ID {sellerId} was not found.") { }
     }
-
     public class BuyerNotFoundException : Exception
     {
         public BuyerNotFoundException(Guid buyerId)

@@ -41,7 +41,7 @@ namespace Microservice_RatingService.Application.Controllers
         [SwaggerOperation(Summary = "Generate JWT token for testing")]
         [SwaggerResponse(200, "Login successful, returns JWT token")]
         [SwaggerResponse(400, "Invalid credentials")]
-        [ProducesResponseType(typeof(LoginResponse), StatusCodes.Status200OK)] // Specify the type for 200 responses
+        [ProducesResponseType(typeof(LoginResponse), StatusCodes.Status200OK)] 
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         public IActionResult Login([FromBody] LoginRequest request)
         {

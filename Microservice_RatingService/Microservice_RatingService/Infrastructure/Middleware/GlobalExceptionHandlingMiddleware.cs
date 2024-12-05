@@ -11,7 +11,6 @@ namespace Microservice_RatingService.Infrastructure.Middleware
         {
             _logger = logger;
         }
-
         public async Task InvokeAsync(HttpContext context, RequestDelegate next)
         {
             try

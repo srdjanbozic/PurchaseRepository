@@ -10,7 +10,6 @@ namespace Microservice_RatingService.Domain.Entities
         [Required] 
         [StringLength(50, MinimumLength = 3)]
         public string BuyerUsername { get; set; }
-
         [Required] 
         [EmailAddress]
         public string BuyerEmail { get; set; }
@@ -21,7 +20,6 @@ namespace Microservice_RatingService.Domain.Entities
             BuyerUsername = username;
             BuyerEmail = email;
         }
-
         public Buyer()
         {
         }

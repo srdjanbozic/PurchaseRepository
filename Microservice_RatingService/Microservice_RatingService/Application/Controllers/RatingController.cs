@@ -42,7 +42,7 @@ namespace Microservice_RatingService.Application.Controllers
         public async Task<IActionResult> CreateRating(RatingCreateDto ratingCreateDto)
         {
             _logger.LogInformation("Creating new rating {@RatingCreateDto}", ratingCreateDto);
-            // pre nego sto kreiramo novi rating moramo uraditi validaciju propertija, guid ne sme biti prazan itd
+            // pre nego sto kreiramo novi rating moramo uraditi validaciju propertija, guid ne sme biti prazan 
             var validationResult = await _createValidator.ValidateAsync(ratingCreateDto);
             if (!validationResult.IsValid)
             {
