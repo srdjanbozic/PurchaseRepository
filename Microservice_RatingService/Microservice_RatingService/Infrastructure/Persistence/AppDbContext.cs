@@ -45,7 +45,7 @@ namespace Microservice_RatingService.Infrastructure.Persistence
     {
         public static async Task SeedData(AppDbContext context)
         {
-            if (context.Ratings.Any()) return;
+            if (await context.Ratings.AnyAsync()) return;
 
             var ratings = new[]
             {

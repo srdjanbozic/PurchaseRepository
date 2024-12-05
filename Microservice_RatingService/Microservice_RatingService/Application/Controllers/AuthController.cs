@@ -21,19 +21,19 @@ namespace Microservice_RatingService.Application.Controllers
         public class LoginRequest
         {
             [Required]
-            public string Username { get; set; }
+            public required string Username { get; set; }
             [Required]
-            public string Password { get; set; }
+            public required string Password { get; set; }
         }
 
         public class LoginResponse
         {
             [Required]
-            public string Token { get; set; }
+            public required string Token { get; set; }
             [Required]
-            public string Username { get; set; }
+            public required string Username { get; set; }
             [Required]
-            public string[] Roles { get; set; }
+            public required string[] Roles { get; set; }
             public DateTime ExpiresAt { get; set; }
         }
 
@@ -41,6 +41,8 @@ namespace Microservice_RatingService.Application.Controllers
         [SwaggerOperation(Summary = "Generate JWT token for testing")]
         [SwaggerResponse(200, "Login successful, returns JWT token")]
         [SwaggerResponse(400, "Invalid credentials")]
+        [ProducesResponseType(typeof(LoginResponse), StatusCodes.Status200OK)] // Specify the type for 200 responses
+        [ProducesResponseType(StatusCodes.Status400BadRequest)]
         public IActionResult Login([FromBody] LoginRequest request)
         {
             _logger.LogInformation("Login attempt for user: {Username}", request.Username);

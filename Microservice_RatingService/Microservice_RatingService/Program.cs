@@ -129,10 +129,10 @@ try
     using (var scope = app.Services.CreateScope())
     {
         var context = scope.ServiceProvider.GetRequiredService<AppDbContext>();
-        context.Database.Migrate(); // Ensure the database is up to date before seeding
+        context.Database.MigrateAsync(); // Ensure the database is up to date before seeding
         await DbInitializer.SeedData(context);
     }
-    app.Run();
+    app.RunAsync();
 }
 catch (Exception ex)
 {
@@ -140,5 +140,5 @@ catch (Exception ex)
 }
 finally
 {
-    Log.CloseAndFlush();
+    Log.CloseAndFlushAsync();
 }
