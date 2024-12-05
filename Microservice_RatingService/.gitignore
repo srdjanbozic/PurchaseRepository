@@ -1,0 +1,14 @@
+# Ignore build and binary files
+bin/
+obj/
+
+# Ignore Visual Studio files
+.vs/
+
+# Ignore SonarQube temporary files
+.sonarqube/
+
+# Ignore other system files
+*.user
+*.suo
+*.log
