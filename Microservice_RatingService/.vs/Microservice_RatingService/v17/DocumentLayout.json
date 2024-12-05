@@ -3,6 +3,22 @@
   "WorkspaceRootPath": "C:\\Users\\Altos\\source\\repos\\MicroserviceProject\\Microservice_RatingService\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{361B88A0-9EE1-4F65-86DF-1B26BEF9E7EB}|Microservice_RatingService\\Microservice_RatingService.csproj|c:\\users\\altos\\source\\repos\\microserviceproject\\microservice_ratingservice\\microservice_ratingservice\\domain\\entities\\seller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{361B88A0-9EE1-4F65-86DF-1B26BEF9E7EB}|Microservice_RatingService\\Microservice_RatingService.csproj|solutionrelative:microservice_ratingservice\\domain\\entities\\seller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{361B88A0-9EE1-4F65-86DF-1B26BEF9E7EB}|Microservice_RatingService\\Microservice_RatingService.csproj|c:\\users\\altos\\source\\repos\\microserviceproject\\microservice_ratingservice\\microservice_ratingservice\\domain\\entities\\buyer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{361B88A0-9EE1-4F65-86DF-1B26BEF9E7EB}|Microservice_RatingService\\Microservice_RatingService.csproj|solutionrelative:microservice_ratingservice\\domain\\entities\\buyer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{361B88A0-9EE1-4F65-86DF-1B26BEF9E7EB}|Microservice_RatingService\\Microservice_RatingService.csproj|c:\\users\\altos\\source\\repos\\microserviceproject\\microservice_ratingservice\\microservice_ratingservice\\domain\\entities\\purchase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{361B88A0-9EE1-4F65-86DF-1B26BEF9E7EB}|Microservice_RatingService\\Microservice_RatingService.csproj|solutionrelative:microservice_ratingservice\\domain\\entities\\purchase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{361B88A0-9EE1-4F65-86DF-1B26BEF9E7EB}|Microservice_RatingService\\Microservice_RatingService.csproj|c:\\users\\altos\\source\\repos\\microserviceproject\\microservice_ratingservice\\microservice_ratingservice\\domain\\entities\\rating.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{361B88A0-9EE1-4F65-86DF-1B26BEF9E7EB}|Microservice_RatingService\\Microservice_RatingService.csproj|solutionrelative:microservice_ratingservice\\domain\\entities\\rating.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{361B88A0-9EE1-4F65-86DF-1B26BEF9E7EB}|Microservice_RatingService\\Microservice_RatingService.csproj|c:\\users\\altos\\source\\repos\\microserviceproject\\microservice_ratingservice\\microservice_ratingservice\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{361B88A0-9EE1-4F65-86DF-1B26BEF9E7EB}|Microservice_RatingService\\Microservice_RatingService.csproj|solutionrelative:microservice_ratingservice\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -15,10 +31,6 @@
       "RelativeMoniker": "D:0:0:{361B88A0-9EE1-4F65-86DF-1B26BEF9E7EB}|Microservice_RatingService\\Microservice_RatingService.csproj|solutionrelative:microservice_ratingservice\\application\\dtos\\ratingcreatedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{361B88A0-9EE1-4F65-86DF-1B26BEF9E7EB}|Microservice_RatingService\\Microservice_RatingService.csproj|c:\\users\\altos\\source\\repos\\microserviceproject\\microservice_ratingservice\\microservice_ratingservice\\domain\\entities\\purchase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{361B88A0-9EE1-4F65-86DF-1B26BEF9E7EB}|Microservice_RatingService\\Microservice_RatingService.csproj|solutionrelative:microservice_ratingservice\\domain\\entities\\purchase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{361B88A0-9EE1-4F65-86DF-1B26BEF9E7EB}|Microservice_RatingService\\Microservice_RatingService.csproj|c:\\users\\altos\\source\\repos\\microserviceproject\\microservice_ratingservice\\microservice_ratingservice\\application\\dtos\\ratingupdatedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{361B88A0-9EE1-4F65-86DF-1B26BEF9E7EB}|Microservice_RatingService\\Microservice_RatingService.csproj|solutionrelative:microservice_ratingservice\\application\\dtos\\ratingupdatedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -29,18 +41,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{361B88A0-9EE1-4F65-86DF-1B26BEF9E7EB}|Microservice_RatingService\\Microservice_RatingService.csproj|c:\\users\\altos\\source\\repos\\microserviceproject\\microservice_ratingservice\\microservice_ratingservice\\infrastructure\\persistence\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{361B88A0-9EE1-4F65-86DF-1B26BEF9E7EB}|Microservice_RatingService\\Microservice_RatingService.csproj|solutionrelative:microservice_ratingservice\\infrastructure\\persistence\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{361B88A0-9EE1-4F65-86DF-1B26BEF9E7EB}|Microservice_RatingService\\Microservice_RatingService.csproj|c:\\users\\altos\\source\\repos\\microserviceproject\\microservice_ratingservice\\microservice_ratingservice\\domain\\entities\\seller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{361B88A0-9EE1-4F65-86DF-1B26BEF9E7EB}|Microservice_RatingService\\Microservice_RatingService.csproj|solutionrelative:microservice_ratingservice\\domain\\entities\\seller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{361B88A0-9EE1-4F65-86DF-1B26BEF9E7EB}|Microservice_RatingService\\Microservice_RatingService.csproj|c:\\users\\altos\\source\\repos\\microserviceproject\\microservice_ratingservice\\microservice_ratingservice\\domain\\entities\\buyer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{361B88A0-9EE1-4F65-86DF-1B26BEF9E7EB}|Microservice_RatingService\\Microservice_RatingService.csproj|solutionrelative:microservice_ratingservice\\domain\\entities\\buyer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{361B88A0-9EE1-4F65-86DF-1B26BEF9E7EB}|Microservice_RatingService\\Microservice_RatingService.csproj|c:\\users\\altos\\source\\repos\\microserviceproject\\microservice_ratingservice\\microservice_ratingservice\\domain\\entities\\rating.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{361B88A0-9EE1-4F65-86DF-1B26BEF9E7EB}|Microservice_RatingService\\Microservice_RatingService.csproj|solutionrelative:microservice_ratingservice\\domain\\entities\\rating.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{361B88A0-9EE1-4F65-86DF-1B26BEF9E7EB}|Microservice_RatingService\\Microservice_RatingService.csproj|c:\\users\\altos\\source\\repos\\microserviceproject\\microservice_ratingservice\\microservice_ratingservice\\application\\exceptions\\customexceptions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -102,19 +102,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "RatingCreateDto.cs",
-              "DocumentMoniker": "C:\\Users\\Altos\\source\\repos\\MicroserviceProject\\Microservice_RatingService\\Microservice_RatingService\\Application\\Dtos\\RatingCreateDto.cs",
-              "RelativeDocumentMoniker": "Microservice_RatingService\\Application\\Dtos\\RatingCreateDto.cs",
-              "ToolTip": "C:\\Users\\Altos\\source\\repos\\MicroserviceProject\\Microservice_RatingService\\Microservice_RatingService\\Application\\Dtos\\RatingCreateDto.cs",
-              "RelativeToolTip": "Microservice_RatingService\\Application\\Dtos\\RatingCreateDto.cs",
-              "ViewState": "AgIAAAQAAAAAAAAAAAAAwBkAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-05T03:34:45.641Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 5,
               "Title": "RatingProfile.cs",
               "DocumentMoniker": "C:\\Users\\Altos\\source\\repos\\MicroserviceProject\\Microservice_RatingService\\Microservice_RatingService\\Application\\MapperProfiles\\RatingProfile.cs",
               "RelativeDocumentMoniker": "Microservice_RatingService\\Application\\MapperProfiles\\RatingProfile.cs",
@@ -122,8 +110,7 @@
               "RelativeToolTip": "Microservice_RatingService\\Application\\MapperProfiles\\RatingProfile.cs",
               "ViewState": "AgIAAAMAAAAAAAAAAAAQwBwAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-05T04:14:48.395Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-05T04:14:48.395Z"
             },
             {
               "$type": "Document",
@@ -139,7 +126,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 8,
               "Title": "RatingRepository.cs",
               "DocumentMoniker": "C:\\Users\\Altos\\source\\repos\\MicroserviceProject\\Microservice_RatingService\\Microservice_RatingService\\Infrastructure\\Repositories\\RatingRepository.cs",
               "RelativeDocumentMoniker": "Microservice_RatingService\\Infrastructure\\Repositories\\RatingRepository.cs",
@@ -151,15 +138,16 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 1,
               "Title": "Buyer.cs",
               "DocumentMoniker": "C:\\Users\\Altos\\source\\repos\\MicroserviceProject\\Microservice_RatingService\\Microservice_RatingService\\Domain\\Entities\\Buyer.cs",
               "RelativeDocumentMoniker": "Microservice_RatingService\\Domain\\Entities\\Buyer.cs",
               "ToolTip": "C:\\Users\\Altos\\source\\repos\\MicroserviceProject\\Microservice_RatingService\\Microservice_RatingService\\Domain\\Entities\\Buyer.cs",
               "RelativeToolTip": "Microservice_RatingService\\Domain\\Entities\\Buyer.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABsAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAvwBcAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-22T14:55:20.281Z"
+              "WhenOpened": "2024-11-22T14:55:20.281Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -187,7 +175,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 3,
               "Title": "Rating.cs",
               "DocumentMoniker": "C:\\Users\\Altos\\source\\repos\\MicroserviceProject\\Microservice_RatingService\\Microservice_RatingService\\Domain\\Entities\\Rating.cs",
               "RelativeDocumentMoniker": "Microservice_RatingService\\Domain\\Entities\\Rating.cs",
@@ -195,31 +183,45 @@
               "RelativeToolTip": "Microservice_RatingService\\Domain\\Entities\\Rating.cs",
               "ViewState": "AgIAAAYAAAAAAAAAAAAAACIAAAAgAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-04T15:01:07.831Z"
+              "WhenOpened": "2024-12-04T15:01:07.831Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 2,
               "Title": "Purchase.cs",
               "DocumentMoniker": "C:\\Users\\Altos\\source\\repos\\MicroserviceProject\\Microservice_RatingService\\Microservice_RatingService\\Domain\\Entities\\Purchase.cs",
               "RelativeDocumentMoniker": "Microservice_RatingService\\Domain\\Entities\\Purchase.cs",
               "ToolTip": "C:\\Users\\Altos\\source\\repos\\MicroserviceProject\\Microservice_RatingService\\Microservice_RatingService\\Domain\\Entities\\Purchase.cs",
               "RelativeToolTip": "Microservice_RatingService\\Domain\\Entities\\Purchase.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAIAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-22T14:55:29.607Z"
+              "WhenOpened": "2024-11-22T14:55:29.607Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 4,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\Altos\\source\\repos\\MicroserviceProject\\Microservice_RatingService\\Microservice_RatingService\\Program.cs",
               "RelativeDocumentMoniker": "Microservice_RatingService\\Program.cs",
               "ToolTip": "C:\\Users\\Altos\\source\\repos\\MicroserviceProject\\Microservice_RatingService\\Microservice_RatingService\\Program.cs",
               "RelativeToolTip": "Microservice_RatingService\\Program.cs",
-              "ViewState": "AgIAAHYAAAAAAAAAAAAtwI4AAAAVAAAAAAAAAA==",
+              "ViewState": "AgIAAHYAAAAAAAAAAAAtwI8AAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-22T14:52:12.386Z",
+              "WhenOpened": "2024-11-22T14:52:12.386Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Seller.cs",
+              "DocumentMoniker": "C:\\Users\\Altos\\source\\repos\\MicroserviceProject\\Microservice_RatingService\\Microservice_RatingService\\Domain\\Entities\\Seller.cs",
+              "RelativeDocumentMoniker": "Microservice_RatingService\\Domain\\Entities\\Seller.cs",
+              "ToolTip": "C:\\Users\\Altos\\source\\repos\\MicroserviceProject\\Microservice_RatingService\\Microservice_RatingService\\Domain\\Entities\\Seller.cs",
+              "RelativeToolTip": "Microservice_RatingService\\Domain\\Entities\\Seller.cs",
+              "ViewState": "AgIAAAIAAAAAAAAAAAAvwBQAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-22T14:56:00.232Z",
               "EditorCaption": ""
             },
             {
@@ -228,19 +230,19 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "Seller.cs",
-              "DocumentMoniker": "C:\\Users\\Altos\\source\\repos\\MicroserviceProject\\Microservice_RatingService\\Microservice_RatingService\\Domain\\Entities\\Seller.cs",
-              "RelativeDocumentMoniker": "Microservice_RatingService\\Domain\\Entities\\Seller.cs",
-              "ToolTip": "C:\\Users\\Altos\\source\\repos\\MicroserviceProject\\Microservice_RatingService\\Microservice_RatingService\\Domain\\Entities\\Seller.cs",
-              "RelativeToolTip": "Microservice_RatingService\\Domain\\Entities\\Seller.cs",
-              "ViewState": "AgIAAA0AAAAAAAAAAAAcwBMAAAAXAAAAAAAAAA==",
+              "DocumentIndex": 6,
+              "Title": "RatingCreateDto.cs",
+              "DocumentMoniker": "C:\\Users\\Altos\\source\\repos\\MicroserviceProject\\Microservice_RatingService\\Microservice_RatingService\\Application\\Dtos\\RatingCreateDto.cs",
+              "RelativeDocumentMoniker": "Microservice_RatingService\\Application\\Dtos\\RatingCreateDto.cs",
+              "ToolTip": "C:\\Users\\Altos\\source\\repos\\MicroserviceProject\\Microservice_RatingService\\Microservice_RatingService\\Application\\Dtos\\RatingCreateDto.cs",
+              "RelativeToolTip": "Microservice_RatingService\\Application\\Dtos\\RatingCreateDto.cs",
+              "ViewState": "AgIAAAQAAAAAAAAAAAAAwBkAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-22T14:56:00.232Z"
+              "WhenOpened": "2024-12-05T03:34:45.641Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 7,
               "Title": "RatingUpdateDto.cs",
               "DocumentMoniker": "C:\\Users\\Altos\\source\\repos\\MicroserviceProject\\Microservice_RatingService\\Microservice_RatingService\\Application\\Dtos\\RatingUpdateDto.cs",
               "RelativeDocumentMoniker": "Microservice_RatingService\\Application\\Dtos\\RatingUpdateDto.cs",
@@ -264,7 +266,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 9,
               "Title": "AppDbContext.cs",
               "DocumentMoniker": "C:\\Users\\Altos\\source\\repos\\MicroserviceProject\\Microservice_RatingService\\Microservice_RatingService\\Infrastructure\\Persistence\\AppDbContext.cs",
               "RelativeDocumentMoniker": "Microservice_RatingService\\Infrastructure\\Persistence\\AppDbContext.cs",

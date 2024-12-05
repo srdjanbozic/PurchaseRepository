@@ -5,14 +5,16 @@ namespace Microservice_RatingService.Domain.Entities
 {
     public class Buyer
     {
+        
         public Guid BuyerId { get; set; }
-        [StringLength(50)]
+        [Required] 
+        [StringLength(50, MinimumLength = 3)]
         public string BuyerUsername { get; set; }
-        public string BuyerEmail { get; set; }
-        [ForeignKey("Rating")]
-        public Guid RatingId { get; set; }
-        public Rating Rating { get; set; }
 
+        [Required] 
+        [EmailAddress]
+        public string BuyerEmail { get; set; }
+        
         public Buyer(Guid guid, string username, string email)
         {
             BuyerId = guid;

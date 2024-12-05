@@ -167,10 +167,10 @@ C:\Users\Altos\source\repos\MicroserviceProject\Microservice_RatingService\Micro
 C:\Users\Altos\source\repos\MicroserviceProject\Microservice_RatingService\Microservice_RatingService\obj\Debug\net9.0\staticwebassets\msbuild.buildMultiTargeting.Microservice_RatingService.props
 C:\Users\Altos\source\repos\MicroserviceProject\Microservice_RatingService\Microservice_RatingService\obj\Debug\net9.0\staticwebassets\msbuild.buildTransitive.Microservice_RatingService.props
 C:\Users\Altos\source\repos\MicroserviceProject\Microservice_RatingService\Microservice_RatingService\obj\Debug\net9.0\staticwebassets.pack.json
-C:\Users\Altos\source\repos\MicroserviceProject\Microservice_RatingService\Microservice_RatingService\obj\Debug\net9.0\staticwebassets.upToDateCheck.txt
 C:\Users\Altos\source\repos\MicroserviceProject\Microservice_RatingService\Microservice_RatingService\obj\Debug\net9.0\Microser.B315B61E.Up2Date
 C:\Users\Altos\source\repos\MicroserviceProject\Microservice_RatingService\Microservice_RatingService\obj\Debug\net9.0\Microservice_RatingService.dll
 C:\Users\Altos\source\repos\MicroserviceProject\Microservice_RatingService\Microservice_RatingService\obj\Debug\net9.0\refint\Microservice_RatingService.dll
 C:\Users\Altos\source\repos\MicroserviceProject\Microservice_RatingService\Microservice_RatingService\obj\Debug\net9.0\Microservice_RatingService.pdb
 C:\Users\Altos\source\repos\MicroserviceProject\Microservice_RatingService\Microservice_RatingService\obj\Debug\net9.0\Microservice_RatingService.genruntimeconfig.cache
 C:\Users\Altos\source\repos\MicroserviceProject\Microservice_RatingService\Microservice_RatingService\obj\Debug\net9.0\ref\Microservice_RatingService.dll
+C:\Users\Altos\source\repos\MicroserviceProject\Microservice_RatingService\Microservice_RatingService\obj\Debug\net9.0\staticwebassets.upToDateCheck.txt
