@@ -13,7 +13,7 @@ Database management using Entity Framework Core and MSSQL.
 Automated code analysis with SonarQube.
 API documentation using Swagger.
 
-Technologies Used
+Technologies Used:
 .NET 9
 Entity Framework Core (Code-First with migrations)
 MSSQL (SQL Server) for database
@@ -23,11 +23,11 @@ Serilog for logging
 Docker (optional, for containerization)
 
 Getting Started
-Prerequisites
-.NET SDK 9 (Download here)
-MSSQL Server (Download here)
-SonarQube (optional, for code analysis)
-Git (for cloning the repository)
+Prerequisites:
+- .NET SDK 9 (Download here)
+- MSSQL Server (Download here)
+- SonarQube (optional, for code analysis)
+- Git (for cloning the repository)
 
 Installation
 Clone the Repository:
@@ -36,10 +36,8 @@ cd RatingRepository
 
 Restore Dependencies: Run the following command to restore NuGet packages:
 dotnet restore
-Update the Database: Apply migrations to ensure the database is up to date:
 
-bash
-Copy code
+Update the Database: Apply migrations to ensure the database is up to date:
 dotnet ef database update
 
 Run the Application: Start the project using:
@@ -51,57 +49,62 @@ Base API URL: https://localhost:7109
 
 API Endpoints
 Ratings
-GET /api/ratings: Get all ratings.
-GET /api/ratings/{id}: Get a specific rating by ID.
-POST /api/ratings: Create a new rating.
-PUT /api/ratings/{id}: Update an existing rating.
-DELETE /api/ratings/{id}: Delete a rating.
+- GET /api/ratings: Get all ratings.
+- GET /api/ratings/{id}: Get a specific rating by ID.
+- POST /api/ratings: Create a new rating.
+- PUT /api/ratings/{id}: Update an existing rating.
+- DELETE /api/ratings/{id}: Delete a rating.
+- 
 Seller Statistics
-GET /api/sellers/{id}/stats: Get statistical data for a seller.
+- GET /api/sellers/{id}/stats: Get statistical data for a seller.
+  
 Authentication (For Testing)
-POST /api/auth/login: Simulate login and generate a test JWT token.
+- POST /api/auth/login: Simulate login and generate a test JWT token.
 
 Project Structure
 The project is structured following a Domain-Driven Design (DDD) approach:
 
-bash
-Copy code
+
 ├── Application
-│   ├── Controllers         # API controllers
-│   ├── Dtos                # Data Transfer Objects
-│   ├── Interfaces          # Service interfaces
+
+│   ├── Controllers    
+│   ├── Dtos              
+│   ├── Interfaces       
 ├── Domain
-│   ├── Entities            # Aggregate root and entities
-│   ├── ValueObjects        # Value objects like Purchase
+
+│   ├── Entities           
+│   ├── ValueObjects        
 ├── Infrastructure
-│   ├── Persistence         # DbContext and EF Core configuration
-│   ├── Repositories        # Repository implementations
-│   ├── Middleware          # Exception handling middleware
-├── Tests                   # Unit and integration tests
+
+│   ├── Persistence        
+│   ├── Repositories       
+│   ├── Middleware         
+├── Tests                   
+
 Configuration
-Database
+Database:
 The connection string can be found in appsettings.json:
-"ConnectionStrings": {
+- "ConnectionStrings": {
   "DefaultConnection": "Server=(localdb)\\MSSQLLocalDB;Database=UrisDB;Trusted_Connection=True;MultipleActiveResultSets=true"
 }
 
-Logging
+Logging:
 Logging is configured using Serilog. By default, logs are stored in the console and a file:
-Log.Logger = new LoggerConfiguration()
+- Log.Logger = new LoggerConfiguration()
     .WriteTo.Console()
     .WriteTo.File("logs/log.txt", rollingInterval: RollingInterval.Day)
     .CreateLogger();
     
 Running SonarQube Locally
 Start the SonarQube Server:
-cd C:\sonarqube\bin\wind
+- cd C:\sonarqube\bin\wind
 ows-x86-64
-StartSonar.bat
+- StartSonar.bat
 
 Analyze the Code:
-dotnet sonarscanner begin /k:"RatingService" /d:sonar.host.url="http://localhost:9000" /d:sonar.login="<your_token>"
-dotnet build
-dotnet sonarscanner end /d:sonar.login="<your_token>"
+- dotnet sonarscanner begin /k:"RatingService" /d:sonar.host.url="http://localhost:9000" /d:sonar.login="<your_token>"
+- dotnet build
+- dotnet sonarscanner end /d:sonar.login="<your_token>"
 
 License
-This project is licensed under the MIT License. See LICENSE for details.
+- This project is licensed under the MIT License. See LICENSE for details.
