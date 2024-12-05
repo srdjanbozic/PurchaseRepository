@@ -5,22 +5,22 @@ Microservice_RatingService is a simple microservice built with .NET 9 using a Do
 The project demonstrates best practices in microservice architecture, including integration with tools like SonarQube for code analysis, database migrations using Entity Framework Core, and detailed documentation with Swagger.
 
 Features
-CRUD operations for managing ratings.
-Statistical analysis of seller ratings (average rating, rating distribution).
-Input validation using DataAnnotations.
-Logging with Serilog.
-Database management using Entity Framework Core and MSSQL.
-Automated code analysis with SonarQube.
-API documentation using Swagger.
+- CRUD operations for managing ratings.
+- Statistical analysis of seller ratings (average rating, rating distribution).
+- Input validation using DataAnnotations.
+- Logging with Serilog.
+- Database management using Entity Framework Core and MSSQL.
+- Automated code analysis with SonarQube.
+-API documentation using Swagger.
 
 Technologies Used:
-.NET 9
-Entity Framework Core (Code-First with migrations)
-MSSQL (SQL Server) for database
-Swagger/OpenAPI for API documentation
-SonarQube for code quality and analysis
-Serilog for logging
-Docker (optional, for containerization)
+- .NET 9
+- Entity Framework Core (Code-First with migrations)
+- MSSQL (SQL Server) for database
+- Swagger/OpenAPI for API documentation
+- SonarQube for code quality and analysis
+- Serilog for logging
+- Docker (optional, for containerization)
 
 Getting Started
 Prerequisites:
@@ -31,21 +31,21 @@ Prerequisites:
 
 Installation
 Clone the Repository:
-git clone https://github.com/srdjanbozic/RatingRepository.git
-cd RatingRepository
+- git clone https://github.com/srdjanbozic/RatingRepository.git
+- cd RatingRepository
 
 Restore Dependencies: Run the following command to restore NuGet packages:
-dotnet restore
+- dotnet restore
 
 Update the Database: Apply migrations to ensure the database is up to date:
-dotnet ef database update
+- dotnet ef database update
 
 Run the Application: Start the project using:
-dotnet run --project Microservice_RatingService/Microservice_RatingService.csproj
+- dotnet run --project Microservice_RatingService/Microservice_RatingService.csproj
 
 Access the API:
-Swagger UI: https://localhost:7109/swagger
-Base API URL: https://localhost:7109
+- Swagger UI: https://localhost:7109/swagger
+- Base API URL: https://localhost:7109
 
 API Endpoints
 Ratings
@@ -54,7 +54,7 @@ Ratings
 - POST /api/ratings: Create a new rating.
 - PUT /api/ratings/{id}: Update an existing rating.
 - DELETE /api/ratings/{id}: Delete a rating.
-- 
+  
 Seller Statistics
 - GET /api/sellers/{id}/stats: Get statistical data for a seller.
   
