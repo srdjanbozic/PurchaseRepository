@@ -35,7 +35,7 @@ namespace Microservice_RatingService.Infrastructure.Persistence
                 {
                     p.Property(x => x.PurchaseId).HasColumnName("PurchaseId");
                     p.Property(x => x.PurchaseDate).HasColumnName("PurchaseDate");
-                    p.Property(x => x.PurchasePrice).HasColumnName("PurchasePrice").HasPrecision(18, 2); ;
+                    p.Property(x => x.PurchasePrice).HasColumnName("PurchasePrice").HasPrecision(18, 2);
                 });
             });
         }

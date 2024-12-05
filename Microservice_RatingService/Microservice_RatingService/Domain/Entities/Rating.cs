@@ -32,13 +32,6 @@ namespace Microservice_RatingService.Domain.Entities
 
         [Required(ErrorMessage = "Status is required!")]
         public Status Status { get; set; }
-
-        /* Foreign key properties
-        public Guid BuyerId { get; set; }
-        public Guid SellerId { get; set; }
-        public Guid PurchaseId { get; set; }
-        */
-
         // Navigation properties
         public Buyer Buyer { get; set; }
         public Seller Seller { get; set; }

@@ -17,7 +17,6 @@ namespace Microservice_RatingService.Domain.Entities
             PurchaseDate = dateTime;
             PurchasePrice = price;
         }
-
         public Purchase()
         {
         }

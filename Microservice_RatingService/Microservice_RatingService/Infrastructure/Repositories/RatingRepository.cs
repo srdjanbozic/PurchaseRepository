@@ -127,17 +127,23 @@ namespace Microservice_RatingService.Infrastructure.Repositories
             {
                 // First check if we have any ratings for this seller
                 var ratings = await _context.Ratings
-                    .Include(r => r.Seller)  // Include seller data
+                    .Include(r => r.Seller) // Include seller data
                     .Where(r => r.Seller.SellerId == sellerId)
                     .ToListAsync();
 
-                if (!ratings.Any())
+                if (ratings.Count == 0)
                 {
                     _logger.LogWarning("Seller with ID {SellerId} not found", sellerId);
                     throw new SellerNotFoundException(sellerId);
                 }
 
-                var seller = ratings.First().Seller;
+                var seller = ratings[0].Seller;
+                if (seller == null)
+                {
+                    _logger.LogWarning("Seller with ID {SellerId} not found", sellerId);
+                    throw new SellerNotFoundException(sellerId);
+                }
+
                 var stats = new SellerRatingStatsDto
                 {
                     SellerId = sellerId,
@@ -155,8 +161,10 @@ namespace Microservice_RatingService.Infrastructure.Repositories
             catch (Exception ex)
             {
                 _logger.LogError(ex, "Error retrieving stats for seller {SellerId}", sellerId);
-                throw;
+                throw new ApplicationException($"An error occurred while retrieving stats for seller with ID {sellerId}.", ex);
             }
         }
     }
+
 }
+

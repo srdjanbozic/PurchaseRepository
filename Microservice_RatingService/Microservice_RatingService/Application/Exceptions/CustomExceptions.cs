@@ -10,7 +10,7 @@
     {
         public List<string> Errors { get; }
 
-        public RatingValidationException(string message, List<string> errors = null)
+        public RatingValidationException(string message, List<string>? errors = null)
             : base(message)
         {
             Errors = errors ?? new List<string>();

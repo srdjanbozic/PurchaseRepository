@@ -17,7 +17,6 @@ namespace Microservice_RatingService.Domain.Entities
             SellerUsername = username;
             SellerEmail = email;
         }
-
         public Seller()
         {
         }

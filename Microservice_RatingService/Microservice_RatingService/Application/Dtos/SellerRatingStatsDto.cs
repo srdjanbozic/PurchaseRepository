@@ -1,11 +1,15 @@
-﻿namespace Microservice_RatingService.Application.Dtos
+﻿using System.Text.Json.Serialization;
+
+namespace Microservice_RatingService.Application.Dtos
 {
     public class SellerRatingStatsDto
     {
+        [JsonRequired]
         public Guid SellerId { get; set; }
-        public string SellerUsername { get; set; }
+        [JsonRequired]
+        public required string SellerUsername { get; set; }
         public double AverageRating { get; set; }
         public int TotalRatings { get; set; }
-        public Dictionary<int, int> RatingDistribution { get; set; } // Key: rating value (1-5), Value: count
+        public required Dictionary<int, int> RatingDistribution { get; set; } // Key: rating value (1-5), Value: count
     }
 }
