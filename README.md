@@ -7,44 +7,48 @@ The project demonstrates best practices in microservice architecture, including 
 Features
 CRUD operations for managing ratings.
 Statistical analysis of seller ratings (average rating, rating distribution).
-Validation of input data using DataAnnotations.
+Input validation using DataAnnotations.
 Logging with Serilog.
 Database management using Entity Framework Core and MSSQL.
 Automated code analysis with SonarQube.
 API documentation using Swagger.
+
 Technologies Used
 .NET 9
 Entity Framework Core (Code-First with migrations)
-MSSQL for database
+MSSQL (SQL Server) for database
 Swagger/OpenAPI for API documentation
 SonarQube for code quality and analysis
 Serilog for logging
 Docker (optional, for containerization)
+
 Getting Started
 Prerequisites
-.NET SDK 9 installed (Download here)
+.NET SDK 9 (Download here)
 MSSQL Server (Download here)
 SonarQube (optional, for code analysis)
 Git (for cloning the repository)
-Installation
 
+Installation
 Clone the Repository:
 git clone https://github.com/srdjanbozic/RatingRepository.git
 cd RatingRepository
 
 Restore Dependencies: Run the following command to restore NuGet packages:
 dotnet restore
-
 Update the Database: Apply migrations to ensure the database is up to date:
+
+bash
+Copy code
 dotnet ef database update
 
 Run the Application: Start the project using:
 dotnet run --project Microservice_RatingService/Microservice_RatingService.csproj
 
 Access the API:
-Open your browser and navigate to:
 Swagger UI: https://localhost:7109/swagger
 Base API URL: https://localhost:7109
+
 API Endpoints
 Ratings
 GET /api/ratings: Get all ratings.
@@ -59,6 +63,9 @@ POST /api/auth/login: Simulate login and generate a test JWT token.
 
 Project Structure
 The project is structured following a Domain-Driven Design (DDD) approach:
+
+bash
+Copy code
 ├── Application
 │   ├── Controllers         # API controllers
 │   ├── Dtos                # Data Transfer Objects
@@ -71,7 +78,6 @@ The project is structured following a Domain-Driven Design (DDD) approach:
 │   ├── Repositories        # Repository implementations
 │   ├── Middleware          # Exception handling middleware
 ├── Tests                   # Unit and integration tests
-
 Configuration
 Database
 The connection string can be found in appsettings.json:
@@ -87,15 +93,15 @@ Log.Logger = new LoggerConfiguration()
     .CreateLogger();
     
 Running SonarQube Locally
-Start the SonarQube server:
-cd C:\sonarqube\bin\windows-x86-64
+Start the SonarQube Server:
+cd C:\sonarqube\bin\wind
+ows-x86-64
 StartSonar.bat
 
-Analyze the code using the Sonar Scanner:
+Analyze the Code:
 dotnet sonarscanner begin /k:"RatingService" /d:sonar.host.url="http://localhost:9000" /d:sonar.login="<your_token>"
 dotnet build
 dotnet sonarscanner end /d:sonar.login="<your_token>"
 
 License
 This project is licensed under the MIT License. See LICENSE for details.
-
