@@ -84,9 +84,6 @@ The project is structured following a Domain-Driven Design (DDD) approach:
 Configuration
 Database:
 The connection string can be found in appsettings.json:
-- "ConnectionStrings": {
-  "DefaultConnection": "Server=(localdb)\\MSSQLLocalDB;Database=UrisDB;Trusted_Connection=True;MultipleActiveResultSets=true"
-}
 
 Logging:
 Logging is configured using Serilog. By default, logs are stored in the console and a file:
