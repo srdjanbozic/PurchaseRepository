@@ -1034,3 +1034,227 @@ END
 2024-12-05 16:14:19.974 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7109/_vs/browserLink - 200 null text/javascript; charset=UTF-8 72.2372ms
 2024-12-05 16:14:20.008 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7109/swagger/v1/swagger.json - null null
 2024-12-05 16:14:20.161 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7109/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 153.2315ms
+2024-12-05 16:31:02.319 +01:00 [INF] Starting Rating Service
+2024-12-05 16:31:03.130 +01:00 [WRN] Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data; this mode should only be enabled during development.
+2024-12-05 16:31:03.827 +01:00 [INF] Executed DbCommand (21ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2024-12-05 16:31:03.842 +01:00 [INF] Acquiring an exclusive lock for migration application. See https://aka.ms/efcore-docs-migrations-lock for more information if this takes too long.
+2024-12-05 16:31:03.858 +01:00 [INF] Executed DbCommand (12ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+DECLARE @result int;
+EXEC @result = sp_getapplock @Resource = '__EFMigrationsLock', @LockOwner = 'Session', @LockMode = 'Exclusive';
+SELECT @result
+2024-12-05 16:31:03.909 +01:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+IF OBJECT_ID(N'[__EFMigrationsHistory]') IS NULL
+BEGIN
+    CREATE TABLE [__EFMigrationsHistory] (
+        [MigrationId] nvarchar(150) NOT NULL,
+        [ProductVersion] nvarchar(32) NOT NULL,
+        CONSTRAINT [PK___EFMigrationsHistory] PRIMARY KEY ([MigrationId])
+    );
+END;
+2024-12-05 16:31:03.922 +01:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2024-12-05 16:31:03.925 +01:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2024-12-05 16:31:03.936 +01:00 [INF] Executed DbCommand (8ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2024-12-05 16:31:03.949 +01:00 [INF] No migrations were applied. The database is already up to date.
+2024-12-05 16:31:03.955 +01:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+DECLARE @result int;
+EXEC @result = sp_releaseapplock @Resource = '__EFMigrationsLock', @LockOwner = 'Session';
+SELECT @result
+2024-12-05 16:31:04.177 +01:00 [INF] Executed DbCommand (15ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [rating] AS [r]) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2024-12-05 16:31:04.220 +01:00 [INF] User profile is available. Using 'C:\Users\Altos\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-12-05 16:31:04.514 +01:00 [INF] Now listening on: https://localhost:7109
+2024-12-05 16:31:04.515 +01:00 [INF] Now listening on: http://localhost:5153
+2024-12-05 16:31:04.635 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-12-05 16:31:04.636 +01:00 [INF] Hosting environment: Development
+2024-12-05 16:31:04.636 +01:00 [INF] Content root path: C:\Users\Altos\source\repos\MicroserviceProject\Microservice_RatingService\Microservice_RatingService
+2024-12-05 16:31:04.932 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7109/swagger/index.html - null null
+2024-12-05 16:31:05.104 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7109/swagger/index.html - 200 null text/html;charset=utf-8 179.2485ms
+2024-12-05 16:31:05.110 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7109/swagger/index.js - null null
+2024-12-05 16:31:05.110 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7109/_framework/aspnetcore-browser-refresh.js - null null
+2024-12-05 16:31:05.119 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7109/_vs/browserLink - null null
+2024-12-05 16:31:05.128 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7109/swagger/index.js - 200 null application/javascript;charset=utf-8 17.4775ms
+2024-12-05 16:31:05.141 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7109/_framework/aspnetcore-browser-refresh.js - 200 13804 application/javascript; charset=utf-8 31.0334ms
+2024-12-05 16:31:05.158 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7109/_vs/browserLink - 200 null text/javascript; charset=UTF-8 39.098ms
+2024-12-05 16:31:05.192 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7109/swagger/v1/swagger.json - null null
+2024-12-05 16:31:05.297 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7109/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 104.5504ms
+2024-12-05 16:31:20.889 +01:00 [INF] Request starting HTTP/2 POST https://localhost:7109/api/Auth/login - application/json 52
+2024-12-05 16:31:20.973 +01:00 [INF] Executing endpoint 'Microservice_RatingService.Application.Controllers.AuthController.Login (Microservice_RatingService)'
+2024-12-05 16:31:20.990 +01:00 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Login(LoginRequest) on controller Microservice_RatingService.Application.Controllers.AuthController (Microservice_RatingService).
+2024-12-05 16:31:21.042 +01:00 [INF] Executing action method Microservice_RatingService.Application.Controllers.AuthController.Login (Microservice_RatingService) - Validation state: "Valid"
+2024-12-05 16:31:21.044 +01:00 [INF] Login attempt for user: admin
+2024-12-05 16:31:21.069 +01:00 [INF] Executed action method Microservice_RatingService.Application.Controllers.AuthController.Login (Microservice_RatingService), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 23.8821ms.
+2024-12-05 16:31:21.078 +01:00 [INF] Executing OkObjectResult, writing value of type 'Microservice_RatingService.Application.Controllers.AuthController+LoginResponse'.
+2024-12-05 16:31:21.088 +01:00 [INF] Executed action Microservice_RatingService.Application.Controllers.AuthController.Login (Microservice_RatingService) in 94.0722ms
+2024-12-05 16:31:21.090 +01:00 [INF] Executed endpoint 'Microservice_RatingService.Application.Controllers.AuthController.Login (Microservice_RatingService)'
+2024-12-05 16:31:21.093 +01:00 [INF] HTTP POST /api/Auth/login responded 200 in 197.2638 ms
+2024-12-05 16:31:21.094 +01:00 [INF] Request finished HTTP/2 POST https://localhost:7109/api/Auth/login - 200 null application/json; charset=utf-8 205.5063ms
+2024-12-05 16:31:38.469 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7109/api/Rating - null null
+2024-12-05 16:31:38.490 +01:00 [INF] Failed to validate the token.
+System.ArgumentException: IDX14102: Unable to decode the header '[PII of type 'Microsoft.IdentityModel.Logging.SecurityArtifact' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]' as Base64Url encoded string.
+ ---> System.FormatException: IDX10400: Unable to decode: '[PII of type 'System.String' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]' as Base64url encoded string.
+   at Microsoft.IdentityModel.Tokens.Base64UrlEncoding.ValidateAndGetOutputSize(ReadOnlySpan`1 strSpan, Int32 offset, Int32 length)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.CreateClaimSet(ReadOnlySpan`1 strSpan, Int32 startIndex, Int32 length, Boolean createHeaderClaimSet)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.ReadToken(ReadOnlyMemory`1 encodedTokenMemory)
+   --- End of inner exception stack trace ---
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.ReadToken(ReadOnlyMemory`1 encodedTokenMemory)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken..ctor(String jwtEncodedString)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ReadToken(String token, TokenValidationParameters validationParameters)
+2024-12-05 16:31:38.498 +01:00 [INF] Bearer was not authenticated. Failure message: IDX14102: Unable to decode the header '[PII of type 'Microsoft.IdentityModel.Logging.SecurityArtifact' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]' as Base64Url encoded string.
+2024-12-05 16:31:38.502 +01:00 [INF] Executing endpoint 'Microservice_RatingService.Application.Controllers.RatingController.GetRatings (Microservice_RatingService)'
+2024-12-05 16:31:38.511 +01:00 [INF] Route matched with {action = "GetRatings", controller = "Rating"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetRatings() on controller Microservice_RatingService.Application.Controllers.RatingController (Microservice_RatingService).
+2024-12-05 16:31:38.632 +01:00 [INF] Executing action method Microservice_RatingService.Application.Controllers.RatingController.GetRatings (Microservice_RatingService) - Validation state: "Valid"
+2024-12-05 16:31:38.636 +01:00 [INF] Retrieving all ratings
+2024-12-05 16:31:38.765 +01:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [r].[RatingId], [r].[Comment], [r].[Grade], [r].[RatingDate], [r].[Status], [r].[Title], [r].[BuyerEmail], [r].[BuyerId], [r].[BuyerUsername], [r].[PurchaseDate], [r].[PurchaseId], [r].[PurchasePrice], [r].[SellerEmail], [r].[SellerId], [r].[SellerUsername]
+FROM [rating] AS [r]
+2024-12-05 16:31:38.850 +01:00 [INF] Retrieved 3 ratings from database
+2024-12-05 16:31:38.862 +01:00 [INF] Retrieved 3 ratings
+2024-12-05 16:31:38.864 +01:00 [INF] Executed action method Microservice_RatingService.Application.Controllers.RatingController.GetRatings (Microservice_RatingService), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 230.3072ms.
+2024-12-05 16:31:38.866 +01:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Microservice_RatingService.Application.Dtos.RatingReadDto, Microservice_RatingService, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-12-05 16:31:38.876 +01:00 [INF] Executed action Microservice_RatingService.Application.Controllers.RatingController.GetRatings (Microservice_RatingService) in 361.3726ms
+2024-12-05 16:31:38.877 +01:00 [INF] Executed endpoint 'Microservice_RatingService.Application.Controllers.RatingController.GetRatings (Microservice_RatingService)'
+2024-12-05 16:31:38.879 +01:00 [INF] HTTP GET /api/Rating responded 200 in 407.0153 ms
+2024-12-05 16:31:38.884 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7109/api/Rating - 200 null application/json; charset=utf-8 415.8015ms
+2024-12-05 16:32:49.862 +01:00 [INF] Request starting HTTP/2 POST https://localhost:7109/api/Rating - application/json 353
+2024-12-05 16:32:49.871 +01:00 [INF] Failed to validate the token.
+System.ArgumentException: IDX14102: Unable to decode the header '[PII of type 'Microsoft.IdentityModel.Logging.SecurityArtifact' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]' as Base64Url encoded string.
+ ---> System.FormatException: IDX10400: Unable to decode: '[PII of type 'System.String' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]' as Base64url encoded string.
+   at Microsoft.IdentityModel.Tokens.Base64UrlEncoding.ValidateAndGetOutputSize(ReadOnlySpan`1 strSpan, Int32 offset, Int32 length)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.CreateClaimSet(ReadOnlySpan`1 strSpan, Int32 startIndex, Int32 length, Boolean createHeaderClaimSet)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.ReadToken(ReadOnlyMemory`1 encodedTokenMemory)
+   --- End of inner exception stack trace ---
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.ReadToken(ReadOnlyMemory`1 encodedTokenMemory)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken..ctor(String jwtEncodedString)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ReadToken(String token, TokenValidationParameters validationParameters)
+2024-12-05 16:32:49.875 +01:00 [INF] Bearer was not authenticated. Failure message: IDX14102: Unable to decode the header '[PII of type 'Microsoft.IdentityModel.Logging.SecurityArtifact' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]' as Base64Url encoded string.
+2024-12-05 16:32:49.879 +01:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (Admin)
+2024-12-05 16:32:49.884 +01:00 [INF] AuthenticationScheme: Bearer was challenged.
+2024-12-05 16:32:49.885 +01:00 [INF] HTTP POST /api/Rating responded 401 in 15.6686 ms
+2024-12-05 16:32:49.886 +01:00 [INF] Request finished HTTP/2 POST https://localhost:7109/api/Rating - 401 0 null 24.1867ms
+2024-12-05 16:33:02.306 +01:00 [INF] Request starting HTTP/2 POST https://localhost:7109/api/Rating - application/json 353
+2024-12-05 16:33:02.308 +01:00 [INF] Failed to validate the token.
+System.ArgumentException: IDX14102: Unable to decode the header '[PII of type 'Microsoft.IdentityModel.Logging.SecurityArtifact' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]' as Base64Url encoded string.
+ ---> System.FormatException: IDX10400: Unable to decode: '[PII of type 'System.String' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]' as Base64url encoded string.
+   at Microsoft.IdentityModel.Tokens.Base64UrlEncoding.ValidateAndGetOutputSize(ReadOnlySpan`1 strSpan, Int32 offset, Int32 length)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.CreateClaimSet(ReadOnlySpan`1 strSpan, Int32 startIndex, Int32 length, Boolean createHeaderClaimSet)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.ReadToken(ReadOnlyMemory`1 encodedTokenMemory)
+   --- End of inner exception stack trace ---
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.ReadToken(ReadOnlyMemory`1 encodedTokenMemory)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken..ctor(String jwtEncodedString)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ReadToken(String token, TokenValidationParameters validationParameters)
+2024-12-05 16:33:02.312 +01:00 [INF] Bearer was not authenticated. Failure message: IDX14102: Unable to decode the header '[PII of type 'Microsoft.IdentityModel.Logging.SecurityArtifact' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]' as Base64Url encoded string.
+2024-12-05 16:33:02.316 +01:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (Admin)
+2024-12-05 16:33:02.317 +01:00 [INF] AuthenticationScheme: Bearer was challenged.
+2024-12-05 16:33:02.318 +01:00 [INF] HTTP POST /api/Rating responded 401 in 10.2824 ms
+2024-12-05 16:33:02.320 +01:00 [INF] Request finished HTTP/2 POST https://localhost:7109/api/Rating - 401 0 null 14.736ms
+2024-12-05 16:33:51.510 +01:00 [INF] Request starting HTTP/2 POST https://localhost:7109/api/Auth/login - application/json 52
+2024-12-05 16:33:51.516 +01:00 [INF] Failed to validate the token.
+System.ArgumentException: IDX14102: Unable to decode the header '[PII of type 'Microsoft.IdentityModel.Logging.SecurityArtifact' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]' as Base64Url encoded string.
+ ---> System.FormatException: IDX10400: Unable to decode: '[PII of type 'System.String' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]' as Base64url encoded string.
+   at Microsoft.IdentityModel.Tokens.Base64UrlEncoding.ValidateAndGetOutputSize(ReadOnlySpan`1 strSpan, Int32 offset, Int32 length)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.CreateClaimSet(ReadOnlySpan`1 strSpan, Int32 startIndex, Int32 length, Boolean createHeaderClaimSet)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.ReadToken(ReadOnlyMemory`1 encodedTokenMemory)
+   --- End of inner exception stack trace ---
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.ReadToken(ReadOnlyMemory`1 encodedTokenMemory)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken..ctor(String jwtEncodedString)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ReadToken(String token, TokenValidationParameters validationParameters)
+2024-12-05 16:33:51.531 +01:00 [INF] Bearer was not authenticated. Failure message: IDX14102: Unable to decode the header '[PII of type 'Microsoft.IdentityModel.Logging.SecurityArtifact' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]' as Base64Url encoded string.
+2024-12-05 16:33:51.532 +01:00 [INF] Executing endpoint 'Microservice_RatingService.Application.Controllers.AuthController.Login (Microservice_RatingService)'
+2024-12-05 16:33:51.534 +01:00 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Login(LoginRequest) on controller Microservice_RatingService.Application.Controllers.AuthController (Microservice_RatingService).
+2024-12-05 16:33:51.543 +01:00 [INF] Executing action method Microservice_RatingService.Application.Controllers.AuthController.Login (Microservice_RatingService) - Validation state: "Valid"
+2024-12-05 16:33:51.544 +01:00 [INF] Login attempt for user: admin
+2024-12-05 16:33:51.546 +01:00 [INF] Executed action method Microservice_RatingService.Application.Controllers.AuthController.Login (Microservice_RatingService), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 1.6549ms.
+2024-12-05 16:33:51.547 +01:00 [INF] Executing OkObjectResult, writing value of type 'Microservice_RatingService.Application.Controllers.AuthController+LoginResponse'.
+2024-12-05 16:33:51.549 +01:00 [INF] Executed action Microservice_RatingService.Application.Controllers.AuthController.Login (Microservice_RatingService) in 7.6257ms
+2024-12-05 16:33:51.555 +01:00 [INF] Executed endpoint 'Microservice_RatingService.Application.Controllers.AuthController.Login (Microservice_RatingService)'
+2024-12-05 16:33:51.558 +01:00 [INF] HTTP POST /api/Auth/login responded 200 in 41.8516 ms
+2024-12-05 16:33:51.560 +01:00 [INF] Request finished HTTP/2 POST https://localhost:7109/api/Auth/login - 200 null application/json; charset=utf-8 50.4578ms
+2024-12-05 16:34:34.111 +01:00 [INF] Request starting HTTP/2 POST https://localhost:7109/api/Rating - application/json 353
+2024-12-05 16:34:34.147 +01:00 [INF] Executing endpoint 'Microservice_RatingService.Application.Controllers.RatingController.CreateRating (Microservice_RatingService)'
+2024-12-05 16:34:34.151 +01:00 [INF] Route matched with {action = "CreateRating", controller = "Rating"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] CreateRating(Microservice_RatingService.Application.Dtos.RatingCreateDto) on controller Microservice_RatingService.Application.Controllers.RatingController (Microservice_RatingService).
+2024-12-05 16:34:34.200 +01:00 [INF] Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2024-12-05 16:34:34.213 +01:00 [INF] Executed action Microservice_RatingService.Application.Controllers.RatingController.CreateRating (Microservice_RatingService) in 60.9034ms
+2024-12-05 16:34:34.214 +01:00 [INF] Executed endpoint 'Microservice_RatingService.Application.Controllers.RatingController.CreateRating (Microservice_RatingService)'
+2024-12-05 16:34:34.215 +01:00 [INF] HTTP POST /api/Rating responded 400 in 98.7418 ms
+2024-12-05 16:34:34.216 +01:00 [INF] Request finished HTTP/2 POST https://localhost:7109/api/Rating - 400 null application/json; charset=utf-8 105.2651ms
+2024-12-05 16:34:58.473 +01:00 [INF] Request starting HTTP/2 POST https://localhost:7109/api/Rating - application/json 353
+2024-12-05 16:34:58.507 +01:00 [INF] Executing endpoint 'Microservice_RatingService.Application.Controllers.RatingController.CreateRating (Microservice_RatingService)'
+2024-12-05 16:34:58.508 +01:00 [INF] Route matched with {action = "CreateRating", controller = "Rating"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] CreateRating(Microservice_RatingService.Application.Dtos.RatingCreateDto) on controller Microservice_RatingService.Application.Controllers.RatingController (Microservice_RatingService).
+2024-12-05 16:34:58.513 +01:00 [INF] Executing action method Microservice_RatingService.Application.Controllers.RatingController.CreateRating (Microservice_RatingService) - Validation state: "Valid"
+2024-12-05 16:34:58.517 +01:00 [INF] Creating new rating {"RatingDate":"2024-12-05T15:31:46.8320000Z","Grade":5,"Comment":"good deal","Title":"plus","Status":"Pending","BuyerId":"8662bf50-81e9-4eb8-b0e4-c65439c37487","SellerId":"6bd00e70-c01f-4535-ab06-6b48a593cfbc","PurchaseId":"867bbed2-2622-404e-9c59-0ab6f4cf864e","PurchaseDate":"2024-11-05T15:31:46.8320000Z","PurchasePrice":200,"$type":"RatingCreateDto"}
+2024-12-05 16:34:58.629 +01:00 [INF] Executed DbCommand (29ms) [Parameters=[@__ratingCreateDto_BuyerId_0='8662bf50-81e9-4eb8-b0e4-c65439c37487'], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [rating] AS [r]
+        WHERE [r].[BuyerId] = @__ratingCreateDto_BuyerId_0) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2024-12-05 16:34:58.641 +01:00 [INF] Executed DbCommand (3ms) [Parameters=[@__ratingCreateDto_SellerId_0='6bd00e70-c01f-4535-ab06-6b48a593cfbc'], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [rating] AS [r]
+        WHERE [r].[SellerId] = @__ratingCreateDto_SellerId_0) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2024-12-05 16:34:58.754 +01:00 [INF] Executed DbCommand (15ms) [Parameters=[@p0='b4a4e927-d453-4464-aabb-1d0669a2436c', @p1='good deal' (Nullable = false) (Size = 50), @p2='5', @p3='2024-12-05T15:31:46.8320000Z', @p4='1', @p5='plus' (Nullable = false) (Size = 20), @p6='defaultBuyer@email.com' (Nullable = false) (Size = 4000), @p7='8662bf50-81e9-4eb8-b0e4-c65439c37487', @p8='defaultBuyerUsername' (Nullable = false) (Size = 50), @p9='2024-11-05T15:31:46.8320000Z', @p10='867bbed2-2622-404e-9c59-0ab6f4cf864e', @p11='200' (Precision = 18) (Scale = 2), @p12='defaultSeller@email.com' (Nullable = false) (Size = 4000), @p13='6bd00e70-c01f-4535-ab06-6b48a593cfbc', @p14='defaultSellerUsername' (Nullable = false) (Size = 50)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [rating] ([RatingId], [Comment], [Grade], [RatingDate], [Status], [Title], [BuyerEmail], [BuyerId], [BuyerUsername], [PurchaseDate], [PurchaseId], [PurchasePrice], [SellerEmail], [SellerId], [SellerUsername])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11, @p12, @p13, @p14);
+2024-12-05 16:34:58.771 +01:00 [INF] Created rating with ID: "b4a4e927-d453-4464-aabb-1d0669a2436c"
+2024-12-05 16:34:58.773 +01:00 [INF] Rating created successfully with ID: "b4a4e927-d453-4464-aabb-1d0669a2436c"
+2024-12-05 16:34:58.776 +01:00 [INF] Executed action method Microservice_RatingService.Application.Controllers.RatingController.CreateRating (Microservice_RatingService), returned result Microsoft.AspNetCore.Mvc.CreatedAtActionResult in 261.8479ms.
+2024-12-05 16:34:58.777 +01:00 [INF] Executing CreatedAtActionResult, writing value of type 'Microservice_RatingService.Application.Dtos.RatingReadDto'.
+2024-12-05 16:34:58.794 +01:00 [INF] Executed action Microservice_RatingService.Application.Controllers.RatingController.CreateRating (Microservice_RatingService) in 283.5658ms
+2024-12-05 16:34:58.795 +01:00 [INF] Executed endpoint 'Microservice_RatingService.Application.Controllers.RatingController.CreateRating (Microservice_RatingService)'
+2024-12-05 16:34:58.796 +01:00 [INF] HTTP POST /api/Rating responded 201 in 289.3122 ms
+2024-12-05 16:34:58.798 +01:00 [INF] Request finished HTTP/2 POST https://localhost:7109/api/Rating - 201 null application/json; charset=utf-8 324.825ms
+2024-12-05 16:35:08.087 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7109/api/Rating - null null
+2024-12-05 16:35:08.090 +01:00 [INF] Executing endpoint 'Microservice_RatingService.Application.Controllers.RatingController.GetRatings (Microservice_RatingService)'
+2024-12-05 16:35:08.091 +01:00 [INF] Route matched with {action = "GetRatings", controller = "Rating"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetRatings() on controller Microservice_RatingService.Application.Controllers.RatingController (Microservice_RatingService).
+2024-12-05 16:35:08.093 +01:00 [INF] Executing action method Microservice_RatingService.Application.Controllers.RatingController.GetRatings (Microservice_RatingService) - Validation state: "Valid"
+2024-12-05 16:35:08.094 +01:00 [INF] Retrieving all ratings
+2024-12-05 16:35:08.100 +01:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [r].[RatingId], [r].[Comment], [r].[Grade], [r].[RatingDate], [r].[Status], [r].[Title], [r].[BuyerEmail], [r].[BuyerId], [r].[BuyerUsername], [r].[PurchaseDate], [r].[PurchaseId], [r].[PurchasePrice], [r].[SellerEmail], [r].[SellerId], [r].[SellerUsername]
+FROM [rating] AS [r]
+2024-12-05 16:35:08.111 +01:00 [INF] Retrieved 4 ratings from database
+2024-12-05 16:35:08.112 +01:00 [INF] Retrieved 4 ratings
+2024-12-05 16:35:08.113 +01:00 [INF] Executed action method Microservice_RatingService.Application.Controllers.RatingController.GetRatings (Microservice_RatingService), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 18.6628ms.
+2024-12-05 16:35:08.114 +01:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Microservice_RatingService.Application.Dtos.RatingReadDto, Microservice_RatingService, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-12-05 16:35:08.116 +01:00 [INF] Executed action Microservice_RatingService.Application.Controllers.RatingController.GetRatings (Microservice_RatingService) in 22.8621ms
+2024-12-05 16:35:08.117 +01:00 [INF] Executed endpoint 'Microservice_RatingService.Application.Controllers.RatingController.GetRatings (Microservice_RatingService)'
+2024-12-05 16:35:08.118 +01:00 [INF] HTTP GET /api/Rating responded 200 in 28.3940 ms
+2024-12-05 16:35:08.120 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7109/api/Rating - 200 null application/json; charset=utf-8 33.424ms
+2024-12-05 16:35:20.168 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7109/api/Rating/b4a4e927-d453-4464-aabb-1d0669a2436c - null null
+2024-12-05 16:35:20.171 +01:00 [INF] Executing endpoint 'Microservice_RatingService.Application.Controllers.RatingController.GetRatingById (Microservice_RatingService)'
+2024-12-05 16:35:20.175 +01:00 [INF] Route matched with {action = "GetRatingById", controller = "Rating"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetRatingById(System.Guid) on controller Microservice_RatingService.Application.Controllers.RatingController (Microservice_RatingService).
+2024-12-05 16:35:20.178 +01:00 [INF] Executing action method Microservice_RatingService.Application.Controllers.RatingController.GetRatingById (Microservice_RatingService) - Validation state: "Valid"
+2024-12-05 16:35:20.180 +01:00 [INF] Retrieving rating with ID: "b4a4e927-d453-4464-aabb-1d0669a2436c"
+2024-12-05 16:35:20.230 +01:00 [INF] Executed DbCommand (2ms) [Parameters=[@__id_0='b4a4e927-d453-4464-aabb-1d0669a2436c'], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [r].[RatingId], [r].[Comment], [r].[Grade], [r].[RatingDate], [r].[Status], [r].[Title], [r].[BuyerEmail], [r].[BuyerId], [r].[BuyerUsername], [r].[PurchaseDate], [r].[PurchaseId], [r].[PurchasePrice], [r].[SellerEmail], [r].[SellerId], [r].[SellerUsername]
+FROM [rating] AS [r]
+WHERE [r].[RatingId] = @__id_0
+2024-12-05 16:35:20.236 +01:00 [INF] Retrieved rating with ID: "b4a4e927-d453-4464-aabb-1d0669a2436c"
+2024-12-05 16:35:20.237 +01:00 [INF] Executed action method Microservice_RatingService.Application.Controllers.RatingController.GetRatingById (Microservice_RatingService), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 57.8319ms.
+2024-12-05 16:35:20.239 +01:00 [INF] Executing OkObjectResult, writing value of type 'Microservice_RatingService.Application.Dtos.RatingReadDto'.
+2024-12-05 16:35:20.240 +01:00 [INF] Executed action Microservice_RatingService.Application.Controllers.RatingController.GetRatingById (Microservice_RatingService) in 62.8156ms
+2024-12-05 16:35:20.241 +01:00 [INF] Executed endpoint 'Microservice_RatingService.Application.Controllers.RatingController.GetRatingById (Microservice_RatingService)'
+2024-12-05 16:35:20.242 +01:00 [INF] HTTP GET /api/Rating/b4a4e927-d453-4464-aabb-1d0669a2436c responded 200 in 71.3602 ms
+2024-12-05 16:35:20.244 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7109/api/Rating/b4a4e927-d453-4464-aabb-1d0669a2436c - 200 null application/json; charset=utf-8 75.8574ms
