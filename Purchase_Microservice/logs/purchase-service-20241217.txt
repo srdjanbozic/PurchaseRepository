@@ -1,0 +1,940 @@
+2024-12-17 18:50:44.093 +01:00 [INF] Starting Rating Service
+2024-12-17 18:50:45.123 +01:00 [WRN] Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data; this mode should only be enabled during development.
+2024-12-17 18:50:45.912 +01:00 [INF] Executed DbCommand (20ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2024-12-17 18:50:45.932 +01:00 [INF] Acquiring an exclusive lock for migration application. See https://aka.ms/efcore-docs-migrations-lock for more information if this takes too long.
+2024-12-17 18:50:45.988 +01:00 [INF] Executed DbCommand (20ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+DECLARE @result int;
+EXEC @result = sp_getapplock @Resource = '__EFMigrationsLock', @LockOwner = 'Session', @LockMode = 'Exclusive';
+SELECT @result
+2024-12-17 18:50:46.066 +01:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+IF OBJECT_ID(N'[__EFMigrationsHistory]') IS NULL
+BEGIN
+    CREATE TABLE [__EFMigrationsHistory] (
+        [MigrationId] nvarchar(150) NOT NULL,
+        [ProductVersion] nvarchar(32) NOT NULL,
+        CONSTRAINT [PK___EFMigrationsHistory] PRIMARY KEY ([MigrationId])
+    );
+END;
+2024-12-17 18:50:46.085 +01:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2024-12-17 18:50:46.090 +01:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2024-12-17 18:50:46.106 +01:00 [INF] Executed DbCommand (9ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2024-12-17 18:50:46.122 +01:00 [INF] No migrations were applied. The database is already up to date.
+2024-12-17 18:50:46.133 +01:00 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+DECLARE @result int;
+EXEC @result = sp_releaseapplock @Resource = '__EFMigrationsLock', @LockOwner = 'Session';
+SELECT @result
+2024-12-17 18:50:46.357 +01:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [purchases] AS [p]) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2024-12-17 18:50:46.388 +01:00 [INF] User profile is available. Using 'C:\Users\Altos\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-12-17 18:50:46.720 +01:00 [INF] Now listening on: https://localhost:7237
+2024-12-17 18:50:46.721 +01:00 [INF] Now listening on: http://localhost:5247
+2024-12-17 18:50:46.846 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-12-17 18:50:46.847 +01:00 [INF] Hosting environment: Development
+2024-12-17 18:50:46.847 +01:00 [INF] Content root path: C:\Users\Altos\source\repos\Purchase_Microservice\Purchase_Microservice\Purchase_Microservice
+2024-12-17 18:51:21.967 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7237/ - null null
+2024-12-17 18:51:22.217 +01:00 [INF] HTTP GET / responded 404 in 91.1564 ms
+2024-12-17 18:51:22.225 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7237/ - 404 0 null 263.8946ms
+2024-12-17 18:51:22.230 +01:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7237/, Response status code: 404
+2024-12-17 18:52:30.942 +01:00 [INF] Starting Rating Service
+2024-12-17 18:52:31.601 +01:00 [WRN] Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data; this mode should only be enabled during development.
+2024-12-17 18:52:32.105 +01:00 [INF] Executed DbCommand (18ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2024-12-17 18:52:32.121 +01:00 [INF] Acquiring an exclusive lock for migration application. See https://aka.ms/efcore-docs-migrations-lock for more information if this takes too long.
+2024-12-17 18:52:32.138 +01:00 [INF] Executed DbCommand (13ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+DECLARE @result int;
+EXEC @result = sp_getapplock @Resource = '__EFMigrationsLock', @LockOwner = 'Session', @LockMode = 'Exclusive';
+SELECT @result
+2024-12-17 18:52:32.187 +01:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+IF OBJECT_ID(N'[__EFMigrationsHistory]') IS NULL
+BEGIN
+    CREATE TABLE [__EFMigrationsHistory] (
+        [MigrationId] nvarchar(150) NOT NULL,
+        [ProductVersion] nvarchar(32) NOT NULL,
+        CONSTRAINT [PK___EFMigrationsHistory] PRIMARY KEY ([MigrationId])
+    );
+END;
+2024-12-17 18:52:32.200 +01:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2024-12-17 18:52:32.203 +01:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2024-12-17 18:52:32.213 +01:00 [INF] Executed DbCommand (6ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2024-12-17 18:52:32.226 +01:00 [INF] No migrations were applied. The database is already up to date.
+2024-12-17 18:52:32.233 +01:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+DECLARE @result int;
+EXEC @result = sp_releaseapplock @Resource = '__EFMigrationsLock', @LockOwner = 'Session';
+SELECT @result
+2024-12-17 18:52:32.410 +01:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [purchases] AS [p]) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2024-12-17 18:52:32.436 +01:00 [INF] User profile is available. Using 'C:\Users\Altos\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-12-17 18:52:32.603 +01:00 [INF] Now listening on: https://localhost:7237
+2024-12-17 18:52:32.604 +01:00 [INF] Now listening on: http://localhost:5247
+2024-12-17 18:52:32.650 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-12-17 18:52:32.651 +01:00 [INF] Hosting environment: Development
+2024-12-17 18:52:32.651 +01:00 [INF] Content root path: C:\Users\Altos\source\repos\Purchase_Microservice\Purchase_Microservice\Purchase_Microservice
+2024-12-17 18:53:40.552 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5247/ - null null
+2024-12-17 18:53:40.659 +01:00 [INF] HTTP GET / responded 307 in 2.7641 ms
+2024-12-17 18:53:40.678 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5247/ - 307 0 null 130.2221ms
+2024-12-17 18:53:40.734 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7237/ - null null
+2024-12-17 18:53:40.802 +01:00 [INF] HTTP GET / responded 404 in 58.3708 ms
+2024-12-17 18:53:40.805 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7237/ - 404 0 null 70.4295ms
+2024-12-17 18:53:40.815 +01:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7237/, Response status code: 404
+2024-12-17 18:53:56.977 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7237/swagger - null null
+2024-12-17 18:53:56.983 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7237/swagger - 301 0 null 5.8066ms
+2024-12-17 18:53:56.987 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7237/swagger/index.html - null null
+2024-12-17 18:53:57.079 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7237/swagger/index.html - 200 null text/html;charset=utf-8 92.3827ms
+2024-12-17 18:53:57.160 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7237/swagger/swagger-ui.css - null null
+2024-12-17 18:53:57.196 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7237/swagger/index.css - null null
+2024-12-17 18:53:57.196 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7237/swagger/swagger-ui-bundle.js - null null
+2024-12-17 18:53:57.201 +01:00 [INF] Sending file. Request path: '/index.css'. Physical path: 'N/A'
+2024-12-17 18:53:57.198 +01:00 [INF] Sending file. Request path: '/swagger-ui.css'. Physical path: 'N/A'
+2024-12-17 18:53:57.327 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7237/swagger/index.css - 200 202 text/css 131.0551ms
+2024-12-17 18:53:57.232 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7237/swagger/swagger-ui-standalone-preset.js - null null
+2024-12-17 18:53:57.232 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7237/swagger/index.js - null null
+2024-12-17 18:53:57.293 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7237/_framework/aspnetcore-browser-refresh.js - null null
+2024-12-17 18:53:57.343 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7237/swagger/swagger-ui.css - 200 152035 text/css 182.6131ms
+2024-12-17 18:53:57.356 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7237/swagger/index.js - 200 null application/javascript;charset=utf-8 123.6291ms
+2024-12-17 18:53:57.356 +01:00 [INF] Sending file. Request path: '/swagger-ui-standalone-preset.js'. Physical path: 'N/A'
+2024-12-17 18:53:57.366 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7237/_framework/aspnetcore-browser-refresh.js - 200 13794 application/javascript; charset=utf-8 99.602ms
+2024-12-17 18:53:57.374 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7237/swagger/swagger-ui-standalone-preset.js - 200 230007 text/javascript 141.8765ms
+2024-12-17 18:53:57.380 +01:00 [INF] Sending file. Request path: '/swagger-ui-bundle.js'. Physical path: 'N/A'
+2024-12-17 18:53:57.386 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7237/swagger/swagger-ui-bundle.js - 200 1426001 text/javascript 189.6005ms
+2024-12-17 18:53:57.430 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7237/_vs/browserLink - null null
+2024-12-17 18:53:57.472 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7237/_vs/browserLink - 200 null text/javascript; charset=UTF-8 42.8605ms
+2024-12-17 18:53:57.502 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7237/swagger/favicon-32x32.png - null null
+2024-12-17 18:53:57.504 +01:00 [INF] Sending file. Request path: '/favicon-32x32.png'. Physical path: 'N/A'
+2024-12-17 18:53:57.506 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7237/swagger/favicon-32x32.png - 200 628 image/png 3.7894ms
+2024-12-17 18:53:58.260 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7237/swagger/v1/swagger.json - null null
+2024-12-17 18:53:58.358 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7237/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 98.2039ms
+2024-12-17 18:54:19.023 +01:00 [INF] Request starting HTTP/2 POST https://localhost:7237/api/Auth/login - application/json 52
+2024-12-17 18:54:19.154 +01:00 [INF] Executing endpoint 'Microservice_RatingService.Application.Controllers.AuthController.Login (Purchase_Microservice)'
+2024-12-17 18:54:19.177 +01:00 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Login(LoginRequest) on controller Microservice_RatingService.Application.Controllers.AuthController (Purchase_Microservice).
+2024-12-17 18:54:19.230 +01:00 [INF] Executing action method Microservice_RatingService.Application.Controllers.AuthController.Login (Purchase_Microservice) - Validation state: "Valid"
+2024-12-17 18:54:19.232 +01:00 [INF] Login attempt for user: admin
+2024-12-17 18:54:19.260 +01:00 [INF] Executed action method Microservice_RatingService.Application.Controllers.AuthController.Login (Purchase_Microservice), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 25.8248ms.
+2024-12-17 18:54:19.270 +01:00 [INF] Executing OkObjectResult, writing value of type 'Microservice_RatingService.Application.Controllers.AuthController+LoginResponse'.
+2024-12-17 18:54:19.282 +01:00 [INF] Executed action Microservice_RatingService.Application.Controllers.AuthController.Login (Purchase_Microservice) in 98.6803ms
+2024-12-17 18:54:19.283 +01:00 [INF] Executed endpoint 'Microservice_RatingService.Application.Controllers.AuthController.Login (Purchase_Microservice)'
+2024-12-17 18:54:19.285 +01:00 [INF] HTTP POST /api/Auth/login responded 200 in 225.1652 ms
+2024-12-17 18:54:19.286 +01:00 [INF] Request finished HTTP/2 POST https://localhost:7237/api/Auth/login - 200 null application/json; charset=utf-8 263.8246ms
+2024-12-17 18:55:09.044 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7237/api/Purchase - null null
+2024-12-17 18:55:09.091 +01:00 [INF] Executing endpoint 'Purchase_Microservice.Application.Controllers.PurchaseController.GetPurchases (Purchase_Microservice)'
+2024-12-17 18:55:09.099 +01:00 [INF] Route matched with {action = "GetPurchases", controller = "Purchase"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetPurchases() on controller Purchase_Microservice.Application.Controllers.PurchaseController (Purchase_Microservice).
+2024-12-17 18:55:09.195 +01:00 [INF] Executing action method Purchase_Microservice.Application.Controllers.PurchaseController.GetPurchases (Purchase_Microservice) - Validation state: "Valid"
+2024-12-17 18:55:09.198 +01:00 [INF] Retrieving all purchases
+2024-12-17 18:55:09.344 +01:00 [INF] Executed DbCommand (14ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[PurchaseId], [p].[Currency], [p].[PurchaseDate], [p].[PurchasePrice], [p].[BuyerEmail], [p].[BuyerId], [p].[BuyerUsername], [p].[DeliveryId], [p].[DeliveryPrice], [p].[PostDate], [p].[OwnerEmail], [p].[OwnerId], [p].[OwnerName], [p].[OwnerPhone], [p].[PostId], [p].[Post_PostTitle], [p].[PostPrice]
+FROM [purchases] AS [p]
+2024-12-17 18:55:09.435 +01:00 [INF] Retrieved 1 purchases from database
+2024-12-17 18:55:09.449 +01:00 [INF] Retrieved 1 purchases
+2024-12-17 18:55:09.451 +01:00 [INF] Executed action method Purchase_Microservice.Application.Controllers.PurchaseController.GetPurchases (Purchase_Microservice), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 254.2493ms.
+2024-12-17 18:55:09.453 +01:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Purchase_Microservice.Application.Dtos.PurchaseReadDto, Purchase_Microservice, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-12-17 18:55:09.465 +01:00 [INF] Executed action Purchase_Microservice.Application.Controllers.PurchaseController.GetPurchases (Purchase_Microservice) in 364.0769ms
+2024-12-17 18:55:09.466 +01:00 [INF] Executed endpoint 'Purchase_Microservice.Application.Controllers.PurchaseController.GetPurchases (Purchase_Microservice)'
+2024-12-17 18:55:09.468 +01:00 [INF] HTTP GET /api/Purchase responded 200 in 417.8070 ms
+2024-12-17 18:55:09.474 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7237/api/Purchase - 200 null application/json; charset=utf-8 429.6666ms
+2024-12-17 18:55:42.882 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7237/api/Purchase/64d9f24e-a9f0-4a23-80a6-1e5561dcdcf1 - null null
+2024-12-17 18:55:42.885 +01:00 [INF] Executing endpoint 'Purchase_Microservice.Application.Controllers.PurchaseController.GetPurchaseById (Purchase_Microservice)'
+2024-12-17 18:55:42.891 +01:00 [INF] Route matched with {action = "GetPurchaseById", controller = "Purchase"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetPurchaseById(System.Guid) on controller Purchase_Microservice.Application.Controllers.PurchaseController (Purchase_Microservice).
+2024-12-17 18:55:42.898 +01:00 [INF] Executing action method Purchase_Microservice.Application.Controllers.PurchaseController.GetPurchaseById (Purchase_Microservice) - Validation state: "Valid"
+2024-12-17 18:55:42.900 +01:00 [INF] Retrieving purchase with ID: "64d9f24e-a9f0-4a23-80a6-1e5561dcdcf1"
+2024-12-17 18:55:43.030 +01:00 [INF] Executed DbCommand (31ms) [Parameters=[@__id_0='64d9f24e-a9f0-4a23-80a6-1e5561dcdcf1'], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [p].[PurchaseId], [p].[Currency], [p].[PurchaseDate], [p].[PurchasePrice], [p].[BuyerEmail], [p].[BuyerId], [p].[BuyerUsername], [p].[DeliveryId], [p].[DeliveryPrice], [p].[PostDate], [p].[OwnerEmail], [p].[OwnerId], [p].[OwnerName], [p].[OwnerPhone], [p].[PostId], [p].[Post_PostTitle], [p].[PostPrice]
+FROM [purchases] AS [p]
+WHERE [p].[PurchaseId] = @__id_0
+2024-12-17 18:55:43.036 +01:00 [INF] Retrieved purchase with ID: "64d9f24e-a9f0-4a23-80a6-1e5561dcdcf1"
+2024-12-17 18:55:43.039 +01:00 [INF] Executed action method Purchase_Microservice.Application.Controllers.PurchaseController.GetPurchaseById (Purchase_Microservice), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 139.1238ms.
+2024-12-17 18:55:43.040 +01:00 [INF] Executing OkObjectResult, writing value of type 'Purchase_Microservice.Application.Dtos.PurchaseReadDto'.
+2024-12-17 18:55:43.041 +01:00 [INF] Executed action Purchase_Microservice.Application.Controllers.PurchaseController.GetPurchaseById (Purchase_Microservice) in 148.3857ms
+2024-12-17 18:55:43.042 +01:00 [INF] Executed endpoint 'Purchase_Microservice.Application.Controllers.PurchaseController.GetPurchaseById (Purchase_Microservice)'
+2024-12-17 18:55:43.043 +01:00 [INF] HTTP GET /api/Purchase/64d9f24e-a9f0-4a23-80a6-1e5561dcdcf1 responded 200 in 159.1054 ms
+2024-12-17 18:55:43.045 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7237/api/Purchase/64d9f24e-a9f0-4a23-80a6-1e5561dcdcf1 - 200 null application/json; charset=utf-8 163.7272ms
+2024-12-17 18:56:04.130 +01:00 [INF] Request starting HTTP/2 PUT https://localhost:7237/api/Purchase/64d9f24e-a9f0-4a23-80a6-1e5561dcdcf1 - application/json 72
+2024-12-17 18:56:04.139 +01:00 [INF] Executing endpoint 'Purchase_Microservice.Application.Controllers.PurchaseController.UpdatePurchase (Purchase_Microservice)'
+2024-12-17 18:56:04.142 +01:00 [INF] Route matched with {action = "UpdatePurchase", controller = "Purchase"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] UpdatePurchase(System.Guid, Purchase_Microservice.Application.Dtos.PurchaseUpdateDto) on controller Purchase_Microservice.Application.Controllers.PurchaseController (Purchase_Microservice).
+2024-12-17 18:56:04.173 +01:00 [INF] Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2024-12-17 18:56:04.185 +01:00 [INF] Executed action Purchase_Microservice.Application.Controllers.PurchaseController.UpdatePurchase (Purchase_Microservice) in 41.2417ms
+2024-12-17 18:56:04.187 +01:00 [INF] Executed endpoint 'Purchase_Microservice.Application.Controllers.PurchaseController.UpdatePurchase (Purchase_Microservice)'
+2024-12-17 18:56:04.188 +01:00 [INF] HTTP PUT /api/Purchase/64d9f24e-a9f0-4a23-80a6-1e5561dcdcf1 responded 400 in 55.8621 ms
+2024-12-17 18:56:04.190 +01:00 [INF] Request finished HTTP/2 PUT https://localhost:7237/api/Purchase/64d9f24e-a9f0-4a23-80a6-1e5561dcdcf1 - 400 null application/json; charset=utf-8 61.2267ms
+2024-12-17 18:56:20.802 +01:00 [INF] Request starting HTTP/2 PUT https://localhost:7237/api/Purchase/64d9f24e-a9f0-4a23-80a6-1e5561dcdcf1 - application/json 70
+2024-12-17 18:56:20.805 +01:00 [INF] Executing endpoint 'Purchase_Microservice.Application.Controllers.PurchaseController.UpdatePurchase (Purchase_Microservice)'
+2024-12-17 18:56:20.807 +01:00 [INF] Route matched with {action = "UpdatePurchase", controller = "Purchase"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] UpdatePurchase(System.Guid, Purchase_Microservice.Application.Dtos.PurchaseUpdateDto) on controller Purchase_Microservice.Application.Controllers.PurchaseController (Purchase_Microservice).
+2024-12-17 18:56:20.810 +01:00 [INF] Executing action method Purchase_Microservice.Application.Controllers.PurchaseController.UpdatePurchase (Purchase_Microservice) - Validation state: "Valid"
+2024-12-17 18:56:20.813 +01:00 [INF] Updating purchase "64d9f24e-a9f0-4a23-80a6-1e5561dcdcf1" with {"PurchasePrice":120,"Currency":"dol","DeliveryPrice":10,"$type":"PurchaseUpdateDto"}
+2024-12-17 18:56:20.888 +01:00 [INF] Executed DbCommand (2ms) [Parameters=[@__p_0='64d9f24e-a9f0-4a23-80a6-1e5561dcdcf1' (Nullable = true)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [p].[PurchaseId], [p].[Currency], [p].[PurchaseDate], [p].[PurchasePrice], [p].[BuyerEmail], [p].[BuyerId], [p].[BuyerUsername], [p].[DeliveryId], [p].[DeliveryPrice], [p].[PostDate], [p].[OwnerEmail], [p].[OwnerId], [p].[OwnerName], [p].[OwnerPhone], [p].[PostId], [p].[Post_PostTitle], [p].[PostPrice]
+FROM [purchases] AS [p]
+WHERE [p].[PurchaseId] = @__p_0
+2024-12-17 18:56:20.981 +01:00 [INF] Executed DbCommand (10ms) [Parameters=[@p2='64d9f24e-a9f0-4a23-80a6-1e5561dcdcf1', @p0='dol' (Nullable = false) (Size = 4000), @p1='120' (Precision = 18) (Scale = 2)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [purchases] SET [Currency] = @p0, [PurchasePrice] = @p1
+OUTPUT 1
+WHERE [PurchaseId] = @p2;
+2024-12-17 18:56:20.994 +01:00 [INF] Updated purchase with ID: "64d9f24e-a9f0-4a23-80a6-1e5561dcdcf1"
+2024-12-17 18:56:20.996 +01:00 [INF] Purchase "64d9f24e-a9f0-4a23-80a6-1e5561dcdcf1" updated successfully
+2024-12-17 18:56:20.996 +01:00 [INF] Executed action method Purchase_Microservice.Application.Controllers.PurchaseController.UpdatePurchase (Purchase_Microservice), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 185.1225ms.
+2024-12-17 18:56:20.997 +01:00 [INF] Executing OkObjectResult, writing value of type 'Purchase_Microservice.Application.Dtos.PurchaseReadDto'.
+2024-12-17 18:56:20.998 +01:00 [INF] Executed action Purchase_Microservice.Application.Controllers.PurchaseController.UpdatePurchase (Purchase_Microservice) in 189.6497ms
+2024-12-17 18:56:20.999 +01:00 [INF] Executed endpoint 'Purchase_Microservice.Application.Controllers.PurchaseController.UpdatePurchase (Purchase_Microservice)'
+2024-12-17 18:56:21.000 +01:00 [INF] HTTP PUT /api/Purchase/64d9f24e-a9f0-4a23-80a6-1e5561dcdcf1 responded 200 in 195.6633 ms
+2024-12-17 18:56:21.002 +01:00 [INF] Request finished HTTP/2 PUT https://localhost:7237/api/Purchase/64d9f24e-a9f0-4a23-80a6-1e5561dcdcf1 - 200 null application/json; charset=utf-8 199.6039ms
+2024-12-17 18:56:43.927 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7237/api/Purchase - null null
+2024-12-17 18:56:43.932 +01:00 [INF] Executing endpoint 'Purchase_Microservice.Application.Controllers.PurchaseController.GetPurchases (Purchase_Microservice)'
+2024-12-17 18:56:43.933 +01:00 [INF] Route matched with {action = "GetPurchases", controller = "Purchase"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetPurchases() on controller Purchase_Microservice.Application.Controllers.PurchaseController (Purchase_Microservice).
+2024-12-17 18:56:43.935 +01:00 [INF] Executing action method Purchase_Microservice.Application.Controllers.PurchaseController.GetPurchases (Purchase_Microservice) - Validation state: "Valid"
+2024-12-17 18:56:43.936 +01:00 [INF] Retrieving all purchases
+2024-12-17 18:56:43.942 +01:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[PurchaseId], [p].[Currency], [p].[PurchaseDate], [p].[PurchasePrice], [p].[BuyerEmail], [p].[BuyerId], [p].[BuyerUsername], [p].[DeliveryId], [p].[DeliveryPrice], [p].[PostDate], [p].[OwnerEmail], [p].[OwnerId], [p].[OwnerName], [p].[OwnerPhone], [p].[PostId], [p].[Post_PostTitle], [p].[PostPrice]
+FROM [purchases] AS [p]
+2024-12-17 18:56:43.948 +01:00 [INF] Retrieved 1 purchases from database
+2024-12-17 18:56:43.948 +01:00 [INF] Retrieved 1 purchases
+2024-12-17 18:56:43.949 +01:00 [INF] Executed action method Purchase_Microservice.Application.Controllers.PurchaseController.GetPurchases (Purchase_Microservice), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 12.99ms.
+2024-12-17 18:56:43.951 +01:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Purchase_Microservice.Application.Dtos.PurchaseReadDto, Purchase_Microservice, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-12-17 18:56:43.952 +01:00 [INF] Executed action Purchase_Microservice.Application.Controllers.PurchaseController.GetPurchases (Purchase_Microservice) in 16.8086ms
+2024-12-17 18:56:43.953 +01:00 [INF] Executed endpoint 'Purchase_Microservice.Application.Controllers.PurchaseController.GetPurchases (Purchase_Microservice)'
+2024-12-17 18:56:43.954 +01:00 [INF] HTTP GET /api/Purchase responded 200 in 21.5535 ms
+2024-12-17 18:56:43.955 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7237/api/Purchase - 200 null application/json; charset=utf-8 28.8621ms
+2024-12-17 18:56:58.787 +01:00 [INF] Request starting HTTP/2 DELETE https://localhost:7237/api/Purchase/64d9f24e-a9f0-4a23-80a6-1e5561dcdcf1 - null null
+2024-12-17 18:56:58.798 +01:00 [INF] Executing endpoint 'Purchase_Microservice.Application.Controllers.PurchaseController.DeletePurchase (Purchase_Microservice)'
+2024-12-17 18:56:58.802 +01:00 [INF] Route matched with {action = "DeletePurchase", controller = "Purchase"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] DeletePurchase(System.Guid) on controller Purchase_Microservice.Application.Controllers.PurchaseController (Purchase_Microservice).
+2024-12-17 18:56:58.804 +01:00 [INF] Executing action method Purchase_Microservice.Application.Controllers.PurchaseController.DeletePurchase (Purchase_Microservice) - Validation state: "Valid"
+2024-12-17 18:56:58.805 +01:00 [INF] Deleting purchase with ID: "64d9f24e-a9f0-4a23-80a6-1e5561dcdcf1"
+2024-12-17 18:56:58.816 +01:00 [INF] Executed DbCommand (3ms) [Parameters=[@__p_0='64d9f24e-a9f0-4a23-80a6-1e5561dcdcf1' (Nullable = true)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [p].[PurchaseId], [p].[Currency], [p].[PurchaseDate], [p].[PurchasePrice], [p].[BuyerEmail], [p].[BuyerId], [p].[BuyerUsername], [p].[DeliveryId], [p].[DeliveryPrice], [p].[PostDate], [p].[OwnerEmail], [p].[OwnerId], [p].[OwnerName], [p].[OwnerPhone], [p].[PostId], [p].[Post_PostTitle], [p].[PostPrice]
+FROM [purchases] AS [p]
+WHERE [p].[PurchaseId] = @__p_0
+2024-12-17 18:56:58.845 +01:00 [INF] Executed DbCommand (5ms) [Parameters=[@p0='64d9f24e-a9f0-4a23-80a6-1e5561dcdcf1'], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+DELETE FROM [purchases]
+OUTPUT 1
+WHERE [PurchaseId] = @p0;
+2024-12-17 18:56:58.854 +01:00 [INF] Deleted purchase with ID: "64d9f24e-a9f0-4a23-80a6-1e5561dcdcf1"
+2024-12-17 18:56:58.855 +01:00 [INF] Purchase "64d9f24e-a9f0-4a23-80a6-1e5561dcdcf1" deleted successfully
+2024-12-17 18:56:58.855 +01:00 [INF] Executed action method Purchase_Microservice.Application.Controllers.PurchaseController.DeletePurchase (Purchase_Microservice), returned result Microsoft.AspNetCore.Mvc.NoContentResult in 50.6829ms.
+2024-12-17 18:56:58.858 +01:00 [INF] Executing StatusCodeResult, setting HTTP status code 204
+2024-12-17 18:56:58.859 +01:00 [INF] Executed action Purchase_Microservice.Application.Controllers.PurchaseController.DeletePurchase (Purchase_Microservice) in 55.3458ms
+2024-12-17 18:56:58.860 +01:00 [INF] Executed endpoint 'Purchase_Microservice.Application.Controllers.PurchaseController.DeletePurchase (Purchase_Microservice)'
+2024-12-17 18:56:58.861 +01:00 [INF] HTTP DELETE /api/Purchase/64d9f24e-a9f0-4a23-80a6-1e5561dcdcf1 responded 204 in 63.2699 ms
+2024-12-17 18:56:58.862 +01:00 [INF] Request finished HTTP/2 DELETE https://localhost:7237/api/Purchase/64d9f24e-a9f0-4a23-80a6-1e5561dcdcf1 - 204 null null 75.907ms
+2024-12-17 18:57:02.099 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7237/api/Purchase - null null
+2024-12-17 18:57:02.101 +01:00 [INF] Executing endpoint 'Purchase_Microservice.Application.Controllers.PurchaseController.GetPurchases (Purchase_Microservice)'
+2024-12-17 18:57:02.102 +01:00 [INF] Route matched with {action = "GetPurchases", controller = "Purchase"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetPurchases() on controller Purchase_Microservice.Application.Controllers.PurchaseController (Purchase_Microservice).
+2024-12-17 18:57:02.104 +01:00 [INF] Executing action method Purchase_Microservice.Application.Controllers.PurchaseController.GetPurchases (Purchase_Microservice) - Validation state: "Valid"
+2024-12-17 18:57:02.105 +01:00 [INF] Retrieving all purchases
+2024-12-17 18:57:02.110 +01:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[PurchaseId], [p].[Currency], [p].[PurchaseDate], [p].[PurchasePrice], [p].[BuyerEmail], [p].[BuyerId], [p].[BuyerUsername], [p].[DeliveryId], [p].[DeliveryPrice], [p].[PostDate], [p].[OwnerEmail], [p].[OwnerId], [p].[OwnerName], [p].[OwnerPhone], [p].[PostId], [p].[Post_PostTitle], [p].[PostPrice]
+FROM [purchases] AS [p]
+2024-12-17 18:57:02.113 +01:00 [INF] Retrieved 0 purchases from database
+2024-12-17 18:57:02.114 +01:00 [INF] Retrieved 0 purchases
+2024-12-17 18:57:02.115 +01:00 [INF] Executed action method Purchase_Microservice.Application.Controllers.PurchaseController.GetPurchases (Purchase_Microservice), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 9.4329ms.
+2024-12-17 18:57:02.116 +01:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Purchase_Microservice.Application.Dtos.PurchaseReadDto, Purchase_Microservice, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-12-17 18:57:02.117 +01:00 [INF] Executed action Purchase_Microservice.Application.Controllers.PurchaseController.GetPurchases (Purchase_Microservice) in 13.1586ms
+2024-12-17 18:57:02.118 +01:00 [INF] Executed endpoint 'Purchase_Microservice.Application.Controllers.PurchaseController.GetPurchases (Purchase_Microservice)'
+2024-12-17 18:57:02.119 +01:00 [INF] HTTP GET /api/Purchase responded 200 in 18.3534 ms
+2024-12-17 18:57:02.121 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7237/api/Purchase - 200 null application/json; charset=utf-8 22.6915ms
+2024-12-17 18:57:09.154 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7237/api/Purchase - null null
+2024-12-17 18:57:09.156 +01:00 [INF] Executing endpoint 'Purchase_Microservice.Application.Controllers.PurchaseController.GetPurchases (Purchase_Microservice)'
+2024-12-17 18:57:09.158 +01:00 [INF] Route matched with {action = "GetPurchases", controller = "Purchase"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetPurchases() on controller Purchase_Microservice.Application.Controllers.PurchaseController (Purchase_Microservice).
+2024-12-17 18:57:09.160 +01:00 [INF] Executing action method Purchase_Microservice.Application.Controllers.PurchaseController.GetPurchases (Purchase_Microservice) - Validation state: "Valid"
+2024-12-17 18:57:09.161 +01:00 [INF] Retrieving all purchases
+2024-12-17 18:57:09.165 +01:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[PurchaseId], [p].[Currency], [p].[PurchaseDate], [p].[PurchasePrice], [p].[BuyerEmail], [p].[BuyerId], [p].[BuyerUsername], [p].[DeliveryId], [p].[DeliveryPrice], [p].[PostDate], [p].[OwnerEmail], [p].[OwnerId], [p].[OwnerName], [p].[OwnerPhone], [p].[PostId], [p].[Post_PostTitle], [p].[PostPrice]
+FROM [purchases] AS [p]
+2024-12-17 18:57:09.169 +01:00 [INF] Retrieved 0 purchases from database
+2024-12-17 18:57:09.170 +01:00 [INF] Retrieved 0 purchases
+2024-12-17 18:57:09.170 +01:00 [INF] Executed action method Purchase_Microservice.Application.Controllers.PurchaseController.GetPurchases (Purchase_Microservice), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 9.552ms.
+2024-12-17 18:57:09.172 +01:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Purchase_Microservice.Application.Dtos.PurchaseReadDto, Purchase_Microservice, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-12-17 18:57:09.173 +01:00 [INF] Executed action Purchase_Microservice.Application.Controllers.PurchaseController.GetPurchases (Purchase_Microservice) in 14.1798ms
+2024-12-17 18:57:09.175 +01:00 [INF] Executed endpoint 'Purchase_Microservice.Application.Controllers.PurchaseController.GetPurchases (Purchase_Microservice)'
+2024-12-17 18:57:09.176 +01:00 [INF] HTTP GET /api/Purchase responded 200 in 19.9196 ms
+2024-12-17 18:57:09.178 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7237/api/Purchase - 200 null application/json; charset=utf-8 23.7752ms
+2024-12-17 18:58:27.285 +01:00 [INF] Request starting HTTP/2 POST https://localhost:7237/api/Purchase - application/json 563
+2024-12-17 18:58:27.290 +01:00 [INF] Executing endpoint 'Purchase_Microservice.Application.Controllers.PurchaseController.CreatePurchase (Purchase_Microservice)'
+2024-12-17 18:58:27.293 +01:00 [INF] Route matched with {action = "CreatePurchase", controller = "Purchase"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] CreatePurchase(Purchase_Microservice.Application.Dtos.PurchaseCreateDto) on controller Purchase_Microservice.Application.Controllers.PurchaseController (Purchase_Microservice).
+2024-12-17 18:58:27.308 +01:00 [INF] Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2024-12-17 18:58:27.310 +01:00 [INF] Executed action Purchase_Microservice.Application.Controllers.PurchaseController.CreatePurchase (Purchase_Microservice) in 15.3414ms
+2024-12-17 18:58:27.311 +01:00 [INF] Executed endpoint 'Purchase_Microservice.Application.Controllers.PurchaseController.CreatePurchase (Purchase_Microservice)'
+2024-12-17 18:58:27.312 +01:00 [INF] HTTP POST /api/Purchase responded 400 in 22.4909 ms
+2024-12-17 18:58:27.313 +01:00 [INF] Request finished HTTP/2 POST https://localhost:7237/api/Purchase - 400 null application/json; charset=utf-8 28.6186ms
+2024-12-17 18:58:48.840 +01:00 [INF] Request starting HTTP/2 POST https://localhost:7237/api/Purchase - application/json 562
+2024-12-17 18:58:48.846 +01:00 [INF] Executing endpoint 'Purchase_Microservice.Application.Controllers.PurchaseController.CreatePurchase (Purchase_Microservice)'
+2024-12-17 18:58:48.847 +01:00 [INF] Route matched with {action = "CreatePurchase", controller = "Purchase"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] CreatePurchase(Purchase_Microservice.Application.Dtos.PurchaseCreateDto) on controller Purchase_Microservice.Application.Controllers.PurchaseController (Purchase_Microservice).
+2024-12-17 18:58:48.864 +01:00 [INF] Executing action method Purchase_Microservice.Application.Controllers.PurchaseController.CreatePurchase (Purchase_Microservice) - Validation state: "Valid"
+2024-12-17 18:58:48.868 +01:00 [INF] Creating new purchase {"PurchaseDate":"2024-12-17T17:57:49.2560000Z","PurchasePrice":120,"Currency":"rsd","BuyerId":"3fa85f64-5717-4562-b3fc-2c963f66afa6","BuyerUsername":"jovan","BuyerEmail":"jovan@gmail.com","DeliveryId":"3fa85f64-5717-4562-b3fc-2c963f66afa6","DeliveryPrice":12,"PostId":"3fa85f64-5717-4562-b3fc-2c963f66afa6","PostTitle":"kupvina","PostDate":"2024-12-17T17:57:49.2560000Z","PostPrice":120,"OwnerId":"3fa85f64-5717-4562-b3fc-2c963f66afa6","OwnerName":"pera","OwnerEmail":"pera@gmail.com","OwnerPhone":645824,"$type":"PurchaseCreateDto"}
+2024-12-17 18:58:48.911 +01:00 [INF] Executed DbCommand (4ms) [Parameters=[@p0='d6479e6e-4188-4df8-8c36-d795c251df5d', @p1='rsd' (Nullable = false) (Size = 4000), @p2='2024-12-17T17:57:49.2560000Z', @p3='120' (Precision = 18) (Scale = 2), @p4='jovan@gmail.com' (Nullable = false) (Size = 4000), @p5='3fa85f64-5717-4562-b3fc-2c963f66afa6', @p6='jovan' (Nullable = false) (Size = 4000), @p7='3fa85f64-5717-4562-b3fc-2c963f66afa6', @p8='12' (Precision = 18) (Scale = 2), @p9='2024-12-17T17:57:49.2560000Z', @p10='pera@gmail.com' (Size = 4000), @p11='3fa85f64-5717-4562-b3fc-2c963f66afa6', @p12='pera' (Size = 4000), @p13='645824' (Nullable = true), @p14='3fa85f64-5717-4562-b3fc-2c963f66afa6', @p15='kupvina' (Nullable = false) (Size = 4000), @p16='120' (Precision = 18) (Scale = 2)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [purchases] ([PurchaseId], [Currency], [PurchaseDate], [PurchasePrice], [BuyerEmail], [BuyerId], [BuyerUsername], [DeliveryId], [DeliveryPrice], [PostDate], [OwnerEmail], [OwnerId], [OwnerName], [OwnerPhone], [PostId], [Post_PostTitle], [PostPrice])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11, @p12, @p13, @p14, @p15, @p16);
+2024-12-17 18:58:48.917 +01:00 [INF] Created purchase with ID: "d6479e6e-4188-4df8-8c36-d795c251df5d"
+2024-12-17 18:58:48.918 +01:00 [INF] Purchase created successfully with ID: "d6479e6e-4188-4df8-8c36-d795c251df5d"
+2024-12-17 18:58:48.921 +01:00 [INF] Executed action method Purchase_Microservice.Application.Controllers.PurchaseController.CreatePurchase (Purchase_Microservice), returned result Microsoft.AspNetCore.Mvc.CreatedAtActionResult in 55.2655ms.
+2024-12-17 18:58:48.923 +01:00 [INF] Executing CreatedAtActionResult, writing value of type 'Purchase_Microservice.Application.Dtos.PurchaseReadDto'.
+2024-12-17 18:58:48.942 +01:00 [INF] Executed action Purchase_Microservice.Application.Controllers.PurchaseController.CreatePurchase (Purchase_Microservice) in 92.6181ms
+2024-12-17 18:58:48.943 +01:00 [INF] Executed endpoint 'Purchase_Microservice.Application.Controllers.PurchaseController.CreatePurchase (Purchase_Microservice)'
+2024-12-17 18:58:48.944 +01:00 [INF] HTTP POST /api/Purchase responded 201 in 98.3674 ms
+2024-12-17 18:58:48.946 +01:00 [INF] Request finished HTTP/2 POST https://localhost:7237/api/Purchase - 201 null application/json; charset=utf-8 106.4823ms
+2024-12-17 18:58:55.644 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7237/api/Purchase - null null
+2024-12-17 18:58:55.647 +01:00 [INF] Executing endpoint 'Purchase_Microservice.Application.Controllers.PurchaseController.GetPurchases (Purchase_Microservice)'
+2024-12-17 18:58:55.647 +01:00 [INF] Route matched with {action = "GetPurchases", controller = "Purchase"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetPurchases() on controller Purchase_Microservice.Application.Controllers.PurchaseController (Purchase_Microservice).
+2024-12-17 18:58:55.649 +01:00 [INF] Executing action method Purchase_Microservice.Application.Controllers.PurchaseController.GetPurchases (Purchase_Microservice) - Validation state: "Valid"
+2024-12-17 18:58:55.650 +01:00 [INF] Retrieving all purchases
+2024-12-17 18:58:55.654 +01:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[PurchaseId], [p].[Currency], [p].[PurchaseDate], [p].[PurchasePrice], [p].[BuyerEmail], [p].[BuyerId], [p].[BuyerUsername], [p].[DeliveryId], [p].[DeliveryPrice], [p].[PostDate], [p].[OwnerEmail], [p].[OwnerId], [p].[OwnerName], [p].[OwnerPhone], [p].[PostId], [p].[Post_PostTitle], [p].[PostPrice]
+FROM [purchases] AS [p]
+2024-12-17 18:58:55.660 +01:00 [INF] Retrieved 1 purchases from database
+2024-12-17 18:58:55.661 +01:00 [INF] Retrieved 1 purchases
+2024-12-17 18:58:55.661 +01:00 [INF] Executed action method Purchase_Microservice.Application.Controllers.PurchaseController.GetPurchases (Purchase_Microservice), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 10.7617ms.
+2024-12-17 18:58:55.662 +01:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Purchase_Microservice.Application.Dtos.PurchaseReadDto, Purchase_Microservice, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-12-17 18:58:55.663 +01:00 [INF] Executed action Purchase_Microservice.Application.Controllers.PurchaseController.GetPurchases (Purchase_Microservice) in 14.1911ms
+2024-12-17 18:58:55.664 +01:00 [INF] Executed endpoint 'Purchase_Microservice.Application.Controllers.PurchaseController.GetPurchases (Purchase_Microservice)'
+2024-12-17 18:58:55.665 +01:00 [INF] HTTP GET /api/Purchase responded 200 in 19.0388 ms
+2024-12-17 18:58:55.667 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7237/api/Purchase - 200 null application/json; charset=utf-8 22.9505ms
+2024-12-17 18:59:10.972 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7237/api/Purchase/buyer/3fa85f64-5717-4562-b3fc-2c963f66afa6 - null null
+2024-12-17 18:59:10.974 +01:00 [INF] Executing endpoint 'Purchase_Microservice.Application.Controllers.PurchaseController.GetPurchasesByBuyer (Purchase_Microservice)'
+2024-12-17 18:59:10.977 +01:00 [INF] Route matched with {action = "GetPurchasesByBuyer", controller = "Purchase"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetPurchasesByBuyer(System.Guid) on controller Purchase_Microservice.Application.Controllers.PurchaseController (Purchase_Microservice).
+2024-12-17 18:59:10.979 +01:00 [INF] Executing action method Purchase_Microservice.Application.Controllers.PurchaseController.GetPurchasesByBuyer (Purchase_Microservice) - Validation state: "Valid"
+2024-12-17 18:59:11.015 +01:00 [INF] Executed DbCommand (3ms) [Parameters=[@__buyerId_0='3fa85f64-5717-4562-b3fc-2c963f66afa6'], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[PurchaseId], [p].[Currency], [p].[PurchaseDate], [p].[PurchasePrice], [p].[BuyerEmail], [p].[BuyerId], [p].[BuyerUsername], [p].[DeliveryId], [p].[DeliveryPrice], [p].[PostDate], [p].[OwnerEmail], [p].[OwnerId], [p].[OwnerName], [p].[OwnerPhone], [p].[PostId], [p].[Post_PostTitle], [p].[PostPrice]
+FROM [purchases] AS [p]
+WHERE [p].[BuyerId] = @__buyerId_0
+2024-12-17 18:59:11.020 +01:00 [INF] Retrieved 1 purchases for buyer "3fa85f64-5717-4562-b3fc-2c963f66afa6"
+2024-12-17 18:59:11.021 +01:00 [INF] Executed action method Purchase_Microservice.Application.Controllers.PurchaseController.GetPurchasesByBuyer (Purchase_Microservice), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 41.244ms.
+2024-12-17 18:59:11.023 +01:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Purchase_Microservice.Application.Dtos.PurchaseReadDto, Purchase_Microservice, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-12-17 18:59:11.024 +01:00 [INF] Executed action Purchase_Microservice.Application.Controllers.PurchaseController.GetPurchasesByBuyer (Purchase_Microservice) in 45.125ms
+2024-12-17 18:59:11.025 +01:00 [INF] Executed endpoint 'Purchase_Microservice.Application.Controllers.PurchaseController.GetPurchasesByBuyer (Purchase_Microservice)'
+2024-12-17 18:59:11.026 +01:00 [INF] HTTP GET /api/Purchase/buyer/3fa85f64-5717-4562-b3fc-2c963f66afa6 responded 200 in 52.7456 ms
+2024-12-17 18:59:11.029 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7237/api/Purchase/buyer/3fa85f64-5717-4562-b3fc-2c963f66afa6 - 200 null application/json; charset=utf-8 57.3486ms
+2024-12-17 18:59:20.380 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7237/api/Purchase/owner/00000000-0000-0000-0000-000000000000 - null null
+2024-12-17 18:59:20.383 +01:00 [INF] Executing endpoint 'Purchase_Microservice.Application.Controllers.PurchaseController.GetPurchasesByOwner (Purchase_Microservice)'
+2024-12-17 18:59:20.386 +01:00 [INF] Route matched with {action = "GetPurchasesByOwner", controller = "Purchase"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetPurchasesByOwner(System.Guid) on controller Purchase_Microservice.Application.Controllers.PurchaseController (Purchase_Microservice).
+2024-12-17 18:59:20.388 +01:00 [INF] Executing action method Purchase_Microservice.Application.Controllers.PurchaseController.GetPurchasesByOwner (Purchase_Microservice) - Validation state: "Valid"
+2024-12-17 18:59:20.427 +01:00 [INF] Executed DbCommand (6ms) [Parameters=[@__ownerId_0='00000000-0000-0000-0000-000000000000'], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[PurchaseId], [p].[Currency], [p].[PurchaseDate], [p].[PurchasePrice], [p].[BuyerEmail], [p].[BuyerId], [p].[BuyerUsername], [p].[DeliveryId], [p].[DeliveryPrice], [p].[PostDate], [p].[OwnerEmail], [p].[OwnerId], [p].[OwnerName], [p].[OwnerPhone], [p].[PostId], [p].[Post_PostTitle], [p].[PostPrice]
+FROM [purchases] AS [p]
+WHERE [p].[OwnerId] = @__ownerId_0
+2024-12-17 18:59:20.431 +01:00 [INF] Retrieved 0 purchases for owner "00000000-0000-0000-0000-000000000000"
+2024-12-17 18:59:20.432 +01:00 [INF] Executed action method Purchase_Microservice.Application.Controllers.PurchaseController.GetPurchasesByOwner (Purchase_Microservice), returned result Microsoft.AspNetCore.Mvc.NotFoundObjectResult in 42.8666ms.
+2024-12-17 18:59:20.434 +01:00 [INF] Executing NotFoundObjectResult, writing value of type 'System.String'.
+2024-12-17 18:59:20.435 +01:00 [INF] Executed action Purchase_Microservice.Application.Controllers.PurchaseController.GetPurchasesByOwner (Purchase_Microservice) in 47.1198ms
+2024-12-17 18:59:20.436 +01:00 [INF] Executed endpoint 'Purchase_Microservice.Application.Controllers.PurchaseController.GetPurchasesByOwner (Purchase_Microservice)'
+2024-12-17 18:59:20.439 +01:00 [INF] HTTP GET /api/Purchase/owner/00000000-0000-0000-0000-000000000000 responded 404 in 56.5895 ms
+2024-12-17 18:59:20.442 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7237/api/Purchase/owner/00000000-0000-0000-0000-000000000000 - 404 null application/json; charset=utf-8 61.8013ms
+2024-12-17 19:05:49.531 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7237/api/Purchase/owner/3FA85F64-5717-4562-B3FC-2C963F66AFA6 - null null
+2024-12-17 19:05:49.538 +01:00 [INF] Executing endpoint 'Purchase_Microservice.Application.Controllers.PurchaseController.GetPurchasesByOwner (Purchase_Microservice)'
+2024-12-17 19:05:49.539 +01:00 [INF] Route matched with {action = "GetPurchasesByOwner", controller = "Purchase"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetPurchasesByOwner(System.Guid) on controller Purchase_Microservice.Application.Controllers.PurchaseController (Purchase_Microservice).
+2024-12-17 19:05:49.541 +01:00 [INF] Executing action method Purchase_Microservice.Application.Controllers.PurchaseController.GetPurchasesByOwner (Purchase_Microservice) - Validation state: "Valid"
+2024-12-17 19:05:49.558 +01:00 [INF] Executed DbCommand (2ms) [Parameters=[@__ownerId_0='3fa85f64-5717-4562-b3fc-2c963f66afa6'], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[PurchaseId], [p].[Currency], [p].[PurchaseDate], [p].[PurchasePrice], [p].[BuyerEmail], [p].[BuyerId], [p].[BuyerUsername], [p].[DeliveryId], [p].[DeliveryPrice], [p].[PostDate], [p].[OwnerEmail], [p].[OwnerId], [p].[OwnerName], [p].[OwnerPhone], [p].[PostId], [p].[Post_PostTitle], [p].[PostPrice]
+FROM [purchases] AS [p]
+WHERE [p].[OwnerId] = @__ownerId_0
+2024-12-17 19:05:49.564 +01:00 [INF] Retrieved 1 purchases for owner "3fa85f64-5717-4562-b3fc-2c963f66afa6"
+2024-12-17 19:05:49.565 +01:00 [INF] Executed action method Purchase_Microservice.Application.Controllers.PurchaseController.GetPurchasesByOwner (Purchase_Microservice), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 22.7739ms.
+2024-12-17 19:05:49.566 +01:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Purchase_Microservice.Application.Dtos.PurchaseReadDto, Purchase_Microservice, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-12-17 19:05:49.567 +01:00 [INF] Executed action Purchase_Microservice.Application.Controllers.PurchaseController.GetPurchasesByOwner (Purchase_Microservice) in 26.5551ms
+2024-12-17 19:05:49.569 +01:00 [INF] Executed endpoint 'Purchase_Microservice.Application.Controllers.PurchaseController.GetPurchasesByOwner (Purchase_Microservice)'
+2024-12-17 19:05:49.570 +01:00 [INF] HTTP GET /api/Purchase/owner/3FA85F64-5717-4562-B3FC-2C963F66AFA6 responded 200 in 31.7388 ms
+2024-12-17 19:05:49.572 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7237/api/Purchase/owner/3FA85F64-5717-4562-B3FC-2C963F66AFA6 - 200 null application/json; charset=utf-8 40.8604ms
+2024-12-17 20:23:35.258 +01:00 [INF] Starting Rating Service
+2024-12-17 20:23:37.062 +01:00 [WRN] Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data; this mode should only be enabled during development.
+2024-12-17 20:23:38.255 +01:00 [INF] Executed DbCommand (62ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2024-12-17 20:23:38.273 +01:00 [INF] Acquiring an exclusive lock for migration application. See https://aka.ms/efcore-docs-migrations-lock for more information if this takes too long.
+2024-12-17 20:23:38.294 +01:00 [INF] Executed DbCommand (15ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+DECLARE @result int;
+EXEC @result = sp_getapplock @Resource = '__EFMigrationsLock', @LockOwner = 'Session', @LockMode = 'Exclusive';
+SELECT @result
+2024-12-17 20:23:38.478 +01:00 [INF] Executed DbCommand (51ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+IF OBJECT_ID(N'[__EFMigrationsHistory]') IS NULL
+BEGIN
+    CREATE TABLE [__EFMigrationsHistory] (
+        [MigrationId] nvarchar(150) NOT NULL,
+        [ProductVersion] nvarchar(32) NOT NULL,
+        CONSTRAINT [PK___EFMigrationsHistory] PRIMARY KEY ([MigrationId])
+    );
+END;
+2024-12-17 20:23:38.535 +01:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2024-12-17 20:23:38.540 +01:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2024-12-17 20:23:38.634 +01:00 [INF] Executed DbCommand (87ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2024-12-17 20:23:38.648 +01:00 [INF] No migrations were applied. The database is already up to date.
+2024-12-17 20:23:38.700 +01:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+DECLARE @result int;
+EXEC @result = sp_releaseapplock @Resource = '__EFMigrationsLock', @LockOwner = 'Session';
+SELECT @result
+2024-12-17 20:23:39.376 +01:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [purchases] AS [p]) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2024-12-17 20:23:39.426 +01:00 [INF] User profile is available. Using 'C:\Users\Altos\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-12-17 20:23:40.048 +01:00 [INF] Now listening on: https://localhost:7237
+2024-12-17 20:23:40.049 +01:00 [INF] Now listening on: http://localhost:5247
+2024-12-17 20:23:40.234 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-12-17 20:23:40.235 +01:00 [INF] Hosting environment: Development
+2024-12-17 20:23:40.236 +01:00 [INF] Content root path: C:\Users\Altos\source\repos\Purchase_Microservice\Purchase_Microservice\Purchase_Microservice
+2024-12-17 20:23:46.627 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7237/swagger/index.html - null null
+2024-12-17 20:23:46.798 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7237/swagger/index.html - 200 null text/html;charset=utf-8 177.5252ms
+2024-12-17 20:23:46.899 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7237/swagger/index.js - null null
+2024-12-17 20:23:46.899 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7237/_framework/aspnetcore-browser-refresh.js - null null
+2024-12-17 20:23:46.907 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7237/swagger/index.js - 200 null application/javascript;charset=utf-8 8.3131ms
+2024-12-17 20:23:46.922 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7237/_framework/aspnetcore-browser-refresh.js - 200 13794 application/javascript; charset=utf-8 23.1722ms
+2024-12-17 20:23:47.061 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7237/_vs/browserLink - null null
+2024-12-17 20:23:47.089 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7237/_vs/browserLink - 200 null text/javascript; charset=UTF-8 27.7932ms
+2024-12-17 20:23:47.653 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7237/swagger/v1/swagger.json - null null
+2024-12-17 20:23:47.744 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7237/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 92.0589ms
+2024-12-17 20:23:54.556 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7237/api/Purchase - null null
+2024-12-17 20:23:54.646 +01:00 [INF] Executing endpoint 'Purchase_Microservice.Application.Controllers.PurchaseController.GetPurchases (Purchase_Microservice)'
+2024-12-17 20:23:54.662 +01:00 [INF] Route matched with {action = "GetPurchases", controller = "Purchase"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetPurchases() on controller Purchase_Microservice.Application.Controllers.PurchaseController (Purchase_Microservice).
+2024-12-17 20:23:54.762 +01:00 [INF] Executing action method Purchase_Microservice.Application.Controllers.PurchaseController.GetPurchases (Purchase_Microservice) - Validation state: "Valid"
+2024-12-17 20:23:54.766 +01:00 [INF] Retrieving all purchases
+2024-12-17 20:23:54.967 +01:00 [INF] Executed DbCommand (19ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[PurchaseId], [p].[Currency], [p].[PurchaseDate], [p].[PurchasePrice], [p].[BuyerEmail], [p].[BuyerId], [p].[BuyerUsername], [p].[DeliveryId], [p].[DeliveryPrice], [p].[PostDate], [p].[OwnerEmail], [p].[OwnerId], [p].[OwnerName], [p].[OwnerPhone], [p].[PostId], [p].[Post_PostTitle], [p].[PostPrice]
+FROM [purchases] AS [p]
+2024-12-17 20:23:55.081 +01:00 [INF] Retrieved 1 purchases from database
+2024-12-17 20:23:55.095 +01:00 [INF] Retrieved 1 purchases
+2024-12-17 20:23:55.100 +01:00 [INF] Executed action method Purchase_Microservice.Application.Controllers.PurchaseController.GetPurchases (Purchase_Microservice), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 333.7013ms.
+2024-12-17 20:23:55.109 +01:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Purchase_Microservice.Application.Dtos.PurchaseReadDto, Purchase_Microservice, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-12-17 20:23:55.132 +01:00 [INF] Executed action Purchase_Microservice.Application.Controllers.PurchaseController.GetPurchases (Purchase_Microservice) in 464.2553ms
+2024-12-17 20:23:55.134 +01:00 [INF] Executed endpoint 'Purchase_Microservice.Application.Controllers.PurchaseController.GetPurchases (Purchase_Microservice)'
+2024-12-17 20:23:55.138 +01:00 [INF] HTTP GET /api/Purchase responded 200 in 573.8980 ms
+2024-12-17 20:23:55.144 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7237/api/Purchase - 200 null application/json; charset=utf-8 588.3035ms
+2024-12-17 20:24:18.692 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7237/api/Purchase/d6479e6e-4188-4df8-8c36-d795c251df5d - null null
+2024-12-17 20:24:18.726 +01:00 [INF] Executing endpoint 'Purchase_Microservice.Application.Controllers.PurchaseController.GetPurchaseById (Purchase_Microservice)'
+2024-12-17 20:24:18.735 +01:00 [INF] Route matched with {action = "GetPurchaseById", controller = "Purchase"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetPurchaseById(System.Guid) on controller Purchase_Microservice.Application.Controllers.PurchaseController (Purchase_Microservice).
+2024-12-17 20:24:18.774 +01:00 [INF] Executing action method Purchase_Microservice.Application.Controllers.PurchaseController.GetPurchaseById (Purchase_Microservice) - Validation state: "Valid"
+2024-12-17 20:24:18.776 +01:00 [INF] Retrieving purchase with ID: "d6479e6e-4188-4df8-8c36-d795c251df5d"
+2024-12-17 20:24:18.963 +01:00 [INF] Executed DbCommand (24ms) [Parameters=[@__id_0='d6479e6e-4188-4df8-8c36-d795c251df5d'], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [p].[PurchaseId], [p].[Currency], [p].[PurchaseDate], [p].[PurchasePrice], [p].[BuyerEmail], [p].[BuyerId], [p].[BuyerUsername], [p].[DeliveryId], [p].[DeliveryPrice], [p].[PostDate], [p].[OwnerEmail], [p].[OwnerId], [p].[OwnerName], [p].[OwnerPhone], [p].[PostId], [p].[Post_PostTitle], [p].[PostPrice]
+FROM [purchases] AS [p]
+WHERE [p].[PurchaseId] = @__id_0
+2024-12-17 20:24:18.984 +01:00 [INF] Retrieved purchase with ID: "d6479e6e-4188-4df8-8c36-d795c251df5d"
+2024-12-17 20:24:18.992 +01:00 [INF] Executed action method Purchase_Microservice.Application.Controllers.PurchaseController.GetPurchaseById (Purchase_Microservice), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 217.0173ms.
+2024-12-17 20:24:18.994 +01:00 [INF] Executing OkObjectResult, writing value of type 'Purchase_Microservice.Application.Dtos.PurchaseReadDto'.
+2024-12-17 20:24:18.995 +01:00 [INF] Executed action Purchase_Microservice.Application.Controllers.PurchaseController.GetPurchaseById (Purchase_Microservice) in 256.9376ms
+2024-12-17 20:24:18.997 +01:00 [INF] Executed endpoint 'Purchase_Microservice.Application.Controllers.PurchaseController.GetPurchaseById (Purchase_Microservice)'
+2024-12-17 20:24:18.999 +01:00 [INF] HTTP GET /api/Purchase/d6479e6e-4188-4df8-8c36-d795c251df5d responded 200 in 273.6630 ms
+2024-12-17 20:24:19.003 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7237/api/Purchase/d6479e6e-4188-4df8-8c36-d795c251df5d - 200 null application/json; charset=utf-8 310.3595ms
+2024-12-17 20:24:41.847 +01:00 [INF] Request starting HTTP/2 PUT https://localhost:7237/api/Purchase/d6479e6e-4188-4df8-8c36-d795c251df5d - application/json 72
+2024-12-17 20:24:41.857 +01:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (Admin)
+2024-12-17 20:24:41.862 +01:00 [INF] AuthenticationScheme: Bearer was challenged.
+2024-12-17 20:24:41.863 +01:00 [INF] HTTP PUT /api/Purchase/d6479e6e-4188-4df8-8c36-d795c251df5d responded 401 in 11.6613 ms
+2024-12-17 20:24:41.864 +01:00 [INF] Request finished HTTP/2 PUT https://localhost:7237/api/Purchase/d6479e6e-4188-4df8-8c36-d795c251df5d - 401 0 null 19.1675ms
+2024-12-17 20:25:03.482 +01:00 [INF] Request starting HTTP/2 POST https://localhost:7237/api/Auth/login - application/json 52
+2024-12-17 20:25:03.485 +01:00 [INF] Executing endpoint 'Microservice_RatingService.Application.Controllers.AuthController.Login (Purchase_Microservice)'
+2024-12-17 20:25:03.488 +01:00 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Login(LoginRequest) on controller Microservice_RatingService.Application.Controllers.AuthController (Purchase_Microservice).
+2024-12-17 20:25:03.506 +01:00 [INF] Executing action method Microservice_RatingService.Application.Controllers.AuthController.Login (Purchase_Microservice) - Validation state: "Valid"
+2024-12-17 20:25:03.508 +01:00 [INF] Login attempt for user: admin
+2024-12-17 20:25:03.531 +01:00 [INF] Executed action method Microservice_RatingService.Application.Controllers.AuthController.Login (Purchase_Microservice), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 24.0778ms.
+2024-12-17 20:25:03.538 +01:00 [INF] Executing OkObjectResult, writing value of type 'Microservice_RatingService.Application.Controllers.AuthController+LoginResponse'.
+2024-12-17 20:25:03.541 +01:00 [INF] Executed action Microservice_RatingService.Application.Controllers.AuthController.Login (Purchase_Microservice) in 49.6139ms
+2024-12-17 20:25:03.542 +01:00 [INF] Executed endpoint 'Microservice_RatingService.Application.Controllers.AuthController.Login (Purchase_Microservice)'
+2024-12-17 20:25:03.544 +01:00 [INF] HTTP POST /api/Auth/login responded 200 in 59.2551 ms
+2024-12-17 20:25:03.545 +01:00 [INF] Request finished HTTP/2 POST https://localhost:7237/api/Auth/login - 200 null application/json; charset=utf-8 63.9155ms
+2024-12-17 20:25:16.592 +01:00 [INF] Request starting HTTP/2 PUT https://localhost:7237/api/Purchase/d6479e6e-4188-4df8-8c36-d795c251df5d - application/json 72
+2024-12-17 20:25:16.631 +01:00 [INF] Executing endpoint 'Purchase_Microservice.Application.Controllers.PurchaseController.UpdatePurchase (Purchase_Microservice)'
+2024-12-17 20:25:16.635 +01:00 [INF] Route matched with {action = "UpdatePurchase", controller = "Purchase"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] UpdatePurchase(System.Guid, Purchase_Microservice.Application.Dtos.PurchaseUpdateDto) on controller Purchase_Microservice.Application.Controllers.PurchaseController (Purchase_Microservice).
+2024-12-17 20:25:16.659 +01:00 [INF] Executing action method Purchase_Microservice.Application.Controllers.PurchaseController.UpdatePurchase (Purchase_Microservice) - Validation state: "Valid"
+2024-12-17 20:25:16.663 +01:00 [INF] Updating purchase "d6479e6e-4188-4df8-8c36-d795c251df5d" with {"PurchasePrice":1230,"Currency":"rds","DeliveryPrice":122,"$type":"PurchaseUpdateDto"}
+2024-12-17 20:25:16.795 +01:00 [INF] Executed DbCommand (3ms) [Parameters=[@__p_0='d6479e6e-4188-4df8-8c36-d795c251df5d' (Nullable = true)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [p].[PurchaseId], [p].[Currency], [p].[PurchaseDate], [p].[PurchasePrice], [p].[BuyerEmail], [p].[BuyerId], [p].[BuyerUsername], [p].[DeliveryId], [p].[DeliveryPrice], [p].[PostDate], [p].[OwnerEmail], [p].[OwnerId], [p].[OwnerName], [p].[OwnerPhone], [p].[PostId], [p].[Post_PostTitle], [p].[PostPrice]
+FROM [purchases] AS [p]
+WHERE [p].[PurchaseId] = @__p_0
+2024-12-17 20:25:16.910 +01:00 [INF] Executed DbCommand (8ms) [Parameters=[@p2='d6479e6e-4188-4df8-8c36-d795c251df5d', @p0='rds' (Nullable = false) (Size = 4000), @p1='1230' (Precision = 18) (Scale = 2)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [purchases] SET [Currency] = @p0, [PurchasePrice] = @p1
+OUTPUT 1
+WHERE [PurchaseId] = @p2;
+2024-12-17 20:25:16.937 +01:00 [INF] Updated purchase with ID: "d6479e6e-4188-4df8-8c36-d795c251df5d"
+2024-12-17 20:25:16.938 +01:00 [INF] Purchase "d6479e6e-4188-4df8-8c36-d795c251df5d" updated successfully
+2024-12-17 20:25:16.939 +01:00 [INF] Executed action method Purchase_Microservice.Application.Controllers.PurchaseController.UpdatePurchase (Purchase_Microservice), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 278.8196ms.
+2024-12-17 20:25:16.941 +01:00 [INF] Executing OkObjectResult, writing value of type 'Purchase_Microservice.Application.Dtos.PurchaseReadDto'.
+2024-12-17 20:25:16.944 +01:00 [INF] Executed action Purchase_Microservice.Application.Controllers.PurchaseController.UpdatePurchase (Purchase_Microservice) in 305.94ms
+2024-12-17 20:25:16.947 +01:00 [INF] Executed endpoint 'Purchase_Microservice.Application.Controllers.PurchaseController.UpdatePurchase (Purchase_Microservice)'
+2024-12-17 20:25:16.949 +01:00 [INF] HTTP PUT /api/Purchase/d6479e6e-4188-4df8-8c36-d795c251df5d responded 200 in 354.4552 ms
+2024-12-17 20:25:16.952 +01:00 [INF] Request finished HTTP/2 PUT https://localhost:7237/api/Purchase/d6479e6e-4188-4df8-8c36-d795c251df5d - 200 null application/json; charset=utf-8 360.2324ms
+2024-12-17 20:25:34.267 +01:00 [INF] Request starting HTTP/2 DELETE https://localhost:7237/api/Purchase/d6479e6e-4188-4df8-8c36-d795c251df5d - null null
+2024-12-17 20:25:34.271 +01:00 [INF] Executing endpoint 'Purchase_Microservice.Application.Controllers.PurchaseController.DeletePurchase (Purchase_Microservice)'
+2024-12-17 20:25:34.277 +01:00 [INF] Route matched with {action = "DeletePurchase", controller = "Purchase"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] DeletePurchase(System.Guid) on controller Purchase_Microservice.Application.Controllers.PurchaseController (Purchase_Microservice).
+2024-12-17 20:25:34.282 +01:00 [INF] Executing action method Purchase_Microservice.Application.Controllers.PurchaseController.DeletePurchase (Purchase_Microservice) - Validation state: "Valid"
+2024-12-17 20:25:34.285 +01:00 [INF] Deleting purchase with ID: "d6479e6e-4188-4df8-8c36-d795c251df5d"
+2024-12-17 20:25:34.301 +01:00 [INF] Executed DbCommand (6ms) [Parameters=[@__p_0='d6479e6e-4188-4df8-8c36-d795c251df5d' (Nullable = true)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [p].[PurchaseId], [p].[Currency], [p].[PurchaseDate], [p].[PurchasePrice], [p].[BuyerEmail], [p].[BuyerId], [p].[BuyerUsername], [p].[DeliveryId], [p].[DeliveryPrice], [p].[PostDate], [p].[OwnerEmail], [p].[OwnerId], [p].[OwnerName], [p].[OwnerPhone], [p].[PostId], [p].[Post_PostTitle], [p].[PostPrice]
+FROM [purchases] AS [p]
+WHERE [p].[PurchaseId] = @__p_0
+2024-12-17 20:25:34.350 +01:00 [INF] Executed DbCommand (3ms) [Parameters=[@p0='d6479e6e-4188-4df8-8c36-d795c251df5d'], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+DELETE FROM [purchases]
+OUTPUT 1
+WHERE [PurchaseId] = @p0;
+2024-12-17 20:25:34.366 +01:00 [INF] Deleted purchase with ID: "d6479e6e-4188-4df8-8c36-d795c251df5d"
+2024-12-17 20:25:34.367 +01:00 [INF] Purchase "d6479e6e-4188-4df8-8c36-d795c251df5d" deleted successfully
+2024-12-17 20:25:34.368 +01:00 [INF] Executed action method Purchase_Microservice.Application.Controllers.PurchaseController.DeletePurchase (Purchase_Microservice), returned result Microsoft.AspNetCore.Mvc.NoContentResult in 83.8904ms.
+2024-12-17 20:25:34.371 +01:00 [INF] Executing StatusCodeResult, setting HTTP status code 204
+2024-12-17 20:25:34.372 +01:00 [INF] Executed action Purchase_Microservice.Application.Controllers.PurchaseController.DeletePurchase (Purchase_Microservice) in 92.433ms
+2024-12-17 20:25:34.373 +01:00 [INF] Executed endpoint 'Purchase_Microservice.Application.Controllers.PurchaseController.DeletePurchase (Purchase_Microservice)'
+2024-12-17 20:25:34.375 +01:00 [INF] HTTP DELETE /api/Purchase/d6479e6e-4188-4df8-8c36-d795c251df5d responded 204 in 104.9316 ms
+2024-12-17 20:25:34.380 +01:00 [INF] Request finished HTTP/2 DELETE https://localhost:7237/api/Purchase/d6479e6e-4188-4df8-8c36-d795c251df5d - 204 null null 113.1972ms
+2024-12-17 20:25:44.552 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7237/api/Purchase - null null
+2024-12-17 20:25:44.554 +01:00 [INF] Executing endpoint 'Purchase_Microservice.Application.Controllers.PurchaseController.GetPurchases (Purchase_Microservice)'
+2024-12-17 20:25:44.556 +01:00 [INF] Route matched with {action = "GetPurchases", controller = "Purchase"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetPurchases() on controller Purchase_Microservice.Application.Controllers.PurchaseController (Purchase_Microservice).
+2024-12-17 20:25:44.559 +01:00 [INF] Executing action method Purchase_Microservice.Application.Controllers.PurchaseController.GetPurchases (Purchase_Microservice) - Validation state: "Valid"
+2024-12-17 20:25:44.560 +01:00 [INF] Retrieving all purchases
+2024-12-17 20:25:44.575 +01:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[PurchaseId], [p].[Currency], [p].[PurchaseDate], [p].[PurchasePrice], [p].[BuyerEmail], [p].[BuyerId], [p].[BuyerUsername], [p].[DeliveryId], [p].[DeliveryPrice], [p].[PostDate], [p].[OwnerEmail], [p].[OwnerId], [p].[OwnerName], [p].[OwnerPhone], [p].[PostId], [p].[Post_PostTitle], [p].[PostPrice]
+FROM [purchases] AS [p]
+2024-12-17 20:25:44.588 +01:00 [INF] Retrieved 0 purchases from database
+2024-12-17 20:25:44.589 +01:00 [INF] Retrieved 0 purchases
+2024-12-17 20:25:44.590 +01:00 [INF] Executed action method Purchase_Microservice.Application.Controllers.PurchaseController.GetPurchases (Purchase_Microservice), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 29.574ms.
+2024-12-17 20:25:44.592 +01:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Purchase_Microservice.Application.Dtos.PurchaseReadDto, Purchase_Microservice, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-12-17 20:25:44.593 +01:00 [INF] Executed action Purchase_Microservice.Application.Controllers.PurchaseController.GetPurchases (Purchase_Microservice) in 34.8437ms
+2024-12-17 20:25:44.598 +01:00 [INF] Executed endpoint 'Purchase_Microservice.Application.Controllers.PurchaseController.GetPurchases (Purchase_Microservice)'
+2024-12-17 20:25:44.603 +01:00 [INF] HTTP GET /api/Purchase responded 200 in 48.7577 ms
+2024-12-17 20:25:44.606 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7237/api/Purchase - 200 null application/json; charset=utf-8 54.5073ms
+2024-12-17 20:26:54.808 +01:00 [INF] Request starting HTTP/2 POST https://localhost:7237/api/Purchase - application/json 560
+2024-12-17 20:26:54.815 +01:00 [INF] Executing endpoint 'Purchase_Microservice.Application.Controllers.PurchaseController.CreatePurchase (Purchase_Microservice)'
+2024-12-17 20:26:54.820 +01:00 [INF] Route matched with {action = "CreatePurchase", controller = "Purchase"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] CreatePurchase(Purchase_Microservice.Application.Dtos.PurchaseCreateDto) on controller Purchase_Microservice.Application.Controllers.PurchaseController (Purchase_Microservice).
+2024-12-17 20:26:54.840 +01:00 [INF] Executing action method Purchase_Microservice.Application.Controllers.PurchaseController.CreatePurchase (Purchase_Microservice) - Validation state: "Valid"
+2024-12-17 20:26:54.844 +01:00 [INF] Creating new purchase {"PurchaseDate":"2024-12-17T19:25:55.6480000Z","PurchasePrice":1234,"Currency":"eur","BuyerId":"3fa85f64-5717-4562-b3fc-2c963f66afa6","BuyerUsername":"mark","BuyerEmail":"mark@gmail.com","DeliveryId":"5fa85f64-5717-4562-b3fc-2c963f66afa6","DeliveryPrice":120,"PostId":"7fa85f64-5717-4562-b3fc-2c963f66afa6","PostTitle":"Najs","PostDate":"2024-12-17T19:25:55.6480000Z","PostPrice":1234,"OwnerId":"2fa85f64-5717-4562-b3fc-2c963f66afa6","OwnerName":"mer","OwnerEmail":"mer@gmail.com","OwnerPhone":42313210,"$type":"PurchaseCreateDto"}
+2024-12-17 20:26:54.904 +01:00 [INF] Executed DbCommand (8ms) [Parameters=[@p0='06211e90-6082-4d8e-a88c-3d2bffd0ebc1', @p1='eur' (Nullable = false) (Size = 4000), @p2='2024-12-17T19:25:55.6480000Z', @p3='1234' (Precision = 18) (Scale = 2), @p4='mark@gmail.com' (Nullable = false) (Size = 4000), @p5='3fa85f64-5717-4562-b3fc-2c963f66afa6', @p6='mark' (Nullable = false) (Size = 4000), @p7='5fa85f64-5717-4562-b3fc-2c963f66afa6', @p8='120' (Precision = 18) (Scale = 2), @p9='2024-12-17T19:25:55.6480000Z', @p10='mer@gmail.com' (Size = 4000), @p11='2fa85f64-5717-4562-b3fc-2c963f66afa6', @p12='mer' (Size = 4000), @p13='42313210' (Nullable = true), @p14='7fa85f64-5717-4562-b3fc-2c963f66afa6', @p15='Najs' (Nullable = false) (Size = 4000), @p16='1234' (Precision = 18) (Scale = 2)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [purchases] ([PurchaseId], [Currency], [PurchaseDate], [PurchasePrice], [BuyerEmail], [BuyerId], [BuyerUsername], [DeliveryId], [DeliveryPrice], [PostDate], [OwnerEmail], [OwnerId], [OwnerName], [OwnerPhone], [PostId], [Post_PostTitle], [PostPrice])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11, @p12, @p13, @p14, @p15, @p16);
+2024-12-17 20:26:54.931 +01:00 [INF] Created purchase with ID: "06211e90-6082-4d8e-a88c-3d2bffd0ebc1"
+2024-12-17 20:26:54.932 +01:00 [INF] Purchase created successfully with ID: "06211e90-6082-4d8e-a88c-3d2bffd0ebc1"
+2024-12-17 20:26:54.936 +01:00 [INF] Executed action method Purchase_Microservice.Application.Controllers.PurchaseController.CreatePurchase (Purchase_Microservice), returned result Microsoft.AspNetCore.Mvc.CreatedAtActionResult in 93.9293ms.
+2024-12-17 20:26:54.937 +01:00 [INF] Executing CreatedAtActionResult, writing value of type 'Purchase_Microservice.Application.Dtos.PurchaseReadDto'.
+2024-12-17 20:26:54.967 +01:00 [INF] Executed action Purchase_Microservice.Application.Controllers.PurchaseController.CreatePurchase (Purchase_Microservice) in 143.4651ms
+2024-12-17 20:26:54.969 +01:00 [INF] Executed endpoint 'Purchase_Microservice.Application.Controllers.PurchaseController.CreatePurchase (Purchase_Microservice)'
+2024-12-17 20:26:54.972 +01:00 [INF] HTTP POST /api/Purchase responded 201 in 156.7224 ms
+2024-12-17 20:26:54.975 +01:00 [INF] Request finished HTTP/2 POST https://localhost:7237/api/Purchase - 201 null application/json; charset=utf-8 166.7836ms
+2024-12-17 20:27:06.164 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7237/api/Purchase - null null
+2024-12-17 20:27:06.166 +01:00 [INF] Executing endpoint 'Purchase_Microservice.Application.Controllers.PurchaseController.GetPurchases (Purchase_Microservice)'
+2024-12-17 20:27:06.167 +01:00 [INF] Route matched with {action = "GetPurchases", controller = "Purchase"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetPurchases() on controller Purchase_Microservice.Application.Controllers.PurchaseController (Purchase_Microservice).
+2024-12-17 20:27:06.173 +01:00 [INF] Executing action method Purchase_Microservice.Application.Controllers.PurchaseController.GetPurchases (Purchase_Microservice) - Validation state: "Valid"
+2024-12-17 20:27:06.174 +01:00 [INF] Retrieving all purchases
+2024-12-17 20:27:06.190 +01:00 [INF] Executed DbCommand (10ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[PurchaseId], [p].[Currency], [p].[PurchaseDate], [p].[PurchasePrice], [p].[BuyerEmail], [p].[BuyerId], [p].[BuyerUsername], [p].[DeliveryId], [p].[DeliveryPrice], [p].[PostDate], [p].[OwnerEmail], [p].[OwnerId], [p].[OwnerName], [p].[OwnerPhone], [p].[PostId], [p].[Post_PostTitle], [p].[PostPrice]
+FROM [purchases] AS [p]
+2024-12-17 20:27:06.210 +01:00 [INF] Retrieved 1 purchases from database
+2024-12-17 20:27:06.210 +01:00 [INF] Retrieved 1 purchases
+2024-12-17 20:27:06.211 +01:00 [INF] Executed action method Purchase_Microservice.Application.Controllers.PurchaseController.GetPurchases (Purchase_Microservice), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 37.0464ms.
+2024-12-17 20:27:06.213 +01:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Purchase_Microservice.Application.Dtos.PurchaseReadDto, Purchase_Microservice, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-12-17 20:27:06.216 +01:00 [INF] Executed action Purchase_Microservice.Application.Controllers.PurchaseController.GetPurchases (Purchase_Microservice) in 43.1227ms
+2024-12-17 20:27:06.221 +01:00 [INF] Executed endpoint 'Purchase_Microservice.Application.Controllers.PurchaseController.GetPurchases (Purchase_Microservice)'
+2024-12-17 20:27:06.223 +01:00 [INF] HTTP GET /api/Purchase responded 200 in 57.7104 ms
+2024-12-17 20:27:06.226 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7237/api/Purchase - 200 null application/json; charset=utf-8 62.3543ms
+2024-12-17 20:27:28.296 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7237/api/Purchase/buyer/3fa85f64-5717-4562-b3fc-2c963f66afa6 - null null
+2024-12-17 20:27:28.304 +01:00 [INF] Executing endpoint 'Purchase_Microservice.Application.Controllers.PurchaseController.GetPurchasesByBuyer (Purchase_Microservice)'
+2024-12-17 20:27:28.308 +01:00 [INF] Route matched with {action = "GetPurchasesByBuyer", controller = "Purchase"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetPurchasesByBuyer(System.Guid) on controller Purchase_Microservice.Application.Controllers.PurchaseController (Purchase_Microservice).
+2024-12-17 20:27:28.311 +01:00 [INF] Executing action method Purchase_Microservice.Application.Controllers.PurchaseController.GetPurchasesByBuyer (Purchase_Microservice) - Validation state: "Valid"
+2024-12-17 20:27:28.411 +01:00 [INF] Executed DbCommand (3ms) [Parameters=[@__buyerId_0='3fa85f64-5717-4562-b3fc-2c963f66afa6'], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[PurchaseId], [p].[Currency], [p].[PurchaseDate], [p].[PurchasePrice], [p].[BuyerEmail], [p].[BuyerId], [p].[BuyerUsername], [p].[DeliveryId], [p].[DeliveryPrice], [p].[PostDate], [p].[OwnerEmail], [p].[OwnerId], [p].[OwnerName], [p].[OwnerPhone], [p].[PostId], [p].[Post_PostTitle], [p].[PostPrice]
+FROM [purchases] AS [p]
+WHERE [p].[BuyerId] = @__buyerId_0
+2024-12-17 20:27:28.435 +01:00 [INF] Retrieved 1 purchases for buyer "3fa85f64-5717-4562-b3fc-2c963f66afa6"
+2024-12-17 20:27:28.437 +01:00 [INF] Executed action method Purchase_Microservice.Application.Controllers.PurchaseController.GetPurchasesByBuyer (Purchase_Microservice), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 124.266ms.
+2024-12-17 20:27:28.439 +01:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Purchase_Microservice.Application.Dtos.PurchaseReadDto, Purchase_Microservice, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-12-17 20:27:28.443 +01:00 [INF] Executed action Purchase_Microservice.Application.Controllers.PurchaseController.GetPurchasesByBuyer (Purchase_Microservice) in 132.5185ms
+2024-12-17 20:27:28.445 +01:00 [INF] Executed endpoint 'Purchase_Microservice.Application.Controllers.PurchaseController.GetPurchasesByBuyer (Purchase_Microservice)'
+2024-12-17 20:27:28.446 +01:00 [INF] HTTP GET /api/Purchase/buyer/3fa85f64-5717-4562-b3fc-2c963f66afa6 responded 200 in 142.2889 ms
+2024-12-17 20:27:28.452 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7237/api/Purchase/buyer/3fa85f64-5717-4562-b3fc-2c963f66afa6 - 200 null application/json; charset=utf-8 155.6138ms
+2024-12-17 20:27:43.016 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7237/api/Purchase/owner/2fa85f64-5717-4562-b3fc-2c963f66afa6 - null null
+2024-12-17 20:27:43.019 +01:00 [INF] Executing endpoint 'Purchase_Microservice.Application.Controllers.PurchaseController.GetPurchasesByOwner (Purchase_Microservice)'
+2024-12-17 20:27:43.022 +01:00 [INF] Route matched with {action = "GetPurchasesByOwner", controller = "Purchase"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetPurchasesByOwner(System.Guid) on controller Purchase_Microservice.Application.Controllers.PurchaseController (Purchase_Microservice).
+2024-12-17 20:27:43.025 +01:00 [INF] Executing action method Purchase_Microservice.Application.Controllers.PurchaseController.GetPurchasesByOwner (Purchase_Microservice) - Validation state: "Valid"
+2024-12-17 20:27:43.135 +01:00 [INF] Executed DbCommand (2ms) [Parameters=[@__ownerId_0='2fa85f64-5717-4562-b3fc-2c963f66afa6'], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[PurchaseId], [p].[Currency], [p].[PurchaseDate], [p].[PurchasePrice], [p].[BuyerEmail], [p].[BuyerId], [p].[BuyerUsername], [p].[DeliveryId], [p].[DeliveryPrice], [p].[PostDate], [p].[OwnerEmail], [p].[OwnerId], [p].[OwnerName], [p].[OwnerPhone], [p].[PostId], [p].[Post_PostTitle], [p].[PostPrice]
+FROM [purchases] AS [p]
+WHERE [p].[OwnerId] = @__ownerId_0
+2024-12-17 20:27:43.154 +01:00 [INF] Retrieved 1 purchases for owner "2fa85f64-5717-4562-b3fc-2c963f66afa6"
+2024-12-17 20:27:43.155 +01:00 [INF] Executed action method Purchase_Microservice.Application.Controllers.PurchaseController.GetPurchasesByOwner (Purchase_Microservice), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 128.9953ms.
+2024-12-17 20:27:43.160 +01:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Purchase_Microservice.Application.Dtos.PurchaseReadDto, Purchase_Microservice, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-12-17 20:27:43.165 +01:00 [INF] Executed action Purchase_Microservice.Application.Controllers.PurchaseController.GetPurchasesByOwner (Purchase_Microservice) in 139.9854ms
+2024-12-17 20:27:43.166 +01:00 [INF] Executed endpoint 'Purchase_Microservice.Application.Controllers.PurchaseController.GetPurchasesByOwner (Purchase_Microservice)'
+2024-12-17 20:27:43.168 +01:00 [INF] HTTP GET /api/Purchase/owner/2fa85f64-5717-4562-b3fc-2c963f66afa6 responded 200 in 149.5915 ms
+2024-12-17 20:27:43.172 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7237/api/Purchase/owner/2fa85f64-5717-4562-b3fc-2c963f66afa6 - 200 null application/json; charset=utf-8 155.5948ms
+2024-12-17 23:19:33.054 +01:00 [INF] Starting Rating Service
+2024-12-17 23:19:33.870 +01:00 [WRN] Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data; this mode should only be enabled during development.
+2024-12-17 23:19:34.081 +01:00 [FTL] Application terminated unexpectedly
+System.InvalidOperationException: An error was generated for warning 'Microsoft.EntityFrameworkCore.Migrations.PendingModelChangesWarning': The model for context 'AppDbContext' has pending changes. Add a new migration before updating the database. This exception can be suppressed or logged by passing event ID 'RelationalEventId.PendingModelChangesWarning' to the 'ConfigureWarnings' method in 'DbContext.OnConfiguring' or 'AddDbContext'.
+   at Microsoft.EntityFrameworkCore.Diagnostics.EventDefinition`1.Log[TLoggerCategory](IDiagnosticsLogger`1 logger, TParam arg)
+   at Microsoft.EntityFrameworkCore.Diagnostics.RelationalLoggerExtensions.PendingModelChangesWarning(IDiagnosticsLogger`1 diagnostics, Type contextType)
+   at Microsoft.EntityFrameworkCore.Migrations.Internal.Migrator.Migrate(String targetMigration)
+   at Microsoft.EntityFrameworkCore.RelationalDatabaseFacadeExtensions.Migrate(DatabaseFacade databaseFacade)
+   at Program.<Main>$(String[] args) in C:\Users\Altos\source\repos\Purchase_Microservice\Purchase_Microservice\Purchase_Microservice\Program.cs:line 124
+2024-12-17 23:20:06.775 +01:00 [WRN] Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data; this mode should only be enabled during development.
+2024-12-17 23:20:16.952 +01:00 [WRN] Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data; this mode should only be enabled during development.
+2024-12-17 23:20:17.330 +01:00 [INF] Executed DbCommand (12ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2024-12-17 23:20:17.342 +01:00 [INF] Acquiring an exclusive lock for migration application. See https://aka.ms/efcore-docs-migrations-lock for more information if this takes too long.
+2024-12-17 23:20:17.356 +01:00 [INF] Executed DbCommand (12ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+DECLARE @result int;
+EXEC @result = sp_getapplock @Resource = '__EFMigrationsLock', @LockOwner = 'Session', @LockMode = 'Exclusive';
+SELECT @result
+2024-12-17 23:20:17.396 +01:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+IF OBJECT_ID(N'[__EFMigrationsHistory]') IS NULL
+BEGIN
+    CREATE TABLE [__EFMigrationsHistory] (
+        [MigrationId] nvarchar(150) NOT NULL,
+        [ProductVersion] nvarchar(32) NOT NULL,
+        CONSTRAINT [PK___EFMigrationsHistory] PRIMARY KEY ([MigrationId])
+    );
+END;
+2024-12-17 23:20:17.405 +01:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2024-12-17 23:20:17.408 +01:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2024-12-17 23:20:17.419 +01:00 [INF] Executed DbCommand (7ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2024-12-17 23:20:17.427 +01:00 [INF] Applying migration '20241217222007_UpdateMigration'.
+2024-12-17 23:20:17.562 +01:00 [INF] Executed DbCommand (122ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+DECLARE @var0 sysname;
+SELECT @var0 = [d].[name]
+FROM [sys].[default_constraints] [d]
+INNER JOIN [sys].[columns] [c] ON [d].[parent_column_id] = [c].[column_id] AND [d].[parent_object_id] = [c].[object_id]
+WHERE ([d].[parent_object_id] = OBJECT_ID(N'[purchases]') AND [c].[name] = N'Post_PostTitle');
+IF @var0 IS NOT NULL EXEC(N'ALTER TABLE [purchases] DROP CONSTRAINT [' + @var0 + '];');
+ALTER TABLE [purchases] ALTER COLUMN [Post_PostTitle] nvarchar(100) NOT NULL;
+2024-12-17 23:20:17.582 +01:00 [INF] Executed DbCommand (18ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+DECLARE @var1 sysname;
+SELECT @var1 = [d].[name]
+FROM [sys].[default_constraints] [d]
+INNER JOIN [sys].[columns] [c] ON [d].[parent_column_id] = [c].[column_id] AND [d].[parent_object_id] = [c].[object_id]
+WHERE ([d].[parent_object_id] = OBJECT_ID(N'[purchases]') AND [c].[name] = N'OwnerName');
+IF @var1 IS NOT NULL EXEC(N'ALTER TABLE [purchases] DROP CONSTRAINT [' + @var1 + '];');
+ALTER TABLE [purchases] ALTER COLUMN [OwnerName] nvarchar(50) NULL;
+2024-12-17 23:20:17.597 +01:00 [INF] Executed DbCommand (12ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+DECLARE @var2 sysname;
+SELECT @var2 = [d].[name]
+FROM [sys].[default_constraints] [d]
+INNER JOIN [sys].[columns] [c] ON [d].[parent_column_id] = [c].[column_id] AND [d].[parent_object_id] = [c].[object_id]
+WHERE ([d].[parent_object_id] = OBJECT_ID(N'[purchases]') AND [c].[name] = N'Currency');
+IF @var2 IS NOT NULL EXEC(N'ALTER TABLE [purchases] DROP CONSTRAINT [' + @var2 + '];');
+ALTER TABLE [purchases] ALTER COLUMN [Currency] nvarchar(3) NOT NULL;
+2024-12-17 23:20:17.611 +01:00 [INF] Executed DbCommand (12ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+DECLARE @var3 sysname;
+SELECT @var3 = [d].[name]
+FROM [sys].[default_constraints] [d]
+INNER JOIN [sys].[columns] [c] ON [d].[parent_column_id] = [c].[column_id] AND [d].[parent_object_id] = [c].[object_id]
+WHERE ([d].[parent_object_id] = OBJECT_ID(N'[purchases]') AND [c].[name] = N'BuyerUsername');
+IF @var3 IS NOT NULL EXEC(N'ALTER TABLE [purchases] DROP CONSTRAINT [' + @var3 + '];');
+ALTER TABLE [purchases] ALTER COLUMN [BuyerUsername] nvarchar(50) NOT NULL;
+2024-12-17 23:20:17.617 +01:00 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO [__EFMigrationsHistory] ([MigrationId], [ProductVersion])
+VALUES (N'20241217222007_UpdateMigration', N'9.0.0');
+2024-12-17 23:20:17.626 +01:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+DECLARE @result int;
+EXEC @result = sp_releaseapplock @Resource = '__EFMigrationsLock', @LockOwner = 'Session';
+SELECT @result
+2024-12-17 23:20:24.109 +01:00 [INF] Starting Rating Service
+2024-12-17 23:20:24.719 +01:00 [WRN] Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data; this mode should only be enabled during development.
+2024-12-17 23:20:25.176 +01:00 [INF] Executed DbCommand (22ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2024-12-17 23:20:25.193 +01:00 [INF] Acquiring an exclusive lock for migration application. See https://aka.ms/efcore-docs-migrations-lock for more information if this takes too long.
+2024-12-17 23:20:25.209 +01:00 [INF] Executed DbCommand (12ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+DECLARE @result int;
+EXEC @result = sp_getapplock @Resource = '__EFMigrationsLock', @LockOwner = 'Session', @LockMode = 'Exclusive';
+SELECT @result
+2024-12-17 23:20:25.257 +01:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+IF OBJECT_ID(N'[__EFMigrationsHistory]') IS NULL
+BEGIN
+    CREATE TABLE [__EFMigrationsHistory] (
+        [MigrationId] nvarchar(150) NOT NULL,
+        [ProductVersion] nvarchar(32) NOT NULL,
+        CONSTRAINT [PK___EFMigrationsHistory] PRIMARY KEY ([MigrationId])
+    );
+END;
+2024-12-17 23:20:25.270 +01:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2024-12-17 23:20:25.273 +01:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2024-12-17 23:20:25.278 +01:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2024-12-17 23:20:25.289 +01:00 [INF] No migrations were applied. The database is already up to date.
+2024-12-17 23:20:25.296 +01:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+DECLARE @result int;
+EXEC @result = sp_releaseapplock @Resource = '__EFMigrationsLock', @LockOwner = 'Session';
+SELECT @result
+2024-12-17 23:20:25.495 +01:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [purchases] AS [p]) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2024-12-17 23:20:25.526 +01:00 [INF] User profile is available. Using 'C:\Users\Altos\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-12-17 23:20:25.749 +01:00 [INF] Now listening on: https://localhost:7237
+2024-12-17 23:20:25.750 +01:00 [INF] Now listening on: http://localhost:5247
+2024-12-17 23:20:25.817 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-12-17 23:20:25.818 +01:00 [INF] Hosting environment: Development
+2024-12-17 23:20:25.819 +01:00 [INF] Content root path: C:\Users\Altos\source\repos\Purchase_Microservice\Purchase_Microservice\Purchase_Microservice
+2024-12-17 23:20:52.946 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7237/swagger/index.html - null null
+2024-12-17 23:20:53.084 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7237/swagger/index.html - 200 null text/html;charset=utf-8 141.9191ms
+2024-12-17 23:20:53.178 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7237/swagger/index.js - null null
+2024-12-17 23:20:53.178 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7237/_framework/aspnetcore-browser-refresh.js - null null
+2024-12-17 23:20:53.220 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7237/swagger/index.js - 200 null application/javascript;charset=utf-8 42.3309ms
+2024-12-17 23:20:53.227 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7237/_framework/aspnetcore-browser-refresh.js - 200 13794 application/javascript; charset=utf-8 48.8625ms
+2024-12-17 23:20:53.380 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7237/_vs/browserLink - null null
+2024-12-17 23:20:53.407 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7237/_vs/browserLink - 200 null text/javascript; charset=UTF-8 26.6318ms
+2024-12-17 23:20:53.982 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7237/swagger/v1/swagger.json - null null
+2024-12-17 23:20:54.070 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7237/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 87.4469ms
+2024-12-17 23:21:06.359 +01:00 [INF] Request starting HTTP/2 POST https://localhost:7237/api/Auth/login - application/json 52
+2024-12-17 23:21:06.443 +01:00 [INF] Executing endpoint 'Microservice_RatingService.Application.Controllers.AuthController.Login (Purchase_Microservice)'
+2024-12-17 23:21:06.455 +01:00 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Login(LoginRequest) on controller Microservice_RatingService.Application.Controllers.AuthController (Purchase_Microservice).
+2024-12-17 23:21:06.506 +01:00 [INF] Executing action method Microservice_RatingService.Application.Controllers.AuthController.Login (Purchase_Microservice) - Validation state: "Valid"
+2024-12-17 23:21:06.508 +01:00 [INF] Login attempt for user: admin
+2024-12-17 23:21:06.532 +01:00 [INF] Executed action method Microservice_RatingService.Application.Controllers.AuthController.Login (Purchase_Microservice), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 22.2101ms.
+2024-12-17 23:21:06.538 +01:00 [INF] Executing OkObjectResult, writing value of type 'Microservice_RatingService.Application.Controllers.AuthController+LoginResponse'.
+2024-12-17 23:21:06.547 +01:00 [INF] Executed action Microservice_RatingService.Application.Controllers.AuthController.Login (Purchase_Microservice) in 87.3746ms
+2024-12-17 23:21:06.548 +01:00 [INF] Executed endpoint 'Microservice_RatingService.Application.Controllers.AuthController.Login (Purchase_Microservice)'
+2024-12-17 23:21:06.551 +01:00 [INF] HTTP POST /api/Auth/login responded 200 in 184.2053 ms
+2024-12-17 23:21:06.552 +01:00 [INF] Request finished HTTP/2 POST https://localhost:7237/api/Auth/login - 200 null application/json; charset=utf-8 192.8047ms
+2024-12-17 23:21:17.216 +01:00 [INF] Request starting HTTP/2 POST https://localhost:7237/api/Auth/login - application/json 50
+2024-12-17 23:21:17.219 +01:00 [INF] Executing endpoint 'Microservice_RatingService.Application.Controllers.AuthController.Login (Purchase_Microservice)'
+2024-12-17 23:21:17.221 +01:00 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Login(LoginRequest) on controller Microservice_RatingService.Application.Controllers.AuthController (Purchase_Microservice).
+2024-12-17 23:21:17.224 +01:00 [INF] Executing action method Microservice_RatingService.Application.Controllers.AuthController.Login (Purchase_Microservice) - Validation state: "Valid"
+2024-12-17 23:21:17.225 +01:00 [INF] Login attempt for user: test
+2024-12-17 23:21:17.226 +01:00 [INF] Executed action method Microservice_RatingService.Application.Controllers.AuthController.Login (Purchase_Microservice), returned result Microsoft.AspNetCore.Mvc.BadRequestObjectResult in 0.8938ms.
+2024-12-17 23:21:17.228 +01:00 [INF] Executing BadRequestObjectResult, writing value of type 'System.String'.
+2024-12-17 23:21:17.229 +01:00 [INF] Executed action Microservice_RatingService.Application.Controllers.AuthController.Login (Purchase_Microservice) in 6.6615ms
+2024-12-17 23:21:17.230 +01:00 [INF] Executed endpoint 'Microservice_RatingService.Application.Controllers.AuthController.Login (Purchase_Microservice)'
+2024-12-17 23:21:17.231 +01:00 [INF] HTTP POST /api/Auth/login responded 400 in 13.4699 ms
+2024-12-17 23:21:17.233 +01:00 [INF] Request finished HTTP/2 POST https://localhost:7237/api/Auth/login - 400 null text/plain; charset=utf-8 16.9959ms
+2024-12-17 23:21:30.306 +01:00 [INF] Request starting HTTP/2 POST https://localhost:7237/api/Auth/login - application/json 50
+2024-12-17 23:21:30.311 +01:00 [INF] Executing endpoint 'Microservice_RatingService.Application.Controllers.AuthController.Login (Purchase_Microservice)'
+2024-12-17 23:21:30.312 +01:00 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Login(LoginRequest) on controller Microservice_RatingService.Application.Controllers.AuthController (Purchase_Microservice).
+2024-12-17 23:21:30.315 +01:00 [INF] Executing action method Microservice_RatingService.Application.Controllers.AuthController.Login (Purchase_Microservice) - Validation state: "Valid"
+2024-12-17 23:21:30.316 +01:00 [INF] Login attempt for user: user
+2024-12-17 23:21:30.317 +01:00 [INF] Executed action method Microservice_RatingService.Application.Controllers.AuthController.Login (Purchase_Microservice), returned result Microsoft.AspNetCore.Mvc.BadRequestObjectResult in 0.8951ms.
+2024-12-17 23:21:30.318 +01:00 [INF] Executing BadRequestObjectResult, writing value of type 'System.String'.
+2024-12-17 23:21:30.319 +01:00 [INF] Executed action Microservice_RatingService.Application.Controllers.AuthController.Login (Purchase_Microservice) in 5.8737ms
+2024-12-17 23:21:30.320 +01:00 [INF] Executed endpoint 'Microservice_RatingService.Application.Controllers.AuthController.Login (Purchase_Microservice)'
+2024-12-17 23:21:30.321 +01:00 [INF] HTTP POST /api/Auth/login responded 400 in 11.8515 ms
+2024-12-17 23:21:30.323 +01:00 [INF] Request finished HTTP/2 POST https://localhost:7237/api/Auth/login - 400 null text/plain; charset=utf-8 16.3122ms
+2024-12-17 23:22:13.547 +01:00 [INF] Starting Rating Service
+2024-12-17 23:22:14.186 +01:00 [WRN] Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data; this mode should only be enabled during development.
+2024-12-17 23:22:14.618 +01:00 [INF] Executed DbCommand (20ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2024-12-17 23:22:14.636 +01:00 [INF] Acquiring an exclusive lock for migration application. See https://aka.ms/efcore-docs-migrations-lock for more information if this takes too long.
+2024-12-17 23:22:14.651 +01:00 [INF] Executed DbCommand (12ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+DECLARE @result int;
+EXEC @result = sp_getapplock @Resource = '__EFMigrationsLock', @LockOwner = 'Session', @LockMode = 'Exclusive';
+SELECT @result
+2024-12-17 23:22:14.700 +01:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+IF OBJECT_ID(N'[__EFMigrationsHistory]') IS NULL
+BEGIN
+    CREATE TABLE [__EFMigrationsHistory] (
+        [MigrationId] nvarchar(150) NOT NULL,
+        [ProductVersion] nvarchar(32) NOT NULL,
+        CONSTRAINT [PK___EFMigrationsHistory] PRIMARY KEY ([MigrationId])
+    );
+END;
+2024-12-17 23:22:14.714 +01:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2024-12-17 23:22:14.717 +01:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2024-12-17 23:22:14.722 +01:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2024-12-17 23:22:14.734 +01:00 [INF] No migrations were applied. The database is already up to date.
+2024-12-17 23:22:14.741 +01:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+DECLARE @result int;
+EXEC @result = sp_releaseapplock @Resource = '__EFMigrationsLock', @LockOwner = 'Session';
+SELECT @result
+2024-12-17 23:22:14.928 +01:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [purchases] AS [p]) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2024-12-17 23:22:14.954 +01:00 [INF] User profile is available. Using 'C:\Users\Altos\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-12-17 23:22:15.122 +01:00 [INF] Now listening on: https://localhost:7237
+2024-12-17 23:22:15.123 +01:00 [INF] Now listening on: http://localhost:5247
+2024-12-17 23:22:15.172 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-12-17 23:22:15.173 +01:00 [INF] Hosting environment: Development
+2024-12-17 23:22:15.174 +01:00 [INF] Content root path: C:\Users\Altos\source\repos\Purchase_Microservice\Purchase_Microservice\Purchase_Microservice
+2024-12-17 23:22:15.341 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7237/swagger/index.html - null null
+2024-12-17 23:22:15.524 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7237/swagger/index.html - 200 null text/html;charset=utf-8 187.4267ms
+2024-12-17 23:22:15.565 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7237/_framework/aspnetcore-browser-refresh.js - null null
+2024-12-17 23:22:15.565 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7237/swagger/index.js - null null
+2024-12-17 23:22:15.580 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7237/swagger/index.js - 200 null application/javascript;charset=utf-8 15.3178ms
+2024-12-17 23:22:15.593 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7237/_framework/aspnetcore-browser-refresh.js - 200 13794 application/javascript; charset=utf-8 28.5011ms
+2024-12-17 23:22:15.808 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7237/_vs/browserLink - null null
+2024-12-17 23:22:15.841 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7237/_vs/browserLink - 200 null text/javascript; charset=UTF-8 32.6493ms
+2024-12-17 23:22:16.431 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7237/swagger/v1/swagger.json - null null
+2024-12-17 23:22:16.519 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7237/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 88.128ms
+2024-12-17 23:22:29.070 +01:00 [INF] Request starting HTTP/2 POST https://localhost:7237/api/Auth/login - application/json 54
+2024-12-17 23:22:29.131 +01:00 [INF] Executing endpoint 'Microservice_RatingService.Application.Controllers.AuthController.Login (Purchase_Microservice)'
+2024-12-17 23:22:29.142 +01:00 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Login(LoginRequest) on controller Microservice_RatingService.Application.Controllers.AuthController (Purchase_Microservice).
+2024-12-17 23:22:29.182 +01:00 [INF] Executing action method Microservice_RatingService.Application.Controllers.AuthController.Login (Purchase_Microservice) - Validation state: "Valid"
+2024-12-17 23:22:29.184 +01:00 [INF] Login attempt for user: testuser
+2024-12-17 23:22:29.205 +01:00 [INF] Executed action method Microservice_RatingService.Application.Controllers.AuthController.Login (Purchase_Microservice), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 19.5613ms.
+2024-12-17 23:22:29.212 +01:00 [INF] Executing OkObjectResult, writing value of type 'Microservice_RatingService.Application.Controllers.AuthController+LoginResponse'.
+2024-12-17 23:22:29.224 +01:00 [INF] Executed action Microservice_RatingService.Application.Controllers.AuthController.Login (Purchase_Microservice) in 76.7568ms
+2024-12-17 23:22:29.225 +01:00 [INF] Executed endpoint 'Microservice_RatingService.Application.Controllers.AuthController.Login (Purchase_Microservice)'
+2024-12-17 23:22:29.228 +01:00 [INF] HTTP POST /api/Auth/login responded 200 in 151.6627 ms
+2024-12-17 23:22:29.230 +01:00 [INF] Request finished HTTP/2 POST https://localhost:7237/api/Auth/login - 200 null application/json; charset=utf-8 160.606ms
+2024-12-17 23:22:46.862 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7237/api/Purchase - null null
+2024-12-17 23:22:46.916 +01:00 [INF] Executing endpoint 'Purchase_Microservice.Application.Controllers.PurchaseController.GetPurchases (Purchase_Microservice)'
+2024-12-17 23:22:46.922 +01:00 [INF] Route matched with {action = "GetPurchases", controller = "Purchase"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetPurchases() on controller Purchase_Microservice.Application.Controllers.PurchaseController (Purchase_Microservice).
+2024-12-17 23:22:47.013 +01:00 [INF] Executing action method Purchase_Microservice.Application.Controllers.PurchaseController.GetPurchases (Purchase_Microservice) - Validation state: "Valid"
+2024-12-17 23:22:47.016 +01:00 [INF] Retrieving all purchases
+2024-12-17 23:22:47.145 +01:00 [INF] Executed DbCommand (13ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[PurchaseId], [p].[Currency], [p].[PurchaseDate], [p].[PurchasePrice], [p].[BuyerEmail], [p].[BuyerId], [p].[BuyerUsername], [p].[DeliveryId], [p].[DeliveryPrice], [p].[PostDate], [p].[OwnerEmail], [p].[OwnerId], [p].[OwnerName], [p].[OwnerPhone], [p].[PostId], [p].[Post_PostTitle], [p].[PostPrice]
+FROM [purchases] AS [p]
+2024-12-17 23:22:47.237 +01:00 [INF] Retrieved 1 purchases from database
+2024-12-17 23:22:47.251 +01:00 [INF] Retrieved 1 purchases
+2024-12-17 23:22:47.252 +01:00 [INF] Executed action method Purchase_Microservice.Application.Controllers.PurchaseController.GetPurchases (Purchase_Microservice), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 237.8362ms.
+2024-12-17 23:22:47.255 +01:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Purchase_Microservice.Application.Dtos.PurchaseReadDto, Purchase_Microservice, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-12-17 23:22:47.269 +01:00 [INF] Executed action Purchase_Microservice.Application.Controllers.PurchaseController.GetPurchases (Purchase_Microservice) in 344.6145ms
+2024-12-17 23:22:47.270 +01:00 [INF] Executed endpoint 'Purchase_Microservice.Application.Controllers.PurchaseController.GetPurchases (Purchase_Microservice)'
+2024-12-17 23:22:47.272 +01:00 [INF] HTTP GET /api/Purchase responded 200 in 406.6673 ms
+2024-12-17 23:22:47.277 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7237/api/Purchase - 200 null application/json; charset=utf-8 415.9469ms
+2024-12-17 23:22:59.114 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7237/api/Purchase/06211e90-6082-4d8e-a88c-3d2bffd0ebc1 - null null
+2024-12-17 23:22:59.120 +01:00 [INF] Executing endpoint 'Purchase_Microservice.Application.Controllers.PurchaseController.GetPurchaseById (Purchase_Microservice)'
+2024-12-17 23:22:59.125 +01:00 [INF] Route matched with {action = "GetPurchaseById", controller = "Purchase"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetPurchaseById(System.Guid) on controller Purchase_Microservice.Application.Controllers.PurchaseController (Purchase_Microservice).
+2024-12-17 23:22:59.130 +01:00 [INF] Executing action method Purchase_Microservice.Application.Controllers.PurchaseController.GetPurchaseById (Purchase_Microservice) - Validation state: "Valid"
+2024-12-17 23:22:59.132 +01:00 [INF] Retrieving purchase with ID: "06211e90-6082-4d8e-a88c-3d2bffd0ebc1"
+2024-12-17 23:22:59.258 +01:00 [INF] Executed DbCommand (20ms) [Parameters=[@__id_0='06211e90-6082-4d8e-a88c-3d2bffd0ebc1'], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [p].[PurchaseId], [p].[Currency], [p].[PurchaseDate], [p].[PurchasePrice], [p].[BuyerEmail], [p].[BuyerId], [p].[BuyerUsername], [p].[DeliveryId], [p].[DeliveryPrice], [p].[PostDate], [p].[OwnerEmail], [p].[OwnerId], [p].[OwnerName], [p].[OwnerPhone], [p].[PostId], [p].[Post_PostTitle], [p].[PostPrice]
+FROM [purchases] AS [p]
+WHERE [p].[PurchaseId] = @__id_0
+2024-12-17 23:22:59.265 +01:00 [INF] Retrieved purchase with ID: "06211e90-6082-4d8e-a88c-3d2bffd0ebc1"
+2024-12-17 23:22:59.268 +01:00 [INF] Executed action method Purchase_Microservice.Application.Controllers.PurchaseController.GetPurchaseById (Purchase_Microservice), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 137.2524ms.
+2024-12-17 23:22:59.270 +01:00 [INF] Executing OkObjectResult, writing value of type 'Purchase_Microservice.Application.Dtos.PurchaseReadDto'.
+2024-12-17 23:22:59.271 +01:00 [INF] Executed action Purchase_Microservice.Application.Controllers.PurchaseController.GetPurchaseById (Purchase_Microservice) in 144.2738ms
+2024-12-17 23:22:59.272 +01:00 [INF] Executed endpoint 'Purchase_Microservice.Application.Controllers.PurchaseController.GetPurchaseById (Purchase_Microservice)'
+2024-12-17 23:22:59.273 +01:00 [INF] HTTP GET /api/Purchase/06211e90-6082-4d8e-a88c-3d2bffd0ebc1 responded 200 in 154.8290 ms
+2024-12-17 23:22:59.275 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7237/api/Purchase/06211e90-6082-4d8e-a88c-3d2bffd0ebc1 - 200 null application/json; charset=utf-8 160.6442ms
+2024-12-17 23:23:41.125 +01:00 [INF] Request starting HTTP/2 POST https://localhost:7237/api/Purchase - application/json 551
+2024-12-17 23:23:41.147 +01:00 [INF] Authorization failed. These requirements were not met:
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (Admin)
+2024-12-17 23:23:41.150 +01:00 [INF] AuthenticationScheme: Bearer was forbidden.
+2024-12-17 23:23:41.151 +01:00 [INF] HTTP POST /api/Purchase responded 403 in 11.7820 ms
+2024-12-17 23:23:41.152 +01:00 [INF] Request finished HTTP/2 POST https://localhost:7237/api/Purchase - 403 0 null 27.2131ms
+2024-12-17 23:24:26.193 +01:00 [INF] Request starting HTTP/2 POST https://localhost:7237/api/Auth/login - application/json 52
+2024-12-17 23:24:26.218 +01:00 [INF] Executing endpoint 'Microservice_RatingService.Application.Controllers.AuthController.Login (Purchase_Microservice)'
+2024-12-17 23:24:26.219 +01:00 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Login(LoginRequest) on controller Microservice_RatingService.Application.Controllers.AuthController (Purchase_Microservice).
+2024-12-17 23:24:26.222 +01:00 [INF] Executing action method Microservice_RatingService.Application.Controllers.AuthController.Login (Purchase_Microservice) - Validation state: "Valid"
+2024-12-17 23:24:26.223 +01:00 [INF] Login attempt for user: admin
+2024-12-17 23:24:26.224 +01:00 [INF] Executed action method Microservice_RatingService.Application.Controllers.AuthController.Login (Purchase_Microservice), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 0.9976ms.
+2024-12-17 23:24:26.225 +01:00 [INF] Executing OkObjectResult, writing value of type 'Microservice_RatingService.Application.Controllers.AuthController+LoginResponse'.
+2024-12-17 23:24:26.226 +01:00 [INF] Executed action Microservice_RatingService.Application.Controllers.AuthController.Login (Purchase_Microservice) in 5.6686ms
+2024-12-17 23:24:26.230 +01:00 [INF] Executed endpoint 'Microservice_RatingService.Application.Controllers.AuthController.Login (Purchase_Microservice)'
+2024-12-17 23:24:26.264 +01:00 [INF] HTTP POST /api/Auth/login responded 200 in 46.3994 ms
+2024-12-17 23:24:26.266 +01:00 [INF] Request finished HTTP/2 POST https://localhost:7237/api/Auth/login - 200 null application/json; charset=utf-8 73.515ms
+2024-12-17 23:24:40.177 +01:00 [INF] Request starting HTTP/2 POST https://localhost:7237/api/Purchase - application/json 551
+2024-12-17 23:24:40.182 +01:00 [INF] Failed to validate the token.
+System.ArgumentException: IDX14102: Unable to decode the header '[PII of type 'Microsoft.IdentityModel.Logging.SecurityArtifact' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]' as Base64Url encoded string.
+ ---> System.FormatException: IDX10400: Unable to decode: '[PII of type 'System.String' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]' as Base64url encoded string.
+   at Microsoft.IdentityModel.Tokens.Base64UrlEncoding.ValidateAndGetOutputSize(ReadOnlySpan`1 strSpan, Int32 offset, Int32 length)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.CreateClaimSet(ReadOnlySpan`1 strSpan, Int32 startIndex, Int32 length, Boolean createHeaderClaimSet)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.ReadToken(ReadOnlyMemory`1 encodedTokenMemory)
+   --- End of inner exception stack trace ---
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.ReadToken(ReadOnlyMemory`1 encodedTokenMemory)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken..ctor(String jwtEncodedString)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ReadToken(String token, TokenValidationParameters validationParameters)
+2024-12-17 23:24:40.188 +01:00 [INF] Bearer was not authenticated. Failure message: IDX14102: Unable to decode the header '[PII of type 'Microsoft.IdentityModel.Logging.SecurityArtifact' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]' as Base64Url encoded string.
+2024-12-17 23:24:40.190 +01:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (Admin)
+2024-12-17 23:24:40.195 +01:00 [INF] AuthenticationScheme: Bearer was challenged.
+2024-12-17 23:24:40.195 +01:00 [INF] HTTP POST /api/Purchase responded 401 in 16.1052 ms
+2024-12-17 23:24:40.197 +01:00 [INF] Request finished HTTP/2 POST https://localhost:7237/api/Purchase - 401 0 null 20.1642ms
+2024-12-17 23:25:02.697 +01:00 [INF] Request starting HTTP/2 POST https://localhost:7237/api/Purchase - application/json 551
+2024-12-17 23:25:02.702 +01:00 [INF] Failed to validate the token.
+System.ArgumentException: IDX14102: Unable to decode the header '[PII of type 'Microsoft.IdentityModel.Logging.SecurityArtifact' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]' as Base64Url encoded string.
+ ---> System.FormatException: IDX10400: Unable to decode: '[PII of type 'System.String' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]' as Base64url encoded string.
+   at Microsoft.IdentityModel.Tokens.Base64UrlEncoding.ValidateAndGetOutputSize(ReadOnlySpan`1 strSpan, Int32 offset, Int32 length)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.CreateClaimSet(ReadOnlySpan`1 strSpan, Int32 startIndex, Int32 length, Boolean createHeaderClaimSet)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.ReadToken(ReadOnlyMemory`1 encodedTokenMemory)
+   --- End of inner exception stack trace ---
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.ReadToken(ReadOnlyMemory`1 encodedTokenMemory)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken..ctor(String jwtEncodedString)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ReadToken(String token, TokenValidationParameters validationParameters)
+2024-12-17 23:25:02.706 +01:00 [INF] Bearer was not authenticated. Failure message: IDX14102: Unable to decode the header '[PII of type 'Microsoft.IdentityModel.Logging.SecurityArtifact' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]' as Base64Url encoded string.
+2024-12-17 23:25:02.707 +01:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (Admin)
+2024-12-17 23:25:02.708 +01:00 [INF] AuthenticationScheme: Bearer was challenged.
+2024-12-17 23:25:02.709 +01:00 [INF] HTTP POST /api/Purchase responded 401 in 7.1406 ms
+2024-12-17 23:25:02.711 +01:00 [INF] Request finished HTTP/2 POST https://localhost:7237/api/Purchase - 401 0 null 14.1973ms
+2024-12-17 23:25:07.084 +01:00 [INF] Request starting HTTP/2 POST https://localhost:7237/api/Auth/login - application/json 52
+2024-12-17 23:25:07.087 +01:00 [INF] Failed to validate the token.
+System.ArgumentException: IDX14102: Unable to decode the header '[PII of type 'Microsoft.IdentityModel.Logging.SecurityArtifact' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]' as Base64Url encoded string.
+ ---> System.FormatException: IDX10400: Unable to decode: '[PII of type 'System.String' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]' as Base64url encoded string.
+   at Microsoft.IdentityModel.Tokens.Base64UrlEncoding.ValidateAndGetOutputSize(ReadOnlySpan`1 strSpan, Int32 offset, Int32 length)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.CreateClaimSet(ReadOnlySpan`1 strSpan, Int32 startIndex, Int32 length, Boolean createHeaderClaimSet)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.ReadToken(ReadOnlyMemory`1 encodedTokenMemory)
+   --- End of inner exception stack trace ---
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.ReadToken(ReadOnlyMemory`1 encodedTokenMemory)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken..ctor(String jwtEncodedString)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ReadToken(String token, TokenValidationParameters validationParameters)
+2024-12-17 23:25:07.090 +01:00 [INF] Bearer was not authenticated. Failure message: IDX14102: Unable to decode the header '[PII of type 'Microsoft.IdentityModel.Logging.SecurityArtifact' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]' as Base64Url encoded string.
+2024-12-17 23:25:07.091 +01:00 [INF] Executing endpoint 'Microservice_RatingService.Application.Controllers.AuthController.Login (Purchase_Microservice)'
+2024-12-17 23:25:07.092 +01:00 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Login(LoginRequest) on controller Microservice_RatingService.Application.Controllers.AuthController (Purchase_Microservice).
+2024-12-17 23:25:07.099 +01:00 [INF] Executing action method Microservice_RatingService.Application.Controllers.AuthController.Login (Purchase_Microservice) - Validation state: "Valid"
+2024-12-17 23:25:07.100 +01:00 [INF] Login attempt for user: admin
+2024-12-17 23:25:07.101 +01:00 [INF] Executed action method Microservice_RatingService.Application.Controllers.AuthController.Login (Purchase_Microservice), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 1.2656ms.
+2024-12-17 23:25:07.103 +01:00 [INF] Executing OkObjectResult, writing value of type 'Microservice_RatingService.Application.Controllers.AuthController+LoginResponse'.
+2024-12-17 23:25:07.104 +01:00 [INF] Executed action Microservice_RatingService.Application.Controllers.AuthController.Login (Purchase_Microservice) in 7.2099ms
+2024-12-17 23:25:07.106 +01:00 [INF] Executed endpoint 'Microservice_RatingService.Application.Controllers.AuthController.Login (Purchase_Microservice)'
+2024-12-17 23:25:07.107 +01:00 [INF] HTTP POST /api/Auth/login responded 200 in 20.9367 ms
+2024-12-17 23:25:07.109 +01:00 [INF] Request finished HTTP/2 POST https://localhost:7237/api/Auth/login - 200 null application/json; charset=utf-8 25.3053ms
+2024-12-17 23:25:20.388 +01:00 [INF] Request starting HTTP/2 POST https://localhost:7237/api/Purchase - application/json 551
+2024-12-17 23:25:20.390 +01:00 [INF] Executing endpoint 'Purchase_Microservice.Application.Controllers.PurchaseController.CreatePurchase (Purchase_Microservice)'
+2024-12-17 23:25:20.394 +01:00 [INF] Route matched with {action = "CreatePurchase", controller = "Purchase"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] CreatePurchase(Purchase_Microservice.Application.Dtos.PurchaseCreateDto) on controller Purchase_Microservice.Application.Controllers.PurchaseController (Purchase_Microservice).
+2024-12-17 23:25:20.431 +01:00 [INF] Executing action method Purchase_Microservice.Application.Controllers.PurchaseController.CreatePurchase (Purchase_Microservice) - Validation state: "Valid"
+2024-12-17 23:25:20.436 +01:00 [INF] Creating new purchase {"PurchaseDate":"2024-12-17T22:23:04.1810000Z","PurchasePrice":450,"Currency":"rsd","BuyerId":"4fa85f64-5717-4562-b3fc-2c963f66afa6","BuyerUsername":"sada","BuyerEmail":"dada@gmail.com","DeliveryId":"33a85f64-5717-4562-b3fc-2c963f66afa6","DeliveryPrice":12,"PostId":"9fa85f64-5717-4562-b3fc-2c963f66afa6","PostTitle":"dada","PostDate":"2024-12-17T22:23:04.1810000Z","PostPrice":10,"OwnerId":"4fa85f64-5717-4562-b3fc-2c963f66afa6","OwnerName":"dfas","OwnerEmail":"dgdsgf","OwnerPhone":131313230,"$type":"PurchaseCreateDto"}
+2024-12-17 23:25:20.555 +01:00 [INF] Executed DbCommand (8ms) [Parameters=[@p0='c8dfe002-606d-4abe-97c0-f83d7c473740', @p1='rsd' (Nullable = false) (Size = 3), @p2='2024-12-17T22:23:04.1810000Z', @p3='450' (Precision = 18) (Scale = 2), @p4='dada@gmail.com' (Nullable = false) (Size = 4000), @p5='4fa85f64-5717-4562-b3fc-2c963f66afa6', @p6='sada' (Nullable = false) (Size = 50), @p7='33a85f64-5717-4562-b3fc-2c963f66afa6', @p8='12' (Precision = 18) (Scale = 2), @p9='2024-12-17T22:23:04.1810000Z', @p10='dgdsgf' (Size = 4000), @p11='4fa85f64-5717-4562-b3fc-2c963f66afa6', @p12='dfas' (Size = 50), @p13='131313230' (Nullable = true), @p14='9fa85f64-5717-4562-b3fc-2c963f66afa6', @p15='dada' (Nullable = false) (Size = 100), @p16='10' (Precision = 18) (Scale = 2)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [purchases] ([PurchaseId], [Currency], [PurchaseDate], [PurchasePrice], [BuyerEmail], [BuyerId], [BuyerUsername], [DeliveryId], [DeliveryPrice], [PostDate], [OwnerEmail], [OwnerId], [OwnerName], [OwnerPhone], [PostId], [Post_PostTitle], [PostPrice])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11, @p12, @p13, @p14, @p15, @p16);
+2024-12-17 23:25:20.572 +01:00 [INF] Created purchase with ID: "c8dfe002-606d-4abe-97c0-f83d7c473740"
+2024-12-17 23:25:20.573 +01:00 [INF] Purchase created successfully with ID: "c8dfe002-606d-4abe-97c0-f83d7c473740"
+2024-12-17 23:25:20.575 +01:00 [INF] Executed action method Purchase_Microservice.Application.Controllers.PurchaseController.CreatePurchase (Purchase_Microservice), returned result Microsoft.AspNetCore.Mvc.CreatedAtActionResult in 142.7394ms.
+2024-12-17 23:25:20.577 +01:00 [INF] Executing CreatedAtActionResult, writing value of type 'Purchase_Microservice.Application.Dtos.PurchaseReadDto'.
+2024-12-17 23:25:20.592 +01:00 [INF] Executed action Purchase_Microservice.Application.Controllers.PurchaseController.CreatePurchase (Purchase_Microservice) in 196.3286ms
+2024-12-17 23:25:20.594 +01:00 [INF] Executed endpoint 'Purchase_Microservice.Application.Controllers.PurchaseController.CreatePurchase (Purchase_Microservice)'
+2024-12-17 23:25:20.595 +01:00 [INF] HTTP POST /api/Purchase responded 201 in 205.2659 ms
+2024-12-17 23:25:20.597 +01:00 [INF] Request finished HTTP/2 POST https://localhost:7237/api/Purchase - 201 null application/json; charset=utf-8 209.4809ms

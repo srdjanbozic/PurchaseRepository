@@ -1,0 +1,12 @@
+{
+  "Version": 1,
+  "Hash": "kBCya2nod2I8FQiOe9Zkvn7HEkq7sCJ0NYcz11B4eLU=",
+  "Source": "Purchase_Microservice",
+  "BasePath": "_content/Purchase_Microservice",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": [],
+  "Endpoints": []
+}
