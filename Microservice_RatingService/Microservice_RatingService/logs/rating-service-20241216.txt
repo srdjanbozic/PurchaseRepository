@@ -1,0 +1,223 @@
+2024-12-16 21:23:48.475 +01:00 [INF] Starting Rating Service
+2024-12-16 21:23:49.526 +01:00 [WRN] Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data; this mode should only be enabled during development.
+2024-12-16 21:23:50.423 +01:00 [INF] Executed DbCommand (19ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2024-12-16 21:23:50.437 +01:00 [INF] Acquiring an exclusive lock for migration application. See https://aka.ms/efcore-docs-migrations-lock for more information if this takes too long.
+2024-12-16 21:23:50.458 +01:00 [INF] Executed DbCommand (16ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+DECLARE @result int;
+EXEC @result = sp_getapplock @Resource = '__EFMigrationsLock', @LockOwner = 'Session', @LockMode = 'Exclusive';
+SELECT @result
+2024-12-16 21:23:50.515 +01:00 [INF] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+IF OBJECT_ID(N'[__EFMigrationsHistory]') IS NULL
+BEGIN
+    CREATE TABLE [__EFMigrationsHistory] (
+        [MigrationId] nvarchar(150) NOT NULL,
+        [ProductVersion] nvarchar(32) NOT NULL,
+        CONSTRAINT [PK___EFMigrationsHistory] PRIMARY KEY ([MigrationId])
+    );
+END;
+2024-12-16 21:23:50.584 +01:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2024-12-16 21:23:50.588 +01:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2024-12-16 21:23:50.599 +01:00 [INF] Executed DbCommand (8ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2024-12-16 21:23:50.611 +01:00 [INF] No migrations were applied. The database is already up to date.
+2024-12-16 21:23:50.620 +01:00 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+DECLARE @result int;
+EXEC @result = sp_releaseapplock @Resource = '__EFMigrationsLock', @LockOwner = 'Session';
+SELECT @result
+2024-12-16 21:23:50.961 +01:00 [INF] Executed DbCommand (19ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [rating] AS [r]) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2024-12-16 21:23:51.002 +01:00 [INF] User profile is available. Using 'C:\Users\Altos\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-12-16 21:23:51.446 +01:00 [INF] Now listening on: https://localhost:7109
+2024-12-16 21:23:51.447 +01:00 [INF] Now listening on: http://localhost:5153
+2024-12-16 21:23:51.491 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-12-16 21:23:51.492 +01:00 [INF] Hosting environment: Development
+2024-12-16 21:23:51.493 +01:00 [INF] Content root path: C:\Users\Altos\source\repos\MicroserviceProject\Microservice_RatingService\Microservice_RatingService
+2024-12-16 21:23:57.658 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7109/swagger/index.html - null null
+2024-12-16 21:23:57.923 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7109/swagger/index.html - 200 null text/html;charset=utf-8 272.1396ms
+2024-12-16 21:23:57.934 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7109/swagger/index.css - null null
+2024-12-16 21:23:57.934 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7109/swagger/swagger-ui.css - null null
+2024-12-16 21:23:57.939 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7109/swagger/swagger-ui-bundle.js - null null
+2024-12-16 21:23:57.934 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7109/_framework/aspnetcore-browser-refresh.js - null null
+2024-12-16 21:23:57.941 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7109/swagger/swagger-ui-standalone-preset.js - null null
+2024-12-16 21:23:57.947 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7109/swagger/index.js - null null
+2024-12-16 21:23:58.036 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7109/_vs/browserLink - null null
+2024-12-16 21:23:58.050 +01:00 [INF] The file /swagger-ui-standalone-preset.js was not modified
+2024-12-16 21:23:58.050 +01:00 [INF] The file /swagger-ui.css was not modified
+2024-12-16 21:23:58.050 +01:00 [INF] The file /swagger-ui-bundle.js was not modified
+2024-12-16 21:23:58.050 +01:00 [INF] The file /index.css was not modified
+2024-12-16 21:23:58.061 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7109/swagger/swagger-ui.css - 304 null text/css 127.917ms
+2024-12-16 21:23:58.070 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7109/swagger/index.css - 304 null text/css 135.9828ms
+2024-12-16 21:23:58.063 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7109/swagger/swagger-ui-bundle.js - 304 null text/javascript 127.7499ms
+2024-12-16 21:23:58.061 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7109/swagger/swagger-ui-standalone-preset.js - 304 null text/javascript 120.3631ms
+2024-12-16 21:23:58.054 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7109/swagger/index.js - 200 null application/javascript;charset=utf-8 107.6717ms
+2024-12-16 21:23:58.058 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7109/_framework/aspnetcore-browser-refresh.js - 200 13804 application/javascript; charset=utf-8 124.7094ms
+2024-12-16 21:23:59.090 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7109/_vs/browserLink - 200 null text/javascript; charset=UTF-8 1053.326ms
+2024-12-16 21:23:59.142 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7109/swagger/v1/swagger.json - null null
+2024-12-16 21:23:59.163 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7109/swagger/favicon-32x32.png - null null
+2024-12-16 21:23:59.175 +01:00 [INF] The file /favicon-32x32.png was not modified
+2024-12-16 21:23:59.176 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7109/swagger/favicon-32x32.png - 304 null image/png 12.856ms
+2024-12-16 21:23:59.262 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7109/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 120.9111ms
+2024-12-16 21:24:56.240 +01:00 [INF] Request starting HTTP/2 POST https://localhost:7109/api/Auth/login - application/json 52
+2024-12-16 21:24:56.363 +01:00 [INF] Executing endpoint 'Microservice_RatingService.Application.Controllers.AuthController.Login (Microservice_RatingService)'
+2024-12-16 21:24:56.380 +01:00 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Login(LoginRequest) on controller Microservice_RatingService.Application.Controllers.AuthController (Microservice_RatingService).
+2024-12-16 21:24:56.432 +01:00 [INF] Login attempt for user: admin
+2024-12-16 21:24:56.459 +01:00 [INF] Executing OkObjectResult, writing value of type 'Microservice_RatingService.Application.Controllers.AuthController+LoginResponse'.
+2024-12-16 21:24:56.468 +01:00 [INF] Executed action Microservice_RatingService.Application.Controllers.AuthController.Login (Microservice_RatingService) in 83.8368ms
+2024-12-16 21:24:56.470 +01:00 [INF] Executed endpoint 'Microservice_RatingService.Application.Controllers.AuthController.Login (Microservice_RatingService)'
+2024-12-16 21:24:56.472 +01:00 [INF] HTTP POST /api/Auth/login responded 200 in 195.4290 ms
+2024-12-16 21:24:56.474 +01:00 [INF] Request finished HTTP/2 POST https://localhost:7109/api/Auth/login - 200 null application/json; charset=utf-8 233.9739ms
+2024-12-16 21:25:47.302 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7109/api/Rating - null null
+2024-12-16 21:25:47.337 +01:00 [INF] Executing endpoint 'Microservice_RatingService.Application.Controllers.RatingController.GetRatings (Microservice_RatingService)'
+2024-12-16 21:25:47.343 +01:00 [INF] Route matched with {action = "GetRatings", controller = "Rating"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetRatings() on controller Microservice_RatingService.Application.Controllers.RatingController (Microservice_RatingService).
+2024-12-16 21:25:47.424 +01:00 [INF] Retrieving all ratings
+2024-12-16 21:25:47.591 +01:00 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [r].[RatingId], [r].[Comment], [r].[Grade], [r].[RatingDate], [r].[Status], [r].[Title], [r].[BuyerEmail], [r].[BuyerId], [r].[BuyerUsername], [r].[PurchaseDate], [r].[PurchaseId], [r].[PurchasePrice], [r].[SellerEmail], [r].[SellerId], [r].[SellerUsername]
+FROM [rating] AS [r]
+2024-12-16 21:25:47.695 +01:00 [INF] Retrieved 4 ratings from database
+2024-12-16 21:25:47.704 +01:00 [INF] Retrieved 4 ratings
+2024-12-16 21:25:47.708 +01:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Microservice_RatingService.Application.Dtos.RatingReadDto, Microservice_RatingService, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-12-16 21:25:47.715 +01:00 [INF] Executed action Microservice_RatingService.Application.Controllers.RatingController.GetRatings (Microservice_RatingService) in 369.2089ms
+2024-12-16 21:25:47.716 +01:00 [INF] Executed endpoint 'Microservice_RatingService.Application.Controllers.RatingController.GetRatings (Microservice_RatingService)'
+2024-12-16 21:25:47.718 +01:00 [INF] HTTP GET /api/Rating responded 200 in 409.9205 ms
+2024-12-16 21:25:47.724 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7109/api/Rating - 200 null application/json; charset=utf-8 422.8665ms
+2024-12-16 21:26:29.811 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7109/api/Rating/b4a4e927-d453-4464-aabb-1d0669a2436c - null null
+2024-12-16 21:26:29.819 +01:00 [INF] Executing endpoint 'Microservice_RatingService.Application.Controllers.RatingController.GetRatingById (Microservice_RatingService)'
+2024-12-16 21:26:29.824 +01:00 [INF] Route matched with {action = "GetRatingById", controller = "Rating"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetRatingById(System.Guid) on controller Microservice_RatingService.Application.Controllers.RatingController (Microservice_RatingService).
+2024-12-16 21:26:29.828 +01:00 [INF] Retrieving rating with ID: "b4a4e927-d453-4464-aabb-1d0669a2436c"
+2024-12-16 21:26:29.942 +01:00 [INF] Executed DbCommand (21ms) [Parameters=[@__id_0='b4a4e927-d453-4464-aabb-1d0669a2436c'], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [r].[RatingId], [r].[Comment], [r].[Grade], [r].[RatingDate], [r].[Status], [r].[Title], [r].[BuyerEmail], [r].[BuyerId], [r].[BuyerUsername], [r].[PurchaseDate], [r].[PurchaseId], [r].[PurchasePrice], [r].[SellerEmail], [r].[SellerId], [r].[SellerUsername]
+FROM [rating] AS [r]
+WHERE [r].[RatingId] = @__id_0
+2024-12-16 21:26:29.949 +01:00 [INF] Retrieved rating with ID: "b4a4e927-d453-4464-aabb-1d0669a2436c"
+2024-12-16 21:26:29.952 +01:00 [INF] Executing OkObjectResult, writing value of type 'Microservice_RatingService.Application.Dtos.RatingReadDto'.
+2024-12-16 21:26:29.953 +01:00 [INF] Executed action Microservice_RatingService.Application.Controllers.RatingController.GetRatingById (Microservice_RatingService) in 127.9617ms
+2024-12-16 21:26:29.954 +01:00 [INF] Executed endpoint 'Microservice_RatingService.Application.Controllers.RatingController.GetRatingById (Microservice_RatingService)'
+2024-12-16 21:26:29.955 +01:00 [INF] HTTP GET /api/Rating/b4a4e927-d453-4464-aabb-1d0669a2436c responded 200 in 137.7599 ms
+2024-12-16 21:26:29.957 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7109/api/Rating/b4a4e927-d453-4464-aabb-1d0669a2436c - 200 null application/json; charset=utf-8 145.9727ms
+2024-12-16 21:38:37.302 +01:00 [INF] Request starting HTTP/2 PUT https://localhost:7109/api/Rating/b4a4e927-d453-4464-aabb-1d0669a2436c - application/json 143
+2024-12-16 21:38:37.309 +01:00 [INF] Executing endpoint 'Microservice_RatingService.Application.Controllers.RatingController.UpdateRating (Microservice_RatingService)'
+2024-12-16 21:38:37.313 +01:00 [INF] Route matched with {action = "UpdateRating", controller = "Rating"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] UpdateRating(System.Guid, Microservice_RatingService.Application.Dtos.RatingUpdateDto) on controller Microservice_RatingService.Application.Controllers.RatingController (Microservice_RatingService).
+2024-12-16 21:38:37.341 +01:00 [INF] Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2024-12-16 21:38:37.354 +01:00 [INF] Executed action Microservice_RatingService.Application.Controllers.RatingController.UpdateRating (Microservice_RatingService) in 38.3709ms
+2024-12-16 21:38:37.356 +01:00 [INF] Executed endpoint 'Microservice_RatingService.Application.Controllers.RatingController.UpdateRating (Microservice_RatingService)'
+2024-12-16 21:38:37.357 +01:00 [INF] HTTP PUT /api/Rating/b4a4e927-d453-4464-aabb-1d0669a2436c responded 400 in 53.1112 ms
+2024-12-16 21:38:37.359 +01:00 [INF] Request finished HTTP/2 PUT https://localhost:7109/api/Rating/b4a4e927-d453-4464-aabb-1d0669a2436c - 400 null application/json; charset=utf-8 123.0189ms
+2024-12-16 21:38:50.074 +01:00 [INF] Request starting HTTP/2 PUT https://localhost:7109/api/Rating/b4a4e927-d453-4464-aabb-1d0669a2436c - application/json 138
+2024-12-16 21:38:50.078 +01:00 [INF] Executing endpoint 'Microservice_RatingService.Application.Controllers.RatingController.UpdateRating (Microservice_RatingService)'
+2024-12-16 21:38:50.079 +01:00 [INF] Route matched with {action = "UpdateRating", controller = "Rating"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] UpdateRating(System.Guid, Microservice_RatingService.Application.Dtos.RatingUpdateDto) on controller Microservice_RatingService.Application.Controllers.RatingController (Microservice_RatingService).
+2024-12-16 21:38:50.086 +01:00 [INF] Updating rating "b4a4e927-d453-4464-aabb-1d0669a2436c" with {"Grade":1,"Title":"Kasnila isporuka","Comment":"Neprofesionalno","Status":"Pending","RatingDate":"2024-12-16T20:38:05.6980000Z","$type":"RatingUpdateDto"}
+2024-12-16 21:38:50.315 +01:00 [INF] Executed DbCommand (10ms) [Parameters=[@__p_0='b4a4e927-d453-4464-aabb-1d0669a2436c' (Nullable = true)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [r].[RatingId], [r].[Comment], [r].[Grade], [r].[RatingDate], [r].[Status], [r].[Title], [r].[BuyerEmail], [r].[BuyerId], [r].[BuyerUsername], [r].[PurchaseDate], [r].[PurchaseId], [r].[PurchasePrice], [r].[SellerEmail], [r].[SellerId], [r].[SellerUsername]
+FROM [rating] AS [r]
+WHERE [r].[RatingId] = @__p_0
+2024-12-16 21:38:50.420 +01:00 [INF] Executed DbCommand (5ms) [Parameters=[@p4='b4a4e927-d453-4464-aabb-1d0669a2436c', @p0='Neprofesionalno' (Nullable = false) (Size = 50), @p1='1', @p2='2024-12-16T20:38:05.6980000Z', @p3='Kasnila isporuka' (Nullable = false) (Size = 20)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [rating] SET [Comment] = @p0, [Grade] = @p1, [RatingDate] = @p2, [Title] = @p3
+OUTPUT 1
+WHERE [RatingId] = @p4;
+2024-12-16 21:38:50.446 +01:00 [INF] Updated rating with ID: "b4a4e927-d453-4464-aabb-1d0669a2436c"
+2024-12-16 21:38:50.448 +01:00 [INF] Rating "b4a4e927-d453-4464-aabb-1d0669a2436c" updated successfully
+2024-12-16 21:38:50.449 +01:00 [INF] Executing OkObjectResult, writing value of type 'Microservice_RatingService.Application.Dtos.RatingReadDto'.
+2024-12-16 21:38:50.451 +01:00 [INF] Executed action Microservice_RatingService.Application.Controllers.RatingController.UpdateRating (Microservice_RatingService) in 368.9223ms
+2024-12-16 21:38:50.454 +01:00 [INF] Executed endpoint 'Microservice_RatingService.Application.Controllers.RatingController.UpdateRating (Microservice_RatingService)'
+2024-12-16 21:38:50.458 +01:00 [INF] HTTP PUT /api/Rating/b4a4e927-d453-4464-aabb-1d0669a2436c responded 200 in 381.0792 ms
+2024-12-16 21:38:50.464 +01:00 [INF] Request finished HTTP/2 PUT https://localhost:7109/api/Rating/b4a4e927-d453-4464-aabb-1d0669a2436c - 200 null application/json; charset=utf-8 389.9112ms
+2024-12-16 21:38:57.441 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7109/api/Rating - null null
+2024-12-16 21:38:57.444 +01:00 [INF] Executing endpoint 'Microservice_RatingService.Application.Controllers.RatingController.GetRatings (Microservice_RatingService)'
+2024-12-16 21:38:57.445 +01:00 [INF] Route matched with {action = "GetRatings", controller = "Rating"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetRatings() on controller Microservice_RatingService.Application.Controllers.RatingController (Microservice_RatingService).
+2024-12-16 21:38:57.449 +01:00 [INF] Retrieving all ratings
+2024-12-16 21:38:57.462 +01:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [r].[RatingId], [r].[Comment], [r].[Grade], [r].[RatingDate], [r].[Status], [r].[Title], [r].[BuyerEmail], [r].[BuyerId], [r].[BuyerUsername], [r].[PurchaseDate], [r].[PurchaseId], [r].[PurchasePrice], [r].[SellerEmail], [r].[SellerId], [r].[SellerUsername]
+FROM [rating] AS [r]
+2024-12-16 21:38:57.503 +01:00 [INF] Retrieved 4 ratings from database
+2024-12-16 21:38:57.504 +01:00 [INF] Retrieved 4 ratings
+2024-12-16 21:38:57.505 +01:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Microservice_RatingService.Application.Dtos.RatingReadDto, Microservice_RatingService, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-12-16 21:38:57.507 +01:00 [INF] Executed action Microservice_RatingService.Application.Controllers.RatingController.GetRatings (Microservice_RatingService) in 58.2397ms
+2024-12-16 21:38:57.508 +01:00 [INF] Executed endpoint 'Microservice_RatingService.Application.Controllers.RatingController.GetRatings (Microservice_RatingService)'
+2024-12-16 21:38:57.513 +01:00 [INF] HTTP GET /api/Rating responded 200 in 68.8673 ms
+2024-12-16 21:38:57.517 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7109/api/Rating - 200 null application/json; charset=utf-8 75.5824ms
+2024-12-16 21:39:08.301 +01:00 [INF] Request starting HTTP/2 DELETE https://localhost:7109/api/Rating/b4a4e927-d453-4464-aabb-1d0669a2436c - null null
+2024-12-16 21:39:08.304 +01:00 [INF] Executing endpoint 'Microservice_RatingService.Application.Controllers.RatingController.DeleteRating (Microservice_RatingService)'
+2024-12-16 21:39:08.308 +01:00 [INF] Route matched with {action = "DeleteRating", controller = "Rating"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] DeleteRating(System.Guid) on controller Microservice_RatingService.Application.Controllers.RatingController (Microservice_RatingService).
+2024-12-16 21:39:08.311 +01:00 [INF] Deleting rating with ID: "b4a4e927-d453-4464-aabb-1d0669a2436c"
+2024-12-16 21:39:08.327 +01:00 [INF] Executed DbCommand (3ms) [Parameters=[@__p_0='b4a4e927-d453-4464-aabb-1d0669a2436c' (Nullable = true)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [r].[RatingId], [r].[Comment], [r].[Grade], [r].[RatingDate], [r].[Status], [r].[Title], [r].[BuyerEmail], [r].[BuyerId], [r].[BuyerUsername], [r].[PurchaseDate], [r].[PurchaseId], [r].[PurchasePrice], [r].[SellerEmail], [r].[SellerId], [r].[SellerUsername]
+FROM [rating] AS [r]
+WHERE [r].[RatingId] = @__p_0
+2024-12-16 21:39:08.374 +01:00 [INF] Executed DbCommand (3ms) [Parameters=[@p0='b4a4e927-d453-4464-aabb-1d0669a2436c'], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+DELETE FROM [rating]
+OUTPUT 1
+WHERE [RatingId] = @p0;
+2024-12-16 21:39:08.393 +01:00 [INF] Deleted rating with ID: "b4a4e927-d453-4464-aabb-1d0669a2436c"
+2024-12-16 21:39:08.398 +01:00 [INF] Rating "b4a4e927-d453-4464-aabb-1d0669a2436c" deleted successfully
+2024-12-16 21:39:08.400 +01:00 [INF] Executing StatusCodeResult, setting HTTP status code 204
+2024-12-16 21:39:08.401 +01:00 [INF] Executed action Microservice_RatingService.Application.Controllers.RatingController.DeleteRating (Microservice_RatingService) in 90.9043ms
+2024-12-16 21:39:08.403 +01:00 [INF] Executed endpoint 'Microservice_RatingService.Application.Controllers.RatingController.DeleteRating (Microservice_RatingService)'
+2024-12-16 21:39:08.404 +01:00 [INF] HTTP DELETE /api/Rating/b4a4e927-d453-4464-aabb-1d0669a2436c responded 204 in 100.6549 ms
+2024-12-16 21:39:08.408 +01:00 [INF] Request finished HTTP/2 DELETE https://localhost:7109/api/Rating/b4a4e927-d453-4464-aabb-1d0669a2436c - 204 null null 107.2193ms
+2024-12-16 21:39:12.745 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7109/api/Rating - null null
+2024-12-16 21:39:12.747 +01:00 [INF] Executing endpoint 'Microservice_RatingService.Application.Controllers.RatingController.GetRatings (Microservice_RatingService)'
+2024-12-16 21:39:12.751 +01:00 [INF] Route matched with {action = "GetRatings", controller = "Rating"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetRatings() on controller Microservice_RatingService.Application.Controllers.RatingController (Microservice_RatingService).
+2024-12-16 21:39:12.755 +01:00 [INF] Retrieving all ratings
+2024-12-16 21:39:12.764 +01:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [r].[RatingId], [r].[Comment], [r].[Grade], [r].[RatingDate], [r].[Status], [r].[Title], [r].[BuyerEmail], [r].[BuyerId], [r].[BuyerUsername], [r].[PurchaseDate], [r].[PurchaseId], [r].[PurchasePrice], [r].[SellerEmail], [r].[SellerId], [r].[SellerUsername]
+FROM [rating] AS [r]
+2024-12-16 21:39:12.793 +01:00 [INF] Retrieved 3 ratings from database
+2024-12-16 21:39:12.794 +01:00 [INF] Retrieved 3 ratings
+2024-12-16 21:39:12.795 +01:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Microservice_RatingService.Application.Dtos.RatingReadDto, Microservice_RatingService, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-12-16 21:39:12.799 +01:00 [INF] Executed action Microservice_RatingService.Application.Controllers.RatingController.GetRatings (Microservice_RatingService) in 44.1672ms
+2024-12-16 21:39:12.804 +01:00 [INF] Executed endpoint 'Microservice_RatingService.Application.Controllers.RatingController.GetRatings (Microservice_RatingService)'
+2024-12-16 21:39:12.805 +01:00 [INF] HTTP GET /api/Rating responded 200 in 58.3917 ms
+2024-12-16 21:39:12.809 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7109/api/Rating - 200 null application/json; charset=utf-8 64.0587ms
+2024-12-16 21:39:38.195 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7109/api/Rating/seller/6bd00e70-c01f-4535-ab06-6b48a593cfbc - null null
+2024-12-16 21:39:38.198 +01:00 [INF] Executing endpoint 'Microservice_RatingService.Application.Controllers.RatingController.GetRatingsBySeller (Microservice_RatingService)'
+2024-12-16 21:39:38.202 +01:00 [INF] Route matched with {action = "GetRatingsBySeller", controller = "Rating"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetRatingsBySeller(System.Guid) on controller Microservice_RatingService.Application.Controllers.RatingController (Microservice_RatingService).
+2024-12-16 21:39:38.299 +01:00 [INF] Executed DbCommand (3ms) [Parameters=[@__sellerId_0='6bd00e70-c01f-4535-ab06-6b48a593cfbc'], CommandType='"Text"', CommandTimeout='30']
+SELECT [r].[RatingId], [r].[Comment], [r].[Grade], [r].[RatingDate], [r].[Status], [r].[Title], [r].[BuyerEmail], [r].[BuyerId], [r].[BuyerUsername], [r].[PurchaseDate], [r].[PurchaseId], [r].[PurchasePrice], [r].[SellerEmail], [r].[SellerId], [r].[SellerUsername]
+FROM [rating] AS [r]
+WHERE [r].[SellerId] = @__sellerId_0
+2024-12-16 21:39:38.330 +01:00 [INF] Retrieved 3 ratings for seller "6bd00e70-c01f-4535-ab06-6b48a593cfbc"
+2024-12-16 21:39:38.331 +01:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Microservice_RatingService.Application.Dtos.RatingReadDto, Microservice_RatingService, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-12-16 21:39:38.336 +01:00 [INF] Executed action Microservice_RatingService.Application.Controllers.RatingController.GetRatingsBySeller (Microservice_RatingService) in 131.2085ms
+2024-12-16 21:39:38.342 +01:00 [INF] Executed endpoint 'Microservice_RatingService.Application.Controllers.RatingController.GetRatingsBySeller (Microservice_RatingService)'
+2024-12-16 21:39:38.344 +01:00 [INF] HTTP GET /api/Rating/seller/6bd00e70-c01f-4535-ab06-6b48a593cfbc responded 200 in 146.2008 ms
+2024-12-16 21:39:38.351 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7109/api/Rating/seller/6bd00e70-c01f-4535-ab06-6b48a593cfbc - 200 null application/json; charset=utf-8 157.9401ms
+2024-12-16 21:40:06.649 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7109/api/Rating/buyer/8662bf50-81e9-4eb8-b0e4-c65439c37487 - null null
+2024-12-16 21:40:06.655 +01:00 [INF] Executing endpoint 'Microservice_RatingService.Application.Controllers.RatingController.GetRatingsByBuyer (Microservice_RatingService)'
+2024-12-16 21:40:06.659 +01:00 [INF] Route matched with {action = "GetRatingsByBuyer", controller = "Rating"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetRatingsByBuyer(System.Guid) on controller Microservice_RatingService.Application.Controllers.RatingController (Microservice_RatingService).
+2024-12-16 21:40:06.764 +01:00 [INF] Executed DbCommand (3ms) [Parameters=[@__buyerId_0='8662bf50-81e9-4eb8-b0e4-c65439c37487'], CommandType='"Text"', CommandTimeout='30']
+SELECT [r].[RatingId], [r].[Comment], [r].[Grade], [r].[RatingDate], [r].[Status], [r].[Title], [r].[BuyerEmail], [r].[BuyerId], [r].[BuyerUsername], [r].[PurchaseDate], [r].[PurchaseId], [r].[PurchasePrice], [r].[SellerEmail], [r].[SellerId], [r].[SellerUsername]
+FROM [rating] AS [r]
+WHERE [r].[BuyerId] = @__buyerId_0
+2024-12-16 21:40:06.793 +01:00 [INF] Retrieved 2 ratings from buyer "8662bf50-81e9-4eb8-b0e4-c65439c37487"
+2024-12-16 21:40:06.794 +01:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Microservice_RatingService.Application.Dtos.RatingReadDto, Microservice_RatingService, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-12-16 21:40:06.795 +01:00 [INF] Executed action Microservice_RatingService.Application.Controllers.RatingController.GetRatingsByBuyer (Microservice_RatingService) in 132.8936ms
+2024-12-16 21:40:06.797 +01:00 [INF] Executed endpoint 'Microservice_RatingService.Application.Controllers.RatingController.GetRatingsByBuyer (Microservice_RatingService)'
+2024-12-16 21:40:06.799 +01:00 [INF] HTTP GET /api/Rating/buyer/8662bf50-81e9-4eb8-b0e4-c65439c37487 responded 200 in 143.9722 ms
+2024-12-16 21:40:06.809 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7109/api/Rating/buyer/8662bf50-81e9-4eb8-b0e4-c65439c37487 - 200 null application/json; charset=utf-8 158.4853ms
+2024-12-16 21:40:33.514 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7109/api/Rating/seller/6bd00e70-c01f-4535-ab06-6b48a593cfbc/stats - null null
+2024-12-16 21:40:33.519 +01:00 [INF] Executing endpoint 'Microservice_RatingService.Application.Controllers.RatingController.GetSellerRatingStats (Microservice_RatingService)'
+2024-12-16 21:40:33.523 +01:00 [INF] Route matched with {action = "GetSellerRatingStats", controller = "Rating"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetSellerRatingStats(System.Guid) on controller Microservice_RatingService.Application.Controllers.RatingController (Microservice_RatingService).
+2024-12-16 21:40:33.635 +01:00 [INF] Executed DbCommand (4ms) [Parameters=[@__sellerId_0='6bd00e70-c01f-4535-ab06-6b48a593cfbc'], CommandType='"Text"', CommandTimeout='30']
+SELECT [r].[RatingId], [r].[Comment], [r].[Grade], [r].[RatingDate], [r].[Status], [r].[Title], [r].[BuyerEmail], [r].[BuyerId], [r].[BuyerUsername], [r].[PurchaseDate], [r].[PurchaseId], [r].[PurchasePrice], [r].[SellerEmail], [r].[SellerId], [r].[SellerUsername]
+FROM [rating] AS [r]
+WHERE [r].[SellerId] = @__sellerId_0
+2024-12-16 21:40:33.673 +01:00 [INF] Retrieved rating stats for seller "6bd00e70-c01f-4535-ab06-6b48a593cfbc"
+2024-12-16 21:40:33.674 +01:00 [INF] Executing OkObjectResult, writing value of type 'Microservice_RatingService.Application.Dtos.SellerRatingStatsDto'.
+2024-12-16 21:40:33.681 +01:00 [INF] Executed action Microservice_RatingService.Application.Controllers.RatingController.GetSellerRatingStats (Microservice_RatingService) in 155.6289ms
+2024-12-16 21:40:33.683 +01:00 [INF] Executed endpoint 'Microservice_RatingService.Application.Controllers.RatingController.GetSellerRatingStats (Microservice_RatingService)'
+2024-12-16 21:40:33.684 +01:00 [INF] HTTP GET /api/Rating/seller/6bd00e70-c01f-4535-ab06-6b48a593cfbc/stats responded 200 in 165.2789 ms
+2024-12-16 21:40:33.690 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7109/api/Rating/seller/6bd00e70-c01f-4535-ab06-6b48a593cfbc/stats - 200 null application/json; charset=utf-8 176.9422ms

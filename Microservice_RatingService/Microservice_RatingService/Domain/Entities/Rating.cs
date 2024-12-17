@@ -23,11 +23,11 @@ namespace Microservice_RatingService.Domain.Entities
         public int Grade { get; set; }
 
         [Required(ErrorMessage = "Comment is required!")]
-        [StringLength(50, ErrorMessage = "Comment cannot be longer than 50 characters!")]
+        [StringLength(200, ErrorMessage = "Comment cannot be longer than 50 characters!")]
         public string Comment { get; set; }
 
         [Required(ErrorMessage = "Title is required!")]
-        [StringLength(20, ErrorMessage = "Title cannot be longer than 20 characters!")]
+        [StringLength(50, ErrorMessage = "Title cannot be longer than 20 characters!")]
         public string Title { get; set; }
 
         [Required(ErrorMessage = "Status is required!")]

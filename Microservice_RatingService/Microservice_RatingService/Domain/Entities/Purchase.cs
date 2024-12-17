@@ -7,7 +7,11 @@ namespace Microservice_RatingService.Domain.Entities
     {
         
         public Guid PurchaseId { get; set; }
+        [Required(ErrorMessage = "Purchase date is required!")]
+        [DataType(DataType.Date)]
+        [Display(Name = "Purchase Date")]
         public DateTime PurchaseDate { get; set; }
+        [Required(ErrorMessage = "Price is required!")]
         public decimal PurchasePrice { get; set; }
         public Purchase(Guid guid, DateTime dateTime, decimal price)
         {
